@@ -3,7 +3,7 @@
 project:
   output-dir: _site/2026-11-airetreat
 website:
-  site-url: https://gitklar.github.io/2026-11-airetreat/
+  site-url: https://gitklar.ch/2026-11-airetreat/
 cohort:
   name: "2026-11-airetreat"
   label: "AI Retreat Gruppe, Herbst 2026"

@@ -20,8 +20,8 @@ lang: de
 website:
   title: "gitklar"
   description: "Git und GitHub für Menschen, die mit KI arbeiten. Ein Kurs von bitz."
-  site-url: https://gitklar.github.io/
-  repo-url: https://github.com/gitklar/gitklar.github.io
+  site-url: https://gitklar.ch/
+  repo-url: https://github.com/gitklar/website
   navbar:
     left:
       - href: index.qmd
@@ -55,7 +55,7 @@ website:
         - vorbereitung/fertig.qmd
   page-footer:
     left: "gitklar von bitz. Lars Schöbitz GmbH, Zürich. Kontakt: lars@lse.de"
-    right: "[Quellcode](https://github.com/gitklar/gitklar.github.io)"
+    right: "[Quellcode](https://github.com/gitklar/website)"
 
 # Default cohort values. A cohort profile overrides them.
 cohort:

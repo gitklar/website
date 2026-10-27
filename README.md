@@ -1,6 +1,6 @@
-# gitklar.github.io
+# website
 
-The course website of gitklar, the Git and GitHub course of bitz (Lars Schöbitz GmbH). Quarto, German, published with GitHub Pages at <https://gitklar.github.io/>.
+The course website of gitklar, the Git and GitHub course of bitz (Lars Schöbitz GmbH). Quarto, German, published with GitHub Pages at <https://gitklar.ch/>.
 
 ## One site, one snapshot per cohort
 
@@ -22,11 +22,15 @@ Open `_site/index.html` and `_site/2026-11-airetreat/index.html`.
 1. Copy `_quarto-2026-11-airetreat.yml` to `_quarto-<name>.yml` and fill in the values.
 2. Add the line `<name> active` to `cohorts`.
 3. Open the pull request from `dev` into `main`. The merge publishes it.
-4. Put `https://gitklar.github.io/<name>/` into the cohort config of `gitklar-dev/admin`.
+4. Put `https://gitklar.ch/<name>/` into the cohort config of `gitklar-dev/admin`.
 
 ## Freeze a cohort
 
 After the last workshop: `git tag <name>` on the commit the cohort last saw, push the tag, change its line in `cohorts` to `frozen`, merge. The pages stay as they were.
+
+## Domain
+
+gitklar.ch, decision 0004 in `gitklar-dev/admin`. At the registrar: four A records for the apex to GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153), four AAAA records (2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153), and `www` as a CNAME to `gitklar.github.io`. In the repository settings under Pages: custom domain `gitklar.ch`, then Enforce HTTPS once the certificate exists. Under the organisation settings, Pages, Verified domains: verify `gitklar.ch`, so nobody else can bind it to a Pages site.
 
 ## Not yet
 
