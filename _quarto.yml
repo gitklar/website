@@ -2,7 +2,7 @@
 # (gitklar-dev/admin, docs/decisions/0001).
 #
 #   quarto render                                    root, into _site/
-#   quarto render --profile cohort,2026-11-airetreat  cohort, into _site/2026-11-airetreat/
+#   quarto render --profile cohort,airetreat-01  cohort, into _site/airetreat-01/
 #
 # A cohort is the profile file _quarto-<name>.yml plus one line in the file
 # `cohorts`. Shared pages are never edited for one cohort: cohort-specific

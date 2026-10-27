@@ -12,14 +12,14 @@ Cohort-specific text lives in three places only: the profile values (`{{< meta c
 
 ```
 quarto render                                      # root
-quarto render --profile cohort,2026-11-airetreat   # one cohort
+quarto render --profile cohort,airetreat-01   # one cohort
 ```
 
-Open `_site/index.html` and `_site/2026-11-airetreat/index.html`.
+Open `_site/index.html` and `_site/airetreat-01/index.html`.
 
 ## Add a cohort
 
-1. Copy `_quarto-2026-11-airetreat.yml` to `_quarto-<name>.yml` and fill in the values.
+1. Copy `_quarto-airetreat-01.yml` to `_quarto-<name>.yml` and fill in the values. Names are audience plus a two-digit counter (airetreat-02, a new audience gets its own prefix).
 2. Add the line `<name> active` to `cohorts`.
 3. Open the pull request from `dev` into `main`. The merge publishes it.
 4. Put `https://gitklar.ch/<name>/` into the cohort config of `gitklar-dev/admin`.

@@ -4,3 +4,5 @@
 .DS_Store
 *.Rproj
 .Rproj.user
+
+**/*.quarto_ipynb

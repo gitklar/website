@@ -1,0 +1,13 @@
+# Cohort airetreat-01: the AI Retreat group of October 2026.
+# Rendered with: quarto render --profile cohort,airetreat-01
+project:
+  output-dir: _site/airetreat-01
+website:
+  site-url: https://gitklar.ch/airetreat-01/
+cohort:
+  name: "airetreat-01"
+  label: "AI Retreat Gruppe, Herbst 2026"
+  session_1: "noch offen"
+  session_2: "noch offen"
+  due_date: "Freitag, 13. November 2026"
+  hosts: "Lars Schöbitz"
