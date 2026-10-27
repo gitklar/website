@@ -1,0 +1,64 @@
+name: Publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.18
+
+      - name: Render the root
+        run: quarto render
+
+      # An active cohort renders from main into _site/<name>/ (its profile
+      # sets the output-dir). A frozen cohort renders from the tag of the
+      # same name, so its pages never change again.
+      - name: Render the cohorts
+        run: |
+          set -e
+          while read -r name state; do
+            case "$name" in ''|\#*) continue ;; esac
+            if [ "$state" = active ]; then
+              quarto render --profile "cohort,$name" --no-clean
+            else
+              rm -rf "/tmp/$name"
+              git worktree add "/tmp/$name" "$name"
+              (cd "/tmp/$name" && quarto render --profile "cohort,$name")
+              rm -rf "_site/$name"
+              mkdir -p "_site/$name"
+              cp -R "/tmp/$name/_site/$name/." "_site/$name/"
+            fi
+          done < cohorts
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

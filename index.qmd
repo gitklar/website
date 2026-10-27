@@ -1,0 +1,53 @@
+---
+title: "gitklar"
+subtitle: "Git und GitHub für Menschen, die mit KI arbeiten"
+toc: false
+---
+
+::: {.content-visible when-profile="cohort"}
+
+## {{< meta cohort.label >}}
+
+| | |
+|---|---|
+| **Workshop 1** | {{< meta cohort.session_1 >}} |
+| **Workshop 2** | {{< meta cohort.session_2 >}} |
+| **Vorbereitung bis** | {{< meta cohort.due_date >}} |
+| **Kursleitung** | {{< meta cohort.hosts >}} |
+
+: {tbl-colwidths="[30,70]"}
+
+Beide Workshops finden online auf Zoom statt und dauern zwei Stunden. Den Link bekommst du per E-Mail.
+
+## So läuft es
+
+1. **Einladung.** Du bekommst zwei E-Mails von GitHub: eine für die Organisation gitklar, eine für dein Übungs-Repository. Nimm beide an.
+2. **Dein Issue.** In deinem Übungs-Repository steht ein Issue mit dem Titel «Deine Vorbereitung auf gitklar». Es nennt die Schritte, die für dich gelten, in deiner Reihenfolge. Jeder Schritt verlinkt auf eine Seite hier.
+3. **Die Schritte.** Rechne mit 45 bis 60 Minuten, verteilt auf mehrere Tage, wenn du willst. Hake jeden Schritt im Issue ab.
+4. **Fertig melden.** Am Ende öffnest du ein Issue mit dem Titel «Vorbereitung abgeschlossen». Dann weiss ich, dass du bereit bist.
+
+[Zur Vorbereitung](vorbereitung/index.qmd){.btn .btn-primary}
+
+:::
+
+::: {.content-visible unless-profile="cohort"}
+
+gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die mit KI arbeiten und ihre Arbeit sichern, nachvollziehen und teilen wollen. Zwei Online-Workshops von je zwei Stunden, davor eine Vorbereitung von etwa einer Stunde, die jede Person in ihrem eigenen Tempo macht.
+
+## Was du danach kannst
+
+- Deine Dateien in einem Repository führen, mit einer Geschichte, die du zurückdrehen kannst.
+- Änderungen von dir und von einer KI auseinanderhalten, bevor du sie behältst.
+- Deine Arbeit auf GitHub sichern und anderen zeigen, wenn du willst.
+
+## Kurse
+
+| Kurs | Vorbereitung bis | Seite |
+|---|---|---|
+| AI Retreat Gruppe, Herbst 2026 | 13. November 2026 | [2026-11-airetreat](2026-11-airetreat/) |
+
+## Vorbereitung
+
+Die Anleitungen zur Vorbereitung stehen für alle Kurse an einem Ort: [Vorbereitung](vorbereitung/index.qmd). Welche Schritte für dich gelten, steht in deinem Issue.
+
+:::

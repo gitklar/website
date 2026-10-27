@@ -1,0 +1,26 @@
+---
+title: "Claude Code im Repository starten"
+subtitle: "Etwa 10 Minuten, nur wenn du Claude Code hast"
+---
+
+Claude Code kann Git für dich bedienen. Vor dem Workshop soll es dir nur zeigen, was es über deinen Ordner weiss. Geändert wird noch nichts. Im Workshop lassen wir Claude etwas ändern und schauen uns gemeinsam an, was es getan hat.
+
+## Schritte
+
+1. Öffne deinen geklonten Ordner in Claude Code.
+   - **Claude Code App:** **Open folder** oder das Ordner-Symbol, dann `Dokumente/gitrepos/setup-dein-benutzername` wählen.
+   - **Claude Code im Terminal:** `cd ~/Documents/gitrepos/setup-dein-benutzername`, dann `claude`.
+2. Schreib diese Frage:
+
+   > Was weiss Git über diesen Ordner? Zeig mir die Commits und erkläre mir in drei Sätzen, was ein Commit ist. Ändere keine Datei.
+
+3. Lies die Antwort. Claude nennt deinen Commit mit deiner Nachricht aus dem [ersten Commit](erster-commit.qmd). Schlägt Claude vor, etwas zu ändern, lehne ab.
+
+## Geschafft, wenn
+
+Claude deinen Commit mit deiner Nachricht nennt.
+
+## Hängt es?
+
+- **Claude findet keine Commits.** Der falsche Ordner ist offen. Prüfe den Pfad.
+- **Claude hat trotzdem etwas geändert.** Kein Problem. Schreib in dein Issue, was passiert ist, und lass GitHub Desktop offen. Wir schauen es im Workshop an.

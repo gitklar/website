@@ -1,0 +1,22 @@
+---
+title: "Einladung annehmen"
+subtitle: "Etwa 2 Minuten"
+---
+
+Der Kurs läuft in der GitHub-Organisation **gitklar**. Dort liegt dein Übungs-Repository, und dort arbeiten wir im Workshop. Du bekommst zwei Einladungen per E-Mail von GitHub, kurz nacheinander.
+
+## Schritte
+
+1. Öffne die E-Mail mit dem Betreff **You've been invited to join the gitklar organization** und klicke auf **Join gitklar**. Oder öffne, angemeldet, [github.com/orgs/gitklar/invitation](https://github.com/orgs/gitklar/invitation).
+2. Klicke auf **Join gitklar**.
+3. Öffne die zweite E-Mail, **larnsce invited you to setup-dein-benutzername**, und klicke auf **View invitation**, dann auf **Accept invitation**. Das ist dein Übungs-Repository. Es heisst `setup-` gefolgt von deinem Benutzernamen.
+
+Einladungen gelten sieben Tage. Ist eine abgelaufen, schreib mir, und ich schicke sie neu.
+
+## Geschafft, wenn
+
+Auf [github.com/gitklar](https://github.com/gitklar) siehst du dein Übungs-Repository `setup-dein-benutzername`, und darin ein Issue mit dem Titel «Deine Vorbereitung auf gitklar».
+
+## Wer was sieht
+
+In der Organisation sehen die anderen Teilnehmer:innen deinen Benutzernamen, und sie können dein Übungs-Repository lesen. So könnt ihr voneinander lernen und später auf der Arbeit der anderen aufbauen. Schreib nichts hinein, was nicht für sie bestimmt ist. Ändern kannst nur du dein Repository, und ich.

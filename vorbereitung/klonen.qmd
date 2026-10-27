@@ -1,0 +1,27 @@
+---
+title: "Dein Übungs-Repository klonen"
+subtitle: "Etwa 10 Minuten"
+---
+
+Klonen heisst: eine vollständige Kopie des Repositorys auf deinem Laptop anlegen, samt Verbindung zurück zu GitHub. Ab dann arbeitest du in diesem Ordner, und GitHub Desktop bringt deine Änderungen hoch.
+
+## Vorher: ein Ordner für alle Repositories
+
+Leg im Ordner **Dokumente** (macOS: Documents) einen Ordner namens **gitrepos** an. Jedes Repository, das du je klonst, kommt dort hinein. Dann findest du sie wieder.
+
+## Schritte
+
+1. Öffne GitHub Desktop. Klicke im Menü auf **File**, dann **Clone Repository**.
+2. Wähle den Reiter **GitHub.com**. In der Liste erscheint **gitklar/setup-dein-benutzername**. Klicke es an. Siehst du es nicht, klicke rechts oben auf das Aktualisieren-Symbol oder prüfe, ob du die [Einladung](einladung.qmd) angenommen hast.
+3. Bei **Local Path** klicke auf **Choose** und wähle den Ordner **Dokumente/gitrepos**.
+4. Klicke auf **Clone**.
+5. GitHub Desktop zeigt jetzt dein Repository. Oben links steht **Current repository: setup-dein-benutzername**. Klicke im Menü **Repository** auf **Show in Finder** (macOS) oder **Show in Explorer** (Windows). Du siehst zwei Dateien: `README.md` und `projekt.md`.
+
+## Geschafft, wenn
+
+Der Ordner `Dokumente/gitrepos/setup-dein-benutzername` existiert und die beiden Dateien darin liegen.
+
+## Hängt es?
+
+- **Die Liste unter GitHub.com ist leer.** Du bist in GitHub Desktop nicht angemeldet, oder die Einladung ist noch nicht angenommen.
+- **Fehlermeldung beim Klonen.** Schreib sie in dein Issue, mit Screenshot.

@@ -1,0 +1,9 @@
+# Shared settings of every cohort render. Activated together with the
+# cohort's own profile: quarto render --profile cohort,<name>
+website:
+  navbar:
+    left:
+      - href: index.qmd
+        text: Dein Kurs
+      - href: vorbereitung/index.qmd
+        text: Vorbereitung

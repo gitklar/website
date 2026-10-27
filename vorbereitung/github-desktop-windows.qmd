@@ -1,0 +1,27 @@
+---
+title: "GitHub Desktop auf Windows installieren"
+subtitle: "Etwa 10 Minuten"
+---
+
+GitHub Desktop ist ein Programm mit Knöpfen für die Dinge, die Git sonst im Terminal erledigt. Git selbst ist darin enthalten, du installierst also nur dieses eine Programm.
+
+GitHub Desktop installiert sich in deinem Benutzerordner und braucht in der Regel keine Adminrechte. Wenn dein Laptop von einer Firma verwaltet wird und die Installation blockiert, schreib das in dein Issue, bevor du Zeit verlierst.
+
+## Schritte
+
+1. Öffne [desktop.github.com](https://desktop.github.com/) und klicke auf **Download for Windows (64bit)**.
+2. Starte die heruntergeladene Datei **GitHubDesktopSetup-x64.exe**. Die Installation läuft ohne Rückfragen und öffnet das Programm am Ende von selbst.
+3. Klicke auf **Sign in to GitHub.com**. Dein Browser öffnet sich. Melde dich mit deinem GitHub-Konto an und klicke auf **Authorize desktop**. Der Browser fragt, ob er GitHub Desktop öffnen darf. Erlaube es.
+4. Zurück in GitHub Desktop siehst du **Configure Git**. Dein Name und deine E-Mail-Adresse stehen später in jedem Commit. Lass die vorgeschlagenen Werte stehen und klicke auf **Finish**.
+5. Es erscheint die Startansicht mit **Let's get started!**. Du kannst das Programm offen lassen oder schliessen. Der nächste Schritt in deinem Issue sagt, wie es weitergeht.
+
+## Geschafft, wenn
+
+Im Menü **File**, **Options**, Reiter **Accounts** steht dein GitHub-Benutzername.
+
+## Hängt es?
+
+- **Windows warnt vor einer unbekannten App.** Klicke auf **Weitere Informationen** und dann auf **Trotzdem ausführen**. Die Datei stammt von GitHub.
+- **Die Installation bricht ab.** Meist eine Firmenrichtlinie. Schreib in dein Issue, was die Meldung sagt.
+- **Der Browser kommt nicht zurück zur App.** Schliesse GitHub Desktop, starte es neu und versuche die Anmeldung noch einmal.
+- Alles andere: Kommentar in dein Issue, mit Screenshot.

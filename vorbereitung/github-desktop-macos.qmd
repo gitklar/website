@@ -1,0 +1,25 @@
+---
+title: "GitHub Desktop auf macOS installieren"
+subtitle: "Etwa 10 Minuten"
+---
+
+GitHub Desktop ist ein Programm mit Knöpfen für die Dinge, die Git sonst im Terminal erledigt. Git selbst ist darin enthalten, du installierst also nur dieses eine Programm.
+
+## Schritte
+
+1. Öffne [desktop.github.com](https://desktop.github.com/) und klicke auf **Download for macOS**. Die Seite erkennt, ob dein Mac einen Apple- oder einen Intel-Chip hat.
+2. Öffne die heruntergeladene ZIP-Datei. Es erscheint das Programm **GitHub Desktop**. Zieh es in den Ordner **Programme**.
+3. Starte GitHub Desktop aus dem Ordner Programme. macOS fragt, ob du ein aus dem Internet geladenes Programm öffnen willst. Klicke auf **Öffnen**.
+4. Klicke auf **Sign in to GitHub.com**. Dein Browser öffnet sich. Melde dich mit deinem GitHub-Konto an und klicke auf **Authorize desktop**. Der Browser fragt, ob er GitHub Desktop öffnen darf. Erlaube es.
+5. Zurück in GitHub Desktop siehst du **Configure Git**. Dein Name und deine E-Mail-Adresse stehen später in jedem Commit. Lass die vorgeschlagenen Werte stehen und klicke auf **Finish**.
+6. Es erscheint die Startansicht mit **Let's get started!**. Du kannst das Programm offen lassen oder schliessen. Der nächste Schritt in deinem Issue sagt, wie es weitergeht.
+
+## Geschafft, wenn
+
+Im Menü **GitHub Desktop**, **Settings**, Reiter **Accounts** steht dein GitHub-Benutzername.
+
+## Hängt es?
+
+- **Das Programm lässt sich nicht öffnen, weil es «von einem nicht verifizierten Entwickler» stammt.** Rechtsklick auf GitHub Desktop im Ordner Programme, dann **Öffnen**, dann noch einmal **Öffnen**.
+- **Der Browser kommt nicht zurück zur App.** Schliesse GitHub Desktop, starte es neu und versuche die Anmeldung noch einmal.
+- Alles andere: Kommentar in dein Issue, mit Screenshot.

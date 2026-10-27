@@ -1,0 +1,23 @@
+---
+title: "Fertig melden"
+subtitle: "Etwa 2 Minuten"
+---
+
+Dein Zeichen, dass dein Laptop bereit ist, ist ein neues Issue. Ich sehe es und weiss, dass ich für dich nichts mehr prüfen muss.
+
+## Schritte
+
+1. Prüfe, ob in deinem Issue «Deine Vorbereitung auf gitklar» alle Kästchen abgehakt sind.
+2. Öffne im Browser dein Übungs-Repository, Reiter **Issues**, Knopf **New issue**.
+3. Titel: **Vorbereitung abgeschlossen**
+4. Text: Was hat gehakt, wie lange hast du gebraucht, was war unklar. Zwei Sätze reichen. Das hilft der nächsten Gruppe.
+5. Rechts bei **Assignees** wähle **larnsce**.
+6. Klicke auf **Create**.
+
+## Geschafft, wenn
+
+Das Issue offen ist und mir zugewiesen. Ich antworte darin, meist am selben Tag.
+
+## Bis zum Workshop
+
+Nichts weiter. Den Zoom-Link bekommst du per E-Mail. Lass GitHub Desktop installiert und den Ordner, wo er ist.

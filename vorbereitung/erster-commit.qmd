@@ -1,0 +1,29 @@
+---
+title: "Erster Commit und Push"
+subtitle: "Etwa 15 Minuten"
+---
+
+Ein Commit ist ein Schnappschuss deiner Dateien mit einer kurzen Nachricht dazu. Ein Push bringt deine Commits auf GitHub. Beides machst du jetzt einmal von Hand, damit du im Workshop weisst, was eine KI tut, wenn sie es für dich macht.
+
+## Schritte
+
+1. Öffne die Datei `projekt.md` aus deinem geklonten Ordner. In GitHub Desktop: Menü **Repository**, **Show in Finder** oder **Show in Explorer**, dann Rechtsklick auf `projekt.md`, **Öffnen mit**, und ein Textprogramm wählen: **TextEdit** auf macOS, **Editor** auf Windows. Zeigt TextEdit Formatierungsknöpfe, wähle im Menü **Format** den Punkt **In reinen Text umwandeln**.
+2. Beantworte die drei Fragen in der Datei, ein bis zwei Sätze pro Antwort. Lass die Zeilen mit `#` stehen, das sind die Überschriften. Speichere die Datei.
+3. Wechsle zu GitHub Desktop. Links steht jetzt `projekt.md` mit einem Häkchen, rechts siehst du deine Änderung: neue Zeilen grün, entfernte rot.
+4. Unten links, im Feld **Summary**, schreibst du eine kurze Nachricht, zum Beispiel `Mein Projekt beschrieben`. Klicke auf **Commit to main**.
+5. Oben erscheint **Push origin**. Klicke darauf. Nach ein paar Sekunden ist der Knopf wieder ruhig.
+6. Öffne im Browser [github.com/gitklar](https://github.com/gitklar), dann dein Repository, dann `projekt.md`. Dein Text steht dort.
+
+## Geschafft, wenn
+
+Dein Text in `projekt.md` auf GitHub sichtbar ist und oben im Repository **2 commits** oder mehr steht.
+
+## Was gerade passiert ist
+
+Git hat deine Änderung als Commit mit deiner Nachricht festgehalten, auf deinem Laptop. Der Push hat den Commit nach GitHub kopiert. Beides kannst du beliebig oft wiederholen. Jede Fassung bleibt erhalten, und du kannst zu jeder zurück.
+
+## Hängt es?
+
+- **Links in GitHub Desktop erscheint keine Änderung.** Die Datei ist nicht gespeichert, oder du hast eine Kopie ausserhalb des Ordners bearbeitet. Prüfe den Pfad: `Dokumente/gitrepos/setup-dein-benutzername/projekt.md`.
+- **Push origin schlägt fehl.** Meist ist die Anmeldung in GitHub Desktop abgelaufen. **Settings** oder **Options**, **Accounts**, neu anmelden.
+- Alles andere: Kommentar in dein Issue, mit Screenshot.
