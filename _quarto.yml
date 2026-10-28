@@ -45,6 +45,9 @@ website:
           contents:
             - vorbereitung/github-desktop-macos.qmd
             - vorbereitung/github-desktop-windows.qmd
+        - section: "Dein Konto"
+          contents:
+            - vorbereitung/konto.qmd
         - section: "Für alle"
           contents:
             - vorbereitung/einladung.qmd
