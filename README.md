@@ -8,6 +8,12 @@ The shared pages under `vorbereitung/` are the manual. A cohort is a Quarto prof
 
 Cohort-specific text lives in three places only: the profile values (`{{< meta cohort.label >}}` and the like), blocks marked `when-profile="cohort"` on the front page, and the profile file itself. Shared pages are never edited for one cohort.
 
+## Reference pages and the glossary
+
+`werkzeuge.qmd` (which tool does what), `glossar.qmd` and `begriffe.qmd` (the terms side by side in English and German) form the sidebar section "Nachschlagen". The glossary and the table are generated at render time from one file, `begriffe.yml`, by the shortcodes in `_extensions/ghe/gl` (copied from agentsforsci-ghe/website and adapted): `{{< glossar liste >}}` renders the entries, `{{< glossar tabelle >}}` the table, and `{{< gl commit >}}` marks a term on any page with a hover popover and a link to its entry. Edit `begriffe.yml` only; the fields are documented at the top of the file. Pandoc parses the file, so no extra tool is needed in the Action.
+
+The course keeps the English terms of github.com and GitHub Desktop, which have no German interface. German on a participant's screen comes from browser translation or from the operating system's own dialogs; `begriffe.qmd` explains both and shows how to switch translation off for github.com.
+
 ## Render locally
 
 ```
@@ -34,4 +40,4 @@ gitklar.ch, decision 0004 in `gitklar-dev/admin`. At the registrar: four A recor
 
 ## Not yet
 
-Screenshots. The pages describe the buttons by their English labels, as GitHub Desktop shows them.
+Screenshots. The pages describe the buttons by their English labels, as GitHub Desktop shows them. The `wo` field of `begriffe.yml` names the screen each label sits on, so the screenshots can be keyed to it later.

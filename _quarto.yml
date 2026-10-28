@@ -28,6 +28,8 @@ website:
         text: Start
       - href: vorbereitung/index.qmd
         text: Vorbereitung
+      - href: werkzeuge.qmd
+        text: Nachschlagen
     right:
       - icon: github
         href: https://github.com/gitklar
@@ -53,6 +55,11 @@ website:
             - vorbereitung/claude-code.qmd
             - vorbereitung/editor.qmd
         - vorbereitung/fertig.qmd
+        - section: "Nachschlagen"
+          contents:
+            - werkzeuge.qmd
+            - glossar.qmd
+            - begriffe.qmd
   page-footer:
     left: "gitklar von bitz. Lars Schöbitz GmbH, Zürich. Kontakt: lars@lse.de"
     right: "[Quellcode](https://github.com/gitklar/website)"
@@ -69,6 +76,7 @@ cohort:
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     toc-title: "Auf dieser Seite"
     link-external-newwindow: true

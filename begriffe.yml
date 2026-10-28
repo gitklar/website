@@ -1,0 +1,321 @@
+# Die Begriffe des Kurses, eine Datei für drei Orte: das Glossar (glossar.qmd,
+# {{< glossar liste >}}), die Tabelle Englisch und Deutsch (begriffe.qmd,
+# {{< glossar tabelle >}}) und die Erklärung beim Darüberfahren auf jeder Seite
+# ({{< gl commit >}}). Die Shortcodes liegen in _extensions/ghe/gl.
+#
+# Felder je Begriff:
+#   term        englisches Stichwort, so wie es auf dem Bildschirm steht
+#   aliases     weitere Schreibweisen, die {{< gl ... >}} auf den Begriff führen
+#   gruppe      Abschnitt auf den Seiten: Git und GitHub, Knöpfe und Fenster, Werkzeuge
+#   uebersetzt  so kann eine Browser-Übersetzung oder ein deutsches System es zeigen
+#   kurz        Bedeutung in wenigen Worten, für die Tabelle
+#   bedeutung   die Erklärung in Alltagssprache, für Glossar und Popover
+#   wo          wo der Begriff im Kurs auf dem Bildschirm vorkommt
+#   befehl      der Befehl im Terminal, der dahintersteckt
+#   seite       die Seite der Vorbereitung, die den Schritt erklärt
+#
+# Alle Werte in Anführungszeichen. Markdown darin ist erlaubt (`code`, **fett**).
+
+begriffe:
+
+  # Git und GitHub ----------------------------------------------------------
+
+  - term: "Branch"
+    aliases: ["Branches", "Zweig"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Zweig», «Filiale», manchmal «Branch»"
+    kurz: "eigene Arbeitslinie im Repository"
+    bedeutung: "Ein Branch ist eine eigene Arbeitslinie innerhalb eines Repositorys. Du legst einen Branch an, wenn du Dateien ändern willst, ohne die Hauptfassung des Projekts anzufassen. Sind die Änderungen geprüft, führst du sie in die Hauptfassung zurück. In der Vorbereitung arbeitest du nur auf `main`."
+    wo: "GitHub Desktop, Knopf **Current branch** oben in der Mitte; auf github.com die Auswahl links über der Dateiliste"
+    befehl: "`git branch`, `git switch`"
+
+  - term: "Clone"
+    aliases: ["klonen", "Clone repository"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Klonen», «Repository klonen»"
+    kurz: "vollständige Kopie auf deinem Laptop anlegen"
+    bedeutung: "Klonen heisst, eine vollständige Kopie eines Repositorys von GitHub auf deinen Laptop zu holen, samt der Geschichte aller Änderungen und der Verbindung zurück zu GitHub. Du klonst einmal, danach arbeitest du in diesem Ordner."
+    wo: "GitHub Desktop, Menü **File**, **Clone Repository**; auf github.com der grüne Knopf **Code**"
+    befehl: "`git clone`"
+    seite: "[Dein Übungs-Repository klonen](vorbereitung/klonen.html)"
+
+  - term: "Commit"
+    aliases: ["Commits", "committen"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Commit», «Festschreiben», «Übernehmen», «Bestätigen»"
+    kurz: "gespeicherte Fassung deiner Dateien mit einer Nachricht"
+    bedeutung: "Ein Commit ist eine gespeicherte Fassung deines Projekts. Beim Commit hält Git den genauen Inhalt deiner Dateien in diesem Moment fest, zusammen mit einer Nachricht, die sagt, was du geändert hast und warum. Du kannst jederzeit zu jedem früheren Commit zurück."
+    wo: "GitHub Desktop, Knopf **Commit to main** unten links"
+    befehl: "`git commit -m \"Nachricht\"`"
+    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+
+  - term: "Commit message"
+    aliases: ["Commit-Nachricht", "Summary"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Zusammenfassung» (Summary) und «Beschreibung» (Description)"
+    kurz: "die Nachricht zum Commit"
+    bedeutung: "Die Commit-Nachricht ist die kurze Notiz zu einem Commit. Sie sagt dir selbst und anderen später, was du geändert hast und warum. In GitHub Desktop schreibst du sie ins Feld **Summary**. Das Feld **Description** darunter ist für längere Erklärungen und darf leer bleiben."
+    wo: "GitHub Desktop, Felder **Summary** und **Description** unten links"
+    befehl: "der Text hinter `-m`"
+
+  - term: "Diff"
+    aliases: ["Diffs"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Diff», «Unterschied»"
+    kurz: "was sich Zeile für Zeile geändert hat"
+    bedeutung: "Ein Diff zeigt, was sich zwischen zwei Fassungen einer Datei geändert hat, Zeile für Zeile. Entfernte Zeilen sind rot und tragen ein Minus, neue Zeilen sind grün und tragen ein Plus. Im Diff prüfst du, was du oder eine KI geändert hat, bevor du es behältst."
+    wo: "GitHub Desktop, rechte Hälfte im Reiter **Changes**; auf github.com der Reiter **Files changed** eines Pull requests"
+    befehl: "`git diff`"
+
+  - term: "Fork"
+    aliases: ["Forks", "forken"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Gabel», «Abspaltung», «Fork»"
+    kurz: "eigene Kopie eines fremden Repositorys in deinem Konto"
+    bedeutung: "Ein Fork ist eine eigene Kopie des Repositorys einer anderen Person, gespeichert in deinem GitHub-Konto. Du kannst deinen Fork frei ändern und deine Änderungen dem Original über einen Pull request anbieten. In der Organisation gitklar kannst du die Übungs-Repositories der anderen forken."
+    wo: "github.com, Knopf **Fork** rechts oben in einem Repository"
+
+  - term: "History"
+    aliases: ["Geschichte", "Verlauf"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Verlauf», «Geschichte», «Historie»"
+    kurz: "alle Commits der Reihe nach"
+    bedeutung: "Die History ist die Liste aller Commits eines Repositorys, vom ersten bis zum neuesten. Sie zeigt, wer wann was geändert hat und warum. Jede Kopie des Repositorys enthält die ganze History. Deshalb kannst du jede frühere Fassung wiederherstellen."
+    wo: "GitHub Desktop, Reiter **History** links; auf github.com der Link **commits** oben in der Dateiliste"
+    befehl: "`git log`"
+
+  - term: "Issue"
+    aliases: ["Issues"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Problem», «Ausgabe», «Anliegen», «Ticket»"
+    kurz: "Aufgabe, Frage oder Fehler, festgehalten im Repository"
+    bedeutung: "Ein Issue ist ein Eintrag auf der GitHub-Seite eines Repositorys für eine Aufgabe, eine Frage oder einen Fehler. Jedes Issue hat eine Nummer, kann einer Person zugewiesen werden und bleibt offen, bis jemand es schliesst. Dein Fahrplan für die Vorbereitung ist ein Issue, und am Ende öffnest du selbst eines."
+    wo: "github.com, Reiter **Issues**, Knopf **New issue**"
+    seite: "[Fertig melden](vorbereitung/fertig.html)"
+
+  - term: "main"
+    aliases: ["Hauptzweig", "default branch"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "bleibt meist «main», selten «Haupt»"
+    kurz: "der Hauptzweig eines Repositorys"
+    bedeutung: "`main` ist der Hauptzweig eines Repositorys, die Fassung, die immer funktionieren soll. In der Vorbereitung committest du direkt auf `main`. Im Kurs lernst du, Änderungen auf einem eigenen Branch zu machen und über einen Pull request nach `main` zu bringen. Ältere Projekte nennen diesen Branch `master`."
+    wo: "GitHub Desktop, Knopf **Commit to main**; **Current branch** zeigt **main**"
+
+  - term: "Merge"
+    aliases: ["mergen", "Merges"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Zusammenführen», «Verschmelzen», «Einbinden»"
+    kurz: "Änderungen eines Branches in einen anderen übernehmen"
+    bedeutung: "Mergen heisst, die Änderungen eines Branches in einen anderen zu übernehmen, so dass ein Branch danach die Arbeit beider enthält. Im Kurs passiert der Merge, wenn jemand einen Pull request auf GitHub annimmt."
+    wo: "github.com, Knopf **Merge pull request**"
+    befehl: "`git merge`"
+
+  - term: "Merge conflict"
+    aliases: ["Konflikt", "Merge-Konflikt"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Zusammenführungskonflikt», «Merge-Konflikt»"
+    kurz: "zwei Fassungen derselben Zeilen, Git fragt dich"
+    bedeutung: "Ein Merge conflict entsteht, wenn zwei Branches dieselben Zeilen derselben Datei verschieden geändert haben und Git nicht wissen kann, welche Fassung du willst. Git hält an, markiert beide Fassungen in der Datei und wartet, bis du dich entscheidest. Das ist kein Fehler. Git rät nur nicht."
+    wo: "GitHub Desktop, Hinweisfenster beim Mergen; auf github.com der Knopf **Resolve conflicts**"
+
+  - term: "Organization"
+    aliases: ["Organisation", "Organizations"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Organisation»"
+    kurz: "gemeinsamer Bereich auf GitHub, hier gitklar"
+    bedeutung: "Eine Organization ist ein gemeinsamer Bereich auf GitHub, in dem Repositories mehreren Personen gehören. gitklar ist eine. Deine Einladung bringt dich hinein, und dein Übungs-Repository liegt dort."
+    wo: "github.com/gitklar; die Einladung kommt per E-Mail mit dem Knopf **Join gitklar**"
+    seite: "[Einladung annehmen](vorbereitung/einladung.html)"
+
+  - term: "origin"
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Ursprung», «Herkunft»"
+    kurz: "der Name der Kopie auf GitHub"
+    bedeutung: "`origin` ist der Name, den dein Repository auf dem Laptop für seine Kopie auf GitHub benutzt, ein Lesezeichen statt der langen Adresse. Beim Klonen vergibt Git den Namen von selbst. Deshalb heissen die Knöpfe **Push origin** und **Fetch origin**."
+    wo: "GitHub Desktop, in **Push origin** und **Fetch origin**"
+    befehl: "`git remote -v`"
+
+  - term: "Pull"
+    aliases: ["Pull origin", "Fetch", "Fetch origin"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Ziehen», «Abrufen» (Fetch), «Pull»"
+    kurz: "neue Commits von GitHub auf deinen Laptop holen"
+    bedeutung: "Pull holt neue Commits von GitHub in deine Kopie auf dem Laptop. GitHub Desktop macht es in zwei Schritten: **Fetch origin** schaut nach, ob es auf GitHub Neues gibt, und wird zu **Pull origin**, wenn ja. Arbeitest du allein an einem Repository, gibt es selten etwas zu holen."
+    wo: "GitHub Desktop, Knopf **Fetch origin** oder **Pull origin** oben rechts"
+    befehl: "`git fetch`, `git pull`"
+
+  - term: "Pull request"
+    aliases: ["Pull requests", "PR"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Pull-Anfrage», «Pull-Request», «Zugriffsanfrage», «Abrufanforderung»"
+    kurz: "die Bitte, einen Branch zu prüfen und zu übernehmen"
+    bedeutung: "Ein Pull request ist die Bitte auf GitHub, die Änderungen eines Branches zu prüfen und in einen anderen Branch zu übernehmen, meist nach `main`. Die prüfende Person liest das Diff, kommentiert und merged am Ende. Mit Pull hat er trotz des Namens nichts zu tun: Pull ist ein Datentransfer, ein Pull request ist ein Gespräch, und es gibt ihn nur auf GitHub, nicht in Git."
+    wo: "github.com, Reiter **Pull requests**, Knopf **Compare & pull request**; GitHub Desktop, Menü **Branch**, **Create pull request**"
+
+  - term: "Push"
+    aliases: ["Push origin", "pushen"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Pushen», «Drücken», «Schieben», «Hochladen»"
+    kurz: "deine Commits nach GitHub kopieren"
+    bedeutung: "Push kopiert deine Commits vom Laptop nach GitHub. Bis du pushst, sieht niemand sonst deine Commits, und GitHub hat keine Sicherung davon. Deshalb gehören Commit und Push zusammen: Commit sichert auf dem Laptop, Push sichert auf GitHub."
+    wo: "GitHub Desktop, Knopf **Push origin** oben rechts"
+    befehl: "`git push`"
+    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+
+  - term: "README"
+    gruppe: "Git und GitHub"
+    uebersetzt: "«LIESMICH», «README»"
+    kurz: "die Startseite eines Repositorys"
+    bedeutung: "Die README ist eine Textdatei, `README.md`, die erklärt, was ein Repository enthält und wie man es benutzt. GitHub zeigt sie unter der Dateiliste an. Deshalb ist sie das Erste, was Besucher:innen lesen."
+    wo: "github.com, unter der Dateiliste eines Repositorys; in deinem Ordner als Datei `README.md`"
+
+  - term: "Repository"
+    aliases: ["Repositories", "Repositorys", "Repo"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "bleibt meist «Repository», manchmal «Ablage», «Aufbewahrungsort» oder «Speicher»"
+    kurz: "ein Projektordner mit seiner ganzen Geschichte"
+    bedeutung: "Ein Repository ist ein Ordner, dessen Geschichte Git festhält: alle Dateien und jeder Commit, der je gemacht wurde. Meist ist ein Projekt ein Repository. Dein Übungs-Repository liegt zweimal vor, einmal auf deinem Laptop und einmal auf GitHub."
+    wo: "GitHub Desktop, oben links **Current repository**; auf github.com die Seite eines Repositorys, Reiter **Code**"
+
+  - term: "Stage"
+    aliases: ["staging", "staged", "stagen"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Inszenieren», «Bereitstellen», «Vormerken»"
+    kurz: "eine Datei für den nächsten Commit vormerken"
+    bedeutung: "Vor dem Commit wählst du, welche geänderten Dateien hineinkommen. Das heisst stagen. In GitHub Desktop ist das Häkchen vor jeder Datei im Reiter **Changes**: Häkchen gesetzt, die Datei kommt in den Commit. Im Terminal ist es ein eigener Befehl."
+    wo: "GitHub Desktop, Häkchen vor den Dateien im Reiter **Changes**"
+    befehl: "`git add`"
+
+  - term: "Version control"
+    aliases: ["Versionskontrolle", "Versionsverwaltung"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Versionskontrolle», «Versionsverwaltung»"
+    kurz: "Fassungen festhalten und zurückholen können"
+    bedeutung: "Versionskontrolle heisst, die Fassungen deiner Dateien so festzuhalten, dass du jede frühere Fassung wiederfindest und siehst, was sich zwischen zwei Fassungen geändert hat. Git ist ein Programm dafür."
+
+  # Knöpfe und Fenster -------------------------------------------------------
+
+  - term: "Authorize"
+    aliases: ["Authorize desktop", "autorisieren"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Autorisieren», «Genehmigen»"
+    kurz: "GitHub Desktop den Zugriff auf dein Konto erlauben"
+    bedeutung: "Beim Anmelden in GitHub Desktop öffnet sich der Browser, und GitHub fragt, ob das Programm in deinem Namen arbeiten darf. **Authorize desktop** sagt ja. Danach kommt der Browser zurück zur App."
+    wo: "Browser, während der Anmeldung in GitHub Desktop"
+    seite: "[GitHub Desktop auf macOS](vorbereitung/github-desktop-macos.html) oder [auf Windows](vorbereitung/github-desktop-windows.html)"
+
+  - term: "Changes"
+    aliases: ["Änderungen"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Änderungen»"
+    kurz: "was sich seit dem letzten Commit geändert hat"
+    bedeutung: "Der Reiter **Changes** in GitHub Desktop zeigt links jede Datei, die sich seit dem letzten Commit geändert hat, und rechts das Diff der angeklickten Datei. Ist die Liste leer, gibt es nichts zu committen."
+    wo: "GitHub Desktop, Reiter **Changes** oben links"
+    befehl: "`git status`"
+
+  - term: "Code"
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Code»"
+    kurz: "der grüne Knopf mit der Adresse zum Klonen"
+    bedeutung: "Der grüne Knopf **Code** auf der GitHub-Seite eines Repositorys öffnet die Adresse zum Klonen und den Punkt **Open with GitHub Desktop**. Der Reiter **Code** daneben ist die Dateiliste."
+    wo: "github.com, Repository, rechts über der Dateiliste"
+
+  - term: "Current repository"
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Aktuelles Repository»"
+    kurz: "das Repository, das GitHub Desktop gerade zeigt"
+    bedeutung: "GitHub Desktop zeigt immer ein Repository auf einmal. Welches, steht oben links unter **Current repository**. Ein Klick darauf öffnet die Liste aller Repositories auf deinem Laptop, die GitHub Desktop kennt."
+    wo: "GitHub Desktop, oben links"
+
+  - term: "Local path"
+    aliases: ["Local Path"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Lokaler Pfad»"
+    kurz: "der Ordner auf deinem Laptop"
+    bedeutung: "**Local Path** im Klon-Fenster ist der Ordner auf deinem Laptop, in den GitHub Desktop das Repository legt. Im Kurs ist das **Dokumente/gitrepos**. Der Knopf **Choose** öffnet das Ordnerfenster deines Systems, und das spricht Deutsch, auch wenn GitHub Desktop Englisch spricht."
+    wo: "GitHub Desktop, Fenster **Clone Repository**"
+    seite: "[Dein Übungs-Repository klonen](vorbereitung/klonen.html)"
+
+  - term: "Open in Terminal"
+    aliases: ["Im Terminal öffnen"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Im Terminal öffnen», auf Windows «In der Eingabeaufforderung öffnen»"
+    kurz: "die Kommandozeile im Repository öffnen"
+    bedeutung: "**Open in Terminal** im Menü **Repository** öffnet ein Terminalfenster, das schon in deinem Repository steht. Dort tippst du Befehle wie `git status`. Im Workshop 1 machen wir das gemeinsam. In der Vorbereitung brauchst du es nicht."
+    wo: "GitHub Desktop, Menü **Repository**"
+
+  - term: "Settings"
+    aliases: ["Options", "Preferences", "Einstellungen"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Einstellungen», «Optionen»"
+    kurz: "die Einstellungen von GitHub Desktop"
+    bedeutung: "Die Einstellungen von GitHub Desktop heissen auf macOS **Settings**, im Menü **GitHub Desktop**, und auf Windows **Options**, im Menü **File**. Dort steht unter **Accounts** deine Anmeldung und unter **Integrations** der Editor, den **Open in** benutzt."
+    wo: "GitHub Desktop, Menü **GitHub Desktop** (macOS) oder **File** (Windows)"
+
+  - term: "Show in Finder"
+    aliases: ["Show in Explorer", "Im Finder anzeigen", "Im Explorer anzeigen"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Im Finder anzeigen», «Im Explorer anzeigen»"
+    kurz: "den Ordner des Repositorys im Dateifenster öffnen"
+    bedeutung: "**Show in Finder** auf macOS und **Show in Explorer** auf Windows öffnen den Ordner deines Repositorys im Dateifenster deines Systems. So findest du die Dateien, um sie mit einem Textprogramm zu öffnen."
+    wo: "GitHub Desktop, Menü **Repository**"
+    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+
+  - term: "Sign in"
+    aliases: ["Sign in to GitHub.com", "anmelden"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Anmelden», «Einloggen»"
+    kurz: "GitHub Desktop mit deinem GitHub-Konto verbinden"
+    bedeutung: "**Sign in to GitHub.com** verbindet GitHub Desktop mit deinem Konto. Die Anmeldung läuft im Browser, mit Benutzername und Passwort von github.com, und endet mit **Authorize desktop**."
+    wo: "GitHub Desktop, beim ersten Start oder unter **Settings**, **Accounts**"
+
+  - term: "Source Control"
+    aliases: ["Quellcodeverwaltung"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Quellcodeverwaltung»"
+    kurz: "die Git-Ansicht in VS Code und Positron"
+    bedeutung: "**Source Control** ist die Git-Ansicht in Editoren wie VS Code und Positron: eine Seitenleiste mit den geänderten Dateien, einem Feld für die Commit-Nachricht und Knöpfen für Commit und Push. Jeder Knopf dort ist derselbe Git-Befehl wie in GitHub Desktop."
+    wo: "VS Code oder Positron, Seitenleiste links, das Symbol mit den drei verbundenen Punkten"
+    seite: "[Editor mit dem Repository verbinden](vorbereitung/editor.html)"
+
+  # Werkzeuge ---------------------------------------------------------------
+
+  - term: "Claude Code"
+    gruppe: "Werkzeuge"
+    kurz: "KI-Agent, der Dateien liest, ändert und Git bedient"
+    bedeutung: "Claude Code ist ein Programm von Anthropic, das in deinem Ordner arbeitet: Es liest Dateien, ändert sie, führt Befehle aus und bedient Git, alles auf eine Anweisung in Alltagssprache hin. Es gibt es als Teil der Claude-App und im Terminal. Im Kurs zeige ich es in Screencasts. Gelehrt wird es nicht."
+    wo: "Claude-App, Reiter **Code**; oder im Terminal mit `claude`"
+    seite: "[Claude Code im Repository starten](vorbereitung/claude-code.html)"
+
+  - term: "Editor"
+    aliases: ["Editoren"]
+    gruppe: "Werkzeuge"
+    uebersetzt: "«Editor»; auf Windows heisst auch das Textprogramm des Systems Editor"
+    kurz: "Programm zum Schreiben von Text und Code"
+    bedeutung: "Ein Editor ist ein Programm, in dem du Text und Code schreibst, etwa VS Code oder Positron. Die meisten Editoren haben eine eigene Git-Ansicht. Im Kurs brauchst du keinen. Wer einen hat, verbindet ihn mit demselben Ordner."
+    seite: "[Editor mit dem Repository verbinden](vorbereitung/editor.html)"
+
+  - term: "Git"
+    gruppe: "Werkzeuge"
+    kurz: "das Programm auf deinem Laptop, das Fassungen festhält"
+    bedeutung: "Git ist ein Programm auf deinem Laptop, das Änderungen an deinen Dateien festhält. Es speichert die Fassungen, die du ihm sagst, zeigt dir, was sich zwischen zwei Fassungen geändert hat, und bringt dich zu jeder früheren Fassung zurück. Git braucht kein Internet. GitHub Desktop bringt Git mit. Deshalb installierst du es nicht selbst."
+    wo: "unsichtbar hinter jedem Knopf von GitHub Desktop"
+
+  - term: "GitHub"
+    gruppe: "Werkzeuge"
+    kurz: "die Website, die eine Kopie deines Repositorys hält"
+    bedeutung: "GitHub ist eine Website, github.com, die eine Kopie deines Repositorys im Internet hält, damit andere dein Projekt sehen, herunterladen und mit dir daran arbeiten können. GitHub fügt hinzu, was Git nicht hat: Issues, Pull requests, Organisationen. GitHub gehört Microsoft. Git gehört niemandem."
+    wo: "im Browser"
+
+  - term: "GitHub Desktop"
+    gruppe: "Werkzeuge"
+    kurz: "das Programm mit den Knöpfen für Git"
+    bedeutung: "GitHub Desktop ist ein Programm von GitHub für macOS und Windows, das die täglichen Git-Schritte als Knöpfe anbietet: klonen, Änderungen sehen, committen, pushen, Branches wechseln. Jeder Knopf ist ein Git-Befehl. Es bringt Git mit und spricht nur Englisch."
+    seite: "[GitHub Desktop auf macOS](vorbereitung/github-desktop-macos.html) oder [auf Windows](vorbereitung/github-desktop-windows.html)"
+
+  - term: "Terminal"
+    aliases: ["Kommandozeile", "Eingabeaufforderung"]
+    gruppe: "Werkzeuge"
+    uebersetzt: "«Terminal» auf macOS; «Eingabeaufforderung» oder «PowerShell» auf Windows"
+    kurz: "das Fenster, in dem du Befehle tippst"
+    bedeutung: "Das Terminal ist ein Fenster, in dem du Befehle als Text tippst, statt Knöpfe zu klicken. Jeder Knopf in GitHub Desktop hat dort einen Befehl, etwa `git push`. Es sieht karg aus und verzeiht keine Tippfehler. Claude Code lebt dort, und mit ihm wird aus dem Befehl wieder ein Satz. In der Vorbereitung brauchst du es nicht. Im Workshop 1 öffnen wir es einmal zusammen."

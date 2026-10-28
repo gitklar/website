@@ -1,0 +1,12 @@
+/* gitklar: site styles */
+
+/* The quieter block under a glossary entry: where the term appears, the
+   command underneath, the page that explains the step. */
+.gl-wo {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.25rem;
+}
+.gl-wo p:last-child {
+  margin-bottom: 0;
+}

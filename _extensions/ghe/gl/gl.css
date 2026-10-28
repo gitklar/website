@@ -1,0 +1,26 @@
+/* Glossary terms: a dotted underline in the text colour. Hover or focus
+   opens the popover with the plain definition, a click opens the entry. */
+a.gl {
+  color: inherit;
+  text-decoration: underline dotted currentColor;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+a.gl:hover, a.gl:focus {
+  color: inherit;
+  text-decoration: underline solid currentColor;
+  text-decoration-thickness: 2px;
+}
+.popover.gl-popover {
+  max-width: 22rem;
+  font-family: inherit;
+}
+.popover.gl-popover .popover-header {
+  font-size: 0.95rem;
+}
+.popover.gl-popover .popover-body {
+  font-size: 0.9rem;
+}
+.popover.gl-popover .popover-body p:last-child {
+  margin-bottom: 0;
+}

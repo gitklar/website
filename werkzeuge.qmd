@@ -1,0 +1,74 @@
+---
+title: "Welches Werkzeug macht was"
+subtitle: "Git, GitHub, GitHub Desktop, Terminal und Claude Code auseinanderhalten"
+---
+
+Im Kurs sind mehrere Programme gleichzeitig auf deinem Bildschirm, und ihre Namen klingen ähnlich. Es ist normal, den Überblick zu verlieren, welches gerade was tut. Diese Seite ist die Landkarte: was jedes Werkzeug ist, und welches Werkzeug hinter jedem Knopf steckt, den du im Kurs drückst.
+
+## Die Werkzeuge in je einem Satz
+
+**{{< gl Git >}}** ist ein Programm auf deinem Laptop, das die Geschichte deiner Dateien festhält: jeden {{< gl Commit >}}, jeden {{< gl Branch >}}, jeden {{< gl Merge >}}. Git braucht kein Internet.
+
+**{{< gl GitHub >}}** ist eine Website, github.com, die eine Kopie deines {{< gl Repository display="Repositorys" >}} im Internet hält. Alles, was andere Menschen betrifft, passiert dort: {{< gl "Pull request" display="Pull requests" >}}, Reviews, {{< gl Issue display="Issues" >}}, Einladungen. GitHub baut auf Git auf, ist aber ein eigenes Produkt einer eigenen Firma.
+
+**{{< gl "GitHub Desktop" >}}** ist das Programm mit den Knöpfen. Es tut nichts selbst: Jeder Knopf lässt Git einen Befehl ausführen. Klickst du **Push origin**, läuft `git push`. Ein Knopf ist ein Befehl.
+
+**Das {{< gl Terminal >}}** ist das Fenster, in dem du dieselben Befehle als Text tippst. Es ist karg und verzeiht keine Tippfehler. Im Workshop 1 öffnen wir es einmal, damit du gesehen hast, was GitHub Desktop vor dir verbirgt.
+
+**{{< gl "Claude Code" >}}** ist der KI-Agent. Er liest und ändert Dateien in deinem Ordner, führt Befehle aus und bedient Git, auf einen Satz in Alltagssprache hin. Im Terminal wird aus `git commit -m "..."` wieder «Sichere meine Änderung». Dieser Kurs lehrt Claude Code nicht. Du siehst es in Screencasts.
+
+## Eine Faustregel
+
+- Hält es die **Geschichte deiner Dateien** fest oder bewegt sie, ist es Git.
+- Betrifft es **eine andere Person oder den Browser**, ist es GitHub.
+- Ist es **ein Knopf**, ist es GitHub Desktop, das Git für dich bedient.
+- Ist es **ein getippter Befehl**, ist es das Terminal, das Git direkt bedient.
+- Ist es **ein Satz in Alltagssprache**, ist es Claude Code, das für dich tippt.
+
+## Jeder Schritt, zugeordnet
+
+| Was du tust | Wo du klickst | Befehl darunter | Werkzeug |
+|---|---|---|---|
+| Repository klonen | GitHub Desktop: **File**, **Clone Repository** | `git clone` | Git |
+| Änderungen sehen | GitHub Desktop: Reiter **Changes** | `git status`, `git diff` | Git |
+| Datei für den Commit vormerken | GitHub Desktop: Häkchen vor der Datei | `git add` | Git |
+| Commit | GitHub Desktop: **Summary**, dann **Commit to main** | `git commit -m "Nachricht"` | Git |
+| Push | GitHub Desktop: **Push origin** | `git push` | Git |
+| Neues von GitHub holen | GitHub Desktop: **Fetch origin**, dann **Pull origin** | `git fetch`, `git pull` | Git |
+| Geschichte ansehen | GitHub Desktop: Reiter **History** | `git log` | Git |
+| Branch anlegen | GitHub Desktop: **Current branch**, **New branch** | `git switch -c name` | Git |
+| Branch wechseln | GitHub Desktop: **Current branch** | `git switch name` | Git |
+| Terminal im Repository öffnen | GitHub Desktop: **Repository**, **Open in Terminal** | kein Befehl | GitHub Desktop |
+| Einladung annehmen | GitHub: E-Mail, **Join gitklar** | kein Befehl | GitHub |
+| Pull request öffnen | GitHub: **Compare & pull request** | kein Befehl | GitHub |
+| Pull request prüfen | GitHub: **Files changed** | kein Befehl | GitHub |
+| Pull request mergen | GitHub: **Merge pull request** | `git merge`, auf GitHubs Servern | Git, über GitHub |
+| Issue öffnen | GitHub: **Issues**, **New issue** | kein Befehl | GitHub |
+| Claude Code starten | Claude-App: **Open folder**; Terminal: `claude` | kein Befehl | Claude Code |
+| Claude committen lassen | ein Satz an Claude | `git commit` | Claude Code bedient Git |
+
+: {tbl-colwidths="[26,32,27,15]"}
+
+«Kein Befehl» heisst: Dafür gibt es keinen Git-Befehl. Der Schritt existiert nur auf der Website oder im Programm.
+
+## Nur auf GitHub
+
+Einige der wichtigsten Dinge im Kurs sind keine Git-Funktionen. GitHub hat sie als Ebene für die Zusammenarbeit über Git gelegt: Pull requests und Reviews, Issues, Forks, Organisationen. Deshalb gibt es keinen Befehl `git pull request`. Ein Pull request lebt auf der Website, nicht in deinem Ordner.
+
+## Was dieser Kurs lehrt, und was nicht
+
+gitklar lehrt Git, GitHub und das Zusammenarbeiten über beides: Repository, Commit, Push, Branch, Pull request, Issue. Das ist die Grundlage, auf der jede KI-Unterstützung aufsetzt.
+
+Agenten wie Claude Code lehrt der Kurs nicht. Du siehst sie in Screencasts, damit du weisst, was sie mit deinem Repository tun, wenn du sie einsetzt. Wer Claude Code schon hat, verbindet es in der Vorbereitung mit dem Ordner und kann nach dem Kurs loslegen. Ein eigener Folgeworkshop für Agenten ist angedacht: der Ordner `.claude`, die Datei `CLAUDE.md`, Skills und Einstellungen.
+
+## Häufige Verwechslungen
+
+**Git ist nicht GitHub.** Git ist das Programm auf deinem Laptop, das die Geschichte führt. GitHub ist die Website, die eine Kopie hält und die Zusammenarbeit dazugibt. Git ohne GitHub geht. GitHub ohne Git ergibt wenig Sinn.
+
+**Pull ist nicht Pull request.** Pull holt Änderungen von GitHub auf deinen Laptop. Ein Pull request ist die Bitte auf GitHub, dass jemand einen Branch prüft und übernimmt. Trotz des gemeinsamen Wortes ist das eine ein Datentransfer und das andere ein Gespräch.
+
+**Commit ist nicht Push.** Commit sichert eine Fassung auf deinem Laptop. Push lädt deine Commits auf GitHub hoch. Bis du pushst, sieht niemand sonst deine Commits. Deshalb gehören beide zusammen.
+
+**GitHub Desktop ist nicht Git.** Es ist ein Fenster mit Knöpfen, das Git für dich bedient. Dieselben Knöpfe gibt es in VS Code und Positron, und dieselben Befehle gibt es im Terminal. Was du in GitHub Desktop lernst, gilt überall.
+
+Ist ein Begriff auf dieser Seite neu, steht er im [Glossar](glossar.qmd). Erscheint er bei dir auf Deutsch, hilft die [Liste der Begriffe auf Englisch und Deutsch](begriffe.qmd).

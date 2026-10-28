@@ -1,0 +1,29 @@
+---
+title: "Begriffe auf Englisch und Deutsch"
+subtitle: "Was auf dem Bildschirm steht, wenn dein Browser oder dein System Deutsch spricht"
+---
+
+Der Kurs benutzt die englischen Begriffe, so wie GitHub und GitHub Desktop sie zeigen. github.com gibt es nur auf Englisch, GitHub Desktop auch. Trotzdem kann bei dir Deutsch auf dem Bildschirm stehen, aus zwei Gründen:
+
+- **Dein Browser übersetzt.** Chrome, Edge und Firefox bieten an, englische Seiten zu übersetzen, und manche tun es von selbst. Dann wird aus **Pull request** eine «Pull-Anfrage» und aus **Branch** eine «Filiale». Die Übersetzung wechselt von Besuch zu Besuch, und meine Screenshots passen nicht mehr zu deinem Bildschirm.
+- **Dein System spricht Deutsch.** Die Fenster zum Öffnen und Auswählen von Ordnern gehören zu macOS oder Windows, nicht zu GitHub Desktop. Dort steht «Dokumente», «Öffnen» und «Auswählen», und das ist in Ordnung.
+
+Das Erste schaltest du einmal aus. Das Zweite bleibt.
+
+## Übersetzung für github.com ausschalten
+
+::: {.callout-note}
+## Zwei Minuten, einmal
+
+- **Chrome und Edge:** Öffne [github.com](https://github.com). Erscheint die Seite auf Deutsch, klicke in der Adresszeile auf das Übersetzen-Symbol, dann auf die drei Punkte, dann auf **Diese Website nie übersetzen**.
+- **Firefox:** Klicke in der Adresszeile auf das Übersetzen-Symbol, dann auf das Zahnrad, dann auf **Diese Website nie übersetzen**.
+- **Safari:** Safari übersetzt nur, wenn du es anklickst. Steht die Seite auf Deutsch, wähle im Übersetzen-Symbol in der Adresszeile die Originalsprache.
+:::
+
+Danach siehst du github.com so wie in den Anleitungen. Die Begriffe selbst erklären die Tabelle unten und das [Glossar](glossar.qmd).
+
+## Die Begriffe nebeneinander
+
+Die mittlere Spalte zeigt Beispiele dafür, wie eine Browser-Übersetzung oder ein deutsches System den Begriff anzeigen kann. Es sind Beispiele. Jede Übersetzung kann anders ausfallen. Die rechte Spalte sagt, wo du den Begriff im Kurs siehst und welcher Befehl im Terminal dahintersteckt.
+
+{{< glossar tabelle >}}
