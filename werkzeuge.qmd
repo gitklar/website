@@ -59,7 +59,7 @@ Einige der wichtigsten Dinge im Kurs sind keine Git-Funktionen. GitHub hat sie a
 
 gitklar lehrt Git, GitHub und das Zusammenarbeiten über beides: Repository, Commit, Push, Branch, Pull request, Issue. Das ist die Grundlage, auf der jede KI-Unterstützung aufsetzt.
 
-Agenten wie Claude Code lehrt der Kurs nicht. Du siehst sie in Screencasts, damit du weisst, was sie mit deinem Repository tun, wenn du sie einsetzt. Wer Claude Code schon hat, verbindet es in der Vorbereitung mit dem Ordner und kann nach dem Kurs loslegen. Ein eigener Folgeworkshop für Agenten ist angedacht: der Ordner `.claude`, die Datei `CLAUDE.md`, Skills und Einstellungen.
+Agenten wie Claude Code lehrt der Kurs nicht. Du siehst sie in Screencasts, damit du weisst, was sie mit deinem Repository tun, wenn du sie einsetzt. Wer Claude Code schon hat, verbindet es in der Vorbereitung mit dem Ordner und kann nach dem Kurs loslegen. Was Claude Code, Cowork, Codex und ChatGPT Work von deinem Ordner und deinem Repository sehen, vergleicht die Seite [KI-Werkzeuge im Vergleich](ki-werkzeuge.qmd). Ein eigener Folgeworkshop für Agenten ist angedacht: der Ordner `.claude`, die Datei `CLAUDE.md`, Skills und Einstellungen.
 
 ## Häufige Verwechslungen
 

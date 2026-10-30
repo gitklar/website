@@ -61,6 +61,7 @@ website:
         - section: "Nachschlagen"
           contents:
             - werkzeuge.qmd
+            - ki-werkzeuge.qmd
             - glossar.qmd
             - begriffe.qmd
   page-footer:

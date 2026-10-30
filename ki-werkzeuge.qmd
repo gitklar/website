@@ -1,0 +1,123 @@
+---
+title: "KI-Werkzeuge im Vergleich"
+subtitle: "Claude Code, Cowork, Codex und ChatGPT Work: was jedes von deinem Ordner und deinem Repository sieht"
+---
+
+Im Kurs bringst du das KI-Werkzeug mit, das du hast: {{< gl "Claude Code" >}} in der {{< gl "Claude Desktop" display="Claude-App" >}} oder im {{< gl Terminal >}}, {{< gl Cowork >}}, {{< gl Codex >}} oder {{< gl "ChatGPT Work" >}}. Der Kurs lehrt keines davon. Aber jedes dieser Werkzeuge ändert Dateien in deinem Ordner, und du sollst wissen, was es dabei von Git und GitHub mitbekommt. Diese Seite beantwortet für jedes Werkzeug drei Fragen, so wie die Hersteller es in ihrer Dokumentation beschreiben.
+
+Stand: 30. Oktober 2026. Die Produkte ändern sich monatlich. Wo die Dokumentation keine klare Antwort gibt, steht «zu prüfen».
+
+## Drei Fragen an jedes Werkzeug
+
+1. **Sieht es deine Dateien?** Kann es Dateien in deinem Ordner lesen und ändern?
+2. **Sieht es dein {{< gl Repository >}}?** Weiss es, dass der Ordner ein Repository ist, und kann es selbst {{< gl Commit display="Commits" >}}, {{< gl Branch display="Branches" >}} und {{< gl "Pull request" display="Pull requests" >}} machen?
+3. **Liest es den Ordner `.claude`?** Nimmt es Anweisungen aus {{< gl CLAUDE.md >}} und dem Ordner `.claude` entgegen, oder aus einer anderen Datei?
+
+## Die Antworten auf einen Blick
+
+| Werkzeug | Wo es läuft | Sieht Dateien | Sieht das Repository | Liest `.claude` |
+|---|---|---|---|---|
+| Claude Code im Terminal | auf deinem Laptop, im Terminal | ja, im Ordner, in dem du es startest | ja: Commits, Branches, Pull requests | ja: `CLAUDE.md`, der Ordner `.claude`; ersatzweise `AGENTS.md` |
+| Claude Code in der Claude-App, Reiter **Code** | auf deinem Laptop (**Local**), wahlweise in der Cloud | ja, im Ordner, den du öffnest | ja, dieselbe Maschine wie im Terminal, mit Diff-Ansicht | ja, dieselben Dateien wie im Terminal |
+| Cowork, in der Claude-App | in der Cloud; Befehle in einer abgeschirmten Umgebung; die App gibt den Ordner frei | ja, in den Ordnern, die du verbindest | nicht dokumentiert: keine Knöpfe für Commit, Branch oder Pull request (zu prüfen) | Skills und Plugins aus `~/.claude`: nein. `CLAUDE.md` im Ordner: zu prüfen |
+| Codex, in der ChatGPT-App, im Terminal oder in der Cloud | auf deinem Laptop oder auf Rechnern von OpenAI | ja, im Projektordner | ja: Stage, Commit, Push und Pull request als Knöpfe in der App; Codex Cloud arbeitet auf GitHub-Repositories | nein; liest `AGENTS.md` und den Ordner `.codex` |
+| ChatGPT Work, im Web, auf dem Handy, in der ChatGPT-App | Web und Handy in der Cloud; in der App wahlweise auf deinem Laptop | im Web und auf dem Handy nein; in der App ja, mit deiner Erlaubnis | nicht dokumentiert; für Repositories ist Codex zuständig | nicht dokumentiert (zu prüfen) |
+
+: {tbl-colwidths="[20,20,18,22,20]"}
+
+## Claude Code im Terminal
+
+Claude Code ist das Programm von Anthropic, das in deinem Ordner arbeitet: Es liest deinen Ordner, ändert Dateien, führt Befehle aus. Du startest es im Terminal, in deinem Repository, mit dem Befehl `claude`. Es gibt es auch als Erweiterung für VS Code und als Teil der Claude-App, dazu gleich.
+
+- **Dateien:** ja, alles im Ordner, in dem du es startest. Vor jeder Änderung fragt es, je nach {{< gl Permission display="Permission-Stufe" >}}.
+- **Repository:** ja. Anthropic schreibt, Claude Code arbeite direkt mit Git: Es merkt Änderungen vor, schreibt Commit-Nachrichten, legt Branches an und öffnet Pull requests. Im Workshop siehst du im Screencast, wie aus «Sichere meine Änderung» ein `git commit` wird.
+- **`.claude`:** ja. Claude Code liest zu Beginn jeder Sitzung die Datei `CLAUDE.md` im Hauptordner oder unter `.claude/CLAUDE.md`, dazu `~/.claude/CLAUDE.md` aus deinem Benutzerordner und Regeln unter `.claude/rules/`. Hat ein Repository nur eine `AGENTS.md`, liest es die.
+
+{{< glossar bild claude-terminal >}}
+
+## Claude Code in der Claude-App
+
+Die Claude-App hat oben in der Seitenleiste den Reiter **Code**. Dahinter steckt Claude Code mit einer grafischen Oberfläche: Du öffnest einen Ordner, schreibst, was Claude tun soll, und siehst die Änderungen in einer Diff-Ansicht, ohne Terminal. Die App bringt Claude Code mit; du installierst nichts dazu. Es braucht ein bezahltes Abo (Pro, Max, Team oder Enterprise).
+
+- **Dateien:** ja. In der Zeile unter dem Eingabefeld wählst du die Umgebung **Local** (läuft auf deinem Laptop, mit direktem Zugriff auf deine Dateien), dann **Open folder…** und deinen Ordner. **Cloud** gibt es auch: Dann läuft die Sitzung auf Rechnern von Anthropic.
+- **Repository:** ja, dieselbe Maschine wie im Terminal. Nach einer Änderung erscheint eine Anzeige wie `+12 -1`; ein Klick öffnet den Diff, Datei für Datei. Du kannst eine Sitzung in einem eigenen {{< gl Branch >}} laufen lassen (Schalter **Worktree**) und einen geöffneten Pull request von der App beobachten lassen.
+- **`.claude`:** ja. Anthropic schreibt, App und Terminal lesen dieselben Dateien: `CLAUDE.md` und `CLAUDE.local.md` im Projekt, die Einstellungen unter `~/.claude/settings.json`, deine Skills unter `~/.claude/skills/`.
+- **Permission-Stufen:** **Auto** (ein Prüfmodell entscheidet im Hintergrund), **Manual** (Claude fragt vor jeder Änderung), **Accept edits** (Dateiänderungen ohne Rückfrage), **Plan** (nur vorschlagen, nichts ändern).
+
+{{< glossar bild claude-app-code >}}
+
+## Cowork
+
+Cowork ist die zweite Arbeitsweise der Claude-App, für längere Aufgaben ohne Terminal: Dokumente, Tabellen, aufgeräumte Ordner, Recherche. Anthropic schreibt, Cowork benutze dieselbe Architektur wie Claude Code. Der Unterschied ist, was es von deinem Ordner weiss.
+
+- **Dateien:** ja, aber nur in den Ordnern, die du verbindest. Claude liest und schreibt Dateien dort direkt, ohne Hochladen. Dafür muss die Claude-App offen sein.
+- **Wo es läuft:** laut Anthropic in der Cloud. Befehle und Code laufen in einer abgeschirmten Umgebung ({{< gl Sandbox >}}) auf Rechnern von Anthropic, nicht auf deinem Laptop. Was Cowork in deinem Ordner ändert, ändert es trotzdem bei dir.
+- **Repository:** nicht dokumentiert. Die Anleitungen zu Cowork nennen Git, Commits, Branches und Pull requests nicht. Für den Kurs heisst das: Cowork sieht einen Ordner, kein Repository. Was es ändert, siehst du danach in GitHub Desktop unter **Changes**, und du committest selbst. Ob ein Git-Befehl in der Sandbox von Cowork läuft: zu prüfen.
+- **`.claude`:** Skills und Plugins liest Cowork nicht aus dem Ordner `~/.claude` auf deinem Laptop, sondern aus deinem Claude-Konto (**Customize** in der Seitenleiste). Ob Cowork eine `CLAUDE.md` im verbundenen Ordner liest, sagt die Dokumentation nicht: zu prüfen. Cowork kennt eigene «Folder instructions», die du beim Verbinden eines Ordners anlegst; wo sie liegen, sagt die Dokumentation ebenfalls nicht.
+- **Hinweis:** Anthropic führt Chat und Cowork gerade zu einer Oberfläche zusammen. Fehlt bei dir im Eingabefeld die Auswahl zwischen **Chat** und **Cowork**, hast du schon die neue Oberfläche; die Arbeitsweise bleibt.
+
+{{< glossar bild claude-app-cowork >}}
+
+## Codex
+
+Codex ist der Coding-Agent von OpenAI, das Gegenstück zu Claude Code. Es gibt ihn an mehreren Orten: als eigene Ansicht in der ChatGPT-App (Menü oben links, **Codex**), als Befehl `codex` im Terminal, als Erweiterung für Editoren, und als Codex Cloud auf Rechnern von OpenAI. OpenAI schreibt, Codex arbeite mit lokalen Ordnern, Repositories, Terminals und Entwicklerwerkzeugen.
+
+- **Dateien:** ja, im Projektordner. Codex liest Dateien, ändert sie und führt die Programme aus, die auf deinem Laptop installiert sind. Standardmässig darf es nur im Projektordner schreiben und nicht ins Internet (Sandbox-Modus **workspace-write**); was darüber hinausgeht, fragt es.
+- **Repository:** ja. In der ChatGPT-App stehen neben jedem Projekt Git-Knöpfe: einzelne Änderungen vormerken oder verwerfen, committen, einen Branch pushen, einen Pull request öffnen. Für den Rest gibt es ein eingebautes Terminal. Codex kann eine Aufgabe in einer eigenen Arbeitskopie des Repositorys beginnen (OpenAI nennt sie Worktree) und daraus einen {{< gl Branch >}} mit dem Vorsatz `codex/` machen. Codex Cloud arbeitet direkt auf Repositories, die du mit GitHub verbindest, und bietet am Ende Commit und Pull request an. Im Terminal empfiehlt OpenAI, vor und nach einer Aufgabe einen Git-Sicherungspunkt zu setzen. Eine Besonderheit: In der Sandbox ist der Ordner `.git` schreibgeschützt. Ob ein Commit durch Codex selbst deshalb immer deine Freigabe braucht: zu prüfen.
+- **`.claude`:** nein. Codex liest vor jeder Arbeit die Datei {{< gl AGENTS.md >}}, zuerst aus `~/.codex`, dann vom Hauptordner des Repositorys bis zu deinem Arbeitsordner. Andere Dateinamen übergeht es, `CLAUDE.md` eingeschlossen, ausser du trägst den Namen in die Einstellungen ein. Projekteinstellungen liegen im Ordner `.codex`.
+
+{{< glossar bild chatgpt-app-codex >}}
+
+## ChatGPT Work
+
+Work ist der Agent in ChatGPT für längere Aufgaben mit fertigem Ergebnis: ein Thema recherchieren, Informationen auswerten, ein Dokument, eine Tabelle, eine Präsentation oder einen Bericht erstellen. OpenAI stellt Work neben **Chat** (schnelle Fragen) und **Codex** (Software): Work ist für Dokumente, Codex für Repositories.
+
+- **Dateien:** im Web und auf dem Handy nein. Dort läuft Work in der Cloud und kommt nicht an die Dateien auf deinem Laptop. In der ChatGPT-App ja: Du öffnest einen lokalen Ordner oder ein Projekt und gibst nur die Dateien frei, die die Aufgabe braucht. OpenAI schreibt dazu, Nachrichten und Aufgabenkontext könnten in der Cloud gespeichert werden, auch wenn die Arbeit lokal läuft.
+- **Wo es läuft:** Web und Handy in der Cloud, auf Rechnern von OpenAI. In der App wahlweise lokal; Befehle und Code laufen in einer abgeschirmten Umgebung, die Work laut OpenAI mit Codex teilt.
+- **Repository:** nicht dokumentiert. Die Anleitungen zu Work nennen Git und GitHub nicht; «mit einem Repository arbeiten» steht bei OpenAI unter Codex. Für den Kurs heisst das: Wie Cowork sieht Work Dateien, kein Repository. Was es ändert, committest du in GitHub Desktop.
+- **`.claude`:** nicht dokumentiert, und ebenso wenig, ob Work eine `AGENTS.md` liest: zu prüfen.
+- **Verfügbarkeit:** In der ChatGPT-App sind Chat, Work und Codex laut OpenAI auf jedem Plan dabei, auch dem kostenlosen. Im Web und auf dem Handy gibt es Work auf bezahlten Plänen.
+
+{{< glossar bild chatgpt-app-work >}}
+
+## Was das für den Kurs heisst
+
+Die vier Werkzeuge zerfallen in zwei Arten.
+
+**Dateiwerkzeuge: Cowork und ChatGPT Work.** Sie ändern Dateien in deinem Ordner und wissen nichts von Git. Für Git ist das eine Änderung wie jede andere: Sie erscheint in GitHub Desktop unter **Changes**, du liest das {{< gl Diff >}}, setzt die Häkchen und committest. Deine Arbeit im Kurs ändert sich nicht, du hast nur eine weitere Quelle von Änderungen.
+
+**Repository-Werkzeuge: Claude Code und Codex.** Sie wissen, dass dein Ordner ein Repository ist, und können selbst committen, Branches anlegen und Pull requests öffnen. Dein Platz ist dann der Reiter **History** und der Diff eines Commits: Du liest, was das Werkzeug festgehalten hat, und holst es zurück, wenn es falsch war.
+
+Eine Faustregel:
+
+- Sieht das Werkzeug **nur Dateien**, committest du.
+- Sieht das Werkzeug **das Repository**, liest du, was es committet hat.
+
+Beides passt zu dem, was der Kurs lehrt. Git ist die Ebene, auf der du jede Änderung siehst, egal wer sie gemacht hat.
+
+## Der Ordner `.claude`
+
+`CLAUDE.md` ist eine Textdatei, in der du Claude Code sagst, wie es in diesem Repository arbeiten soll: Regeln, Abläufe, was es lassen soll. Sie liegt im Hauptordner oder im Ordner `.claude`, in dem auch Einstellungen und Skills stehen. Claude Code liest sie zu Beginn jeder Sitzung, im Terminal und in der App. Cowork liest Skills und Plugins nicht aus `~/.claude`. Codex hat seine eigene Datei, `AGENTS.md`, und übergeht `CLAUDE.md`.
+
+Dieser Kurs lehrt den Ordner `.claude` nicht. Er ist Thema eines Folgeworkshops für alle, die schon mit Agenten arbeiten: `CLAUDE.md`, Skills, Einstellungen, und die Vorführung, welches Werkzeug den Ordner liest und welches nicht. Im Übungs-Repository kannst du ihn trotzdem anlegen. Für Git ist er ein Ordner wie jeder andere, und er gehört in den Commit.
+
+## Häufige Verwechslungen
+
+**Die Claude-App ist nicht Claude Code.** Die App hat drei Arbeitsweisen: Chat, Cowork und den Reiter Code. Claude Code ist der Reiter Code, oder das Programm `claude` im Terminal. Chat und Cowork sind etwas anderes.
+
+**Cowork ist nicht Claude Code.** Dieselbe Architektur, sagt Anthropic, aber ein anderer Blick: Cowork sieht einen Ordner und arbeitet in der Cloud, Claude Code sieht ein Repository und arbeitet auf deinem Laptop. Cowork liest `~/.claude` nicht.
+
+**Codex ist nicht ChatGPT Work.** Beide stecken in der ChatGPT-App. Codex ist die eigene Ansicht für Repositories, Work der Umschalter neben Chat für Dokumente. Nur Codex liest `AGENTS.md` und hat Git-Knöpfe.
+
+**Die Cloud ist nicht dein Laptop.** Was in der Cloud läuft, sieht deine Dateien nur, wenn du sie verbindest oder hochlädst. Dein Repository auf GitHub liegt auch in der Cloud, auf Rechnern von GitHub. Push bringt deine Commits dorthin, nichts anderes.
+
+Ist ein Begriff auf dieser Seite neu, steht er im [Glossar](glossar.qmd). Welches Werkzeug hinter jedem Knopf des Kurses steckt, erklärt [Welches Werkzeug macht was](werkzeuge.qmd).
+
+## Quellen
+
+Die Angaben folgen den Dokumentationen der Hersteller, gelesen am 30. Oktober 2026.
+
+- Claude Code: [Overview](https://code.claude.com/docs/en/overview), [How Claude remembers your project](https://code.claude.com/docs/en/memory), [Get started with the desktop app](https://code.claude.com/docs/en/desktop-quickstart), [Claude Code Desktop](https://code.claude.com/docs/en/desktop) (Anthropic).
+- Cowork: [Cowork overview](https://claude.com/docs/cowork/overview), [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork), [Desktop and filesystem access](https://claude.com/docs/third-party/claude-desktop/local-access) (Anthropic).
+- Codex: [Codex](https://developers.openai.com/codex), [Codex CLI](https://developers.openai.com/codex/cli), [Local environments](https://developers.openai.com/codex/environments/local-environment), [Git worktrees](https://developers.openai.com/codex/environments/git-worktrees), [Codex Cloud](https://developers.openai.com/codex/cloud), [AGENTS.md](https://developers.openai.com/codex/agent-configuration/agents-md), [Agent approvals and security](https://developers.openai.com/codex/agent-approvals-security) (OpenAI).
+- ChatGPT Work: [ChatGPT Work and Codex](https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex), [ChatGPT is now a partner for your most ambitious work](https://openai.com/index/chatgpt-for-your-most-ambitious-work/) vom 9. Juli 2026, [ChatGPT Work overview](https://learn.chatgpt.com/docs/enterprise/chatgpt-work-overview) (OpenAI).

@@ -10,7 +10,7 @@ Cohort-specific text lives in three places only: the profile values (`{{< meta c
 
 ## Reference pages and the glossary
 
-`werkzeuge.qmd` (which tool does what), `glossar.qmd` and `begriffe.qmd` (the terms side by side in English and German) form the sidebar section "Nachschlagen". The glossary and the table are generated at render time from one file, `begriffe.yml`, by the shortcodes in `_extensions/ghe/gl` (copied from agentsforsci-ghe/website and adapted): `{{< glossar liste >}}` renders the entries, `{{< glossar tabelle >}}` the table, and `{{< gl commit >}}` marks a term on any page with a hover popover and a link to its entry. Edit `begriffe.yml` only; the fields are documented at the top of the file. Pandoc parses the file, so no extra tool is needed in the Action.
+`werkzeuge.qmd` (which tool does what), `ki-werkzeuge.qmd` (what Claude Code, Cowork, Codex and ChatGPT Work see of the folder and the repository, from the vendors' documentation, with the date of the last check), `glossar.qmd` and `begriffe.qmd` (the terms side by side in English and German) form the sidebar section "Nachschlagen". The glossary and the table are generated at render time from one file, `begriffe.yml`, by the shortcodes in `_extensions/ghe/gl` (copied from agentsforsci-ghe/website and adapted): `{{< glossar liste >}}` renders the entries, `{{< glossar tabelle >}}` the table, and `{{< gl commit >}}` marks a term on any page with a hover popover and a link to its entry. Edit `begriffe.yml` only; the fields are documented at the top of the file. Pandoc parses the file, so no extra tool is needed in the Action.
 
 The course keeps the English terms of github.com and GitHub Desktop, which have no German interface. German on a participant's screen comes from browser translation or from the operating system's own dialogs; `begriffe.qmd` explains both and shows how to switch translation off for github.com.
 
@@ -38,6 +38,10 @@ After the last workshop: `git tag <name>` on the commit the cohort last saw, pus
 
 gitklar.ch, decision 0004 in `gitklar-dev/admin`. At the registrar: four A records for the apex to GitHub Pages (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153), four AAAA records (2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153), and `www` as a CNAME to `gitklar.github.io`. In the repository settings under Pages: custom domain `gitklar.ch`, then Enforce HTTPS once the certificate exists. Under the organisation settings, Pages, Verified domains: verify `gitklar.ch`, so nobody else can bind it to a Pages site.
 
+## Screenshots
+
+The pages describe the buttons by their English labels, as GitHub Desktop shows them. The screenshots are data: the list `bildschirme` in `begriffe.yml` names each screen (key, title, page, what it shows), and a term points at its screen through the `bild` field. `{{< glossar bildschirme >}}` renders every screen of the current page under a heading, `{{< glossar bild <key> >}}` one screen anywhere. Until the file exists under `bilder/<key>.png` (or the `datei` the entry names), the page shows a dashed placeholder box with the key and the expected file name; drop the file in and the box becomes the image, no page edit needed. The screens of the first repository setup render on `begriffe.qmd`, those of the AI tools on `ki-werkzeuge.qmd`.
+
 ## Not yet
 
-Screenshots. The pages describe the buttons by their English labels, as GitHub Desktop shows them. The `wo` field of `begriffe.yml` names the screen each label sits on, so the screenshots can be keyed to it later.
+The screenshot files themselves (see above). A check of `ki-werkzeuge.qmd` against the vendors' pages before each cohort; the page carries its date and marks open points with "zu prüfen".
