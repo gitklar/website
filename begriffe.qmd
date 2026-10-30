@@ -27,3 +27,9 @@ Danach siehst du github.com so wie in den Anleitungen. Die Begriffe selbst erkl�
 Die mittlere Spalte zeigt Beispiele dafür, wie eine Browser-Übersetzung oder ein deutsches System den Begriff anzeigen kann. Es sind Beispiele. Jede Übersetzung kann anders ausfallen. Die rechte Spalte sagt, wo du den Begriff im Kurs siehst und welcher Befehl im Terminal dahintersteckt.
 
 {{< glossar tabelle >}}
+
+## Die Bildschirme
+
+Die Spalte «Wo du es siehst» verweist mit «Bild» auf einen der Bildschirme hier: die Fenster und Seiten, die du beim Einrichten deines ersten Repositorys siehst, auf Englisch, so wie GitHub Desktop und github.com sie zeigen. Die Screenshots der KI-Werkzeuge stehen auf [KI-Werkzeuge im Vergleich](ki-werkzeuge.qmd).
+
+{{< glossar bildschirme >}}

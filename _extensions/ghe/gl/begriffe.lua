@@ -1,10 +1,14 @@
 -- Shared loader for the glossary shortcodes. Reads begriffe.yml at the
 -- project root through pandoc's YAML parser, so the file needs no other
--- tool. Every entry is a map with the fields documented in begriffe.yml.
+-- tool. The file has two top-level lists: `begriffe` (the terms, fields
+-- documented in begriffe.yml) and `bildschirme` (the screens the
+-- screenshots show, keyed by the `bild` field of a term).
 
 local M = {}
 
+local meta = nil
 local entries = nil
+local screens = nil
 local root = nil
 local offset = nil
 
@@ -34,24 +38,30 @@ function M.find_root()
   return nil, nil
 end
 
-function M.load()
-  if entries ~= nil then return entries end
-  entries = {}
+local function read_meta()
+  if meta ~= nil then return meta end
+  meta = {}
   local dir = M.find_root()
   if dir == nil then
     quarto.log.warning("gl: begriffe.yml not found above " .. tostring(quarto.doc.input_file))
-    return entries
+    return meta
   end
   local path = pandoc.path.join({dir, "begriffe.yml"})
   local f = io.open(path, "r")
   if not f then
     quarto.log.warning("gl: cannot open " .. path)
-    return entries
+    return meta
   end
   local content = "---\n" .. f:read("*a") .. "\n---\n"
   f:close()
-  local meta = pandoc.read(content, "markdown").meta
-  local list = meta.begriffe
+  meta = pandoc.read(content, "markdown").meta
+  return meta
+end
+
+function M.load()
+  if entries ~= nil then return entries end
+  entries = {}
+  local list = read_meta().begriffe
   if list == nil then
     quarto.log.warning("gl: begriffe.yml has no top-level key 'begriffe'")
     return entries
@@ -60,6 +70,41 @@ function M.load()
     entries[#entries + 1] = item
   end
   return entries
+end
+
+-- The screens, in file order. Each has key, titel, seite, beschreibung and
+-- optionally datei (the screenshot, relative to the project root).
+function M.screens()
+  if screens ~= nil then return screens end
+  screens = {}
+  local list = read_meta().bildschirme
+  if list == nil then return screens end
+  for _, item in ipairs(list) do
+    screens[#screens + 1] = item
+  end
+  return screens
+end
+
+-- key -> screen
+function M.screen_index()
+  local idx = {}
+  for _, s in ipairs(M.screens()) do
+    idx[M.str(s.key)] = s
+  end
+  return idx
+end
+
+-- The current document as the page it becomes, relative to the project
+-- root: begriffe.qmd -> "begriffe.html", vorbereitung/klonen.qmd ->
+-- "vorbereitung/klonen.html". Matches the `seite` field of a screen.
+function M.page()
+  local dir = M.find_root()
+  local input = quarto.doc.input_file
+  local rel = input
+  if dir ~= nil and input:sub(1, #dir) == dir then
+    rel = input:sub(#dir + 2)
+  end
+  return (rel:gsub("%.qmd$", ".html"))
 end
 
 function M.str(v)
