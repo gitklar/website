@@ -6,7 +6,8 @@
 # Felder je Begriff:
 #   term        englisches Stichwort, so wie es auf dem Bildschirm steht
 #   aliases     weitere Schreibweisen, die {{< gl ... >}} auf den Begriff führen
-#   gruppe      Abschnitt auf den Seiten: Git und GitHub, Knöpfe und Fenster, Werkzeuge
+#   gruppe      Abschnitt auf den Seiten: Git und GitHub, Dateien, Knöpfe und Fenster,
+#               Werkzeuge, KI und Agenten
 #   uebersetzt  so kann eine Browser-Übersetzung oder ein deutsches System es zeigen
 #   kurz        Bedeutung in wenigen Worten, für die Tabelle
 #   bedeutung   die Erklärung in Alltagssprache, für Glossar und Popover
@@ -37,7 +38,8 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "«Zweig», «Filiale», manchmal «Branch»"
     kurz: "eigene Arbeitslinie im Repository"
-    bedeutung: "Ein Branch ist eine eigene Arbeitslinie innerhalb eines Repositorys. Du legst einen Branch an, wenn du Dateien ändern willst, ohne die Hauptfassung des Projekts anzufassen. Sind die Änderungen geprüft, führst du sie in die Hauptfassung zurück. In der Vorbereitung arbeitest du nur auf `main`."
+    bedeutung: "Ein Branch ist eine eigene Arbeitslinie innerhalb eines Repositorys. Du legst einen Branch an, wenn du Dateien ändern willst, ohne die Hauptfassung des Projekts anzufassen. Sind die Änderungen geprüft, führst du sie in die Hauptfassung zurück. In der Vorbereitung arbeitest du nur auf `main`. Im Workshop 1 legst du im Kochbuch deinen ersten eigenen Branch an, zum Beispiel `rezept-linsensuppe`."
+    seite: "[Rezept per Pull request einreichen](rezept-einreichen.html)"
     wo: "GitHub Desktop, Knopf **Current branch** oben in der Mitte; auf github.com die Auswahl links über der Dateiliste"
     befehl: "`git branch`, `git switch`"
     bild: "desktop-oben"
@@ -50,7 +52,7 @@ begriffe:
     bedeutung: "Klonen heisst, eine vollständige Kopie eines Repositorys von GitHub auf deinen Laptop zu holen, samt der Geschichte aller Änderungen und der Verbindung zurück zu GitHub. Du klonst einmal, danach arbeitest du in diesem Ordner."
     wo: "GitHub Desktop, Menü **File**, **Clone Repository**; auf github.com der grüne Knopf **Code**"
     befehl: "`git clone`"
-    seite: "[Dein Übungs-Repository klonen](vorbereitung/klonen.html)"
+    seite: "[Dein Repository klonen](vorbereitung/klonen.html)"
     bild: "desktop-klonen"
 
   - term: "Commit"
@@ -59,9 +61,9 @@ begriffe:
     uebersetzt: "«Commit», «Festschreiben», «Übernehmen», «Bestätigen»"
     kurz: "gespeicherte Fassung deiner Dateien mit einer Nachricht"
     bedeutung: "Ein Commit ist eine gespeicherte Fassung deines Projekts. Beim Commit hält Git den genauen Inhalt deiner Dateien in diesem Moment fest, zusammen mit einer Nachricht, die sagt, was du geändert hast und warum. Du kannst jederzeit zu jedem früheren Commit zurück."
-    wo: "GitHub Desktop, Knopf **Commit to main** unten links"
+    wo: "GitHub Desktop, Knopf **Commit to main** unten links; auf github.com der Knopf **Commit changes** beim Bearbeiten einer Datei"
     befehl: "`git commit -m \"Nachricht\"`"
-    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+    seite: "[Commit und Push vom Laptop](vorbereitung/erster-commit.html)"
     bild: "desktop-changes"
 
   - term: "Commit message"
@@ -89,7 +91,7 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "«Gabel», «Abspaltung», «Fork»"
     kurz: "eigene Kopie eines fremden Repositorys in deinem Konto"
-    bedeutung: "Ein Fork ist eine eigene Kopie des Repositorys einer anderen Person, gespeichert in deinem GitHub-Konto. Du kannst deinen Fork frei ändern und deine Änderungen dem Original über einen Pull request anbieten. In der Organisation gitklar kannst du die Übungs-Repositories der anderen forken."
+    bedeutung: "Ein Fork ist eine eigene Kopie des Repositorys einer anderen Person, gespeichert in deinem GitHub-Konto. Du kannst deinen Fork frei ändern und deine Änderungen dem Original über einen Pull request anbieten. Im Kurs brauchst du keinen Fork: Im Kochbuch legst du deinen Branch direkt im gemeinsamen Repository an."
     wo: "github.com, Knopf **Fork** rechts oben in einem Repository"
     bild: "github-repository"
 
@@ -108,7 +110,7 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "«Problem», «Ausgabe», «Anliegen», «Ticket»"
     kurz: "Aufgabe, Frage oder Fehler, festgehalten im Repository"
-    bedeutung: "Ein Issue ist ein Eintrag auf der GitHub-Seite eines Repositorys für eine Aufgabe, eine Frage oder einen Fehler. Jedes Issue hat eine Nummer, kann einer Person zugewiesen werden und bleibt offen, bis jemand es schliesst. Dein Fahrplan für die Vorbereitung ist ein Issue, und am Ende öffnest du selbst eines."
+    bedeutung: "Ein Issue ist ein Eintrag auf der GitHub-Seite eines Repositorys für eine Aufgabe, eine Frage oder einen Fehler. Jedes Issue hat eine Nummer, kann einer Person zugewiesen werden und bleibt offen, bis jemand es schliesst. Dein Fahrplan für die Vorbereitung ist ein Issue im Repository `gitklar/vorbereitung`, und am Ende schreibst du einen Kommentar hinein."
     wo: "github.com, Reiter **Issues**, Knopf **New issue**"
     seite: "[Fertig melden](vorbereitung/fertig.html)"
     bild: "github-issue"
@@ -137,7 +139,7 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "«Zusammenführungskonflikt», «Merge-Konflikt»"
     kurz: "zwei Fassungen derselben Zeilen, Git fragt dich"
-    bedeutung: "Ein Merge conflict entsteht, wenn zwei Branches dieselben Zeilen derselben Datei verschieden geändert haben und Git nicht wissen kann, welche Fassung du willst. Git hält an, markiert beide Fassungen in der Datei und wartet, bis du dich entscheidest. Das ist kein Fehler. Git rät nur nicht."
+    bedeutung: "Ein Merge conflict entsteht, wenn zwei Branches dieselben Zeilen derselben Datei verschieden geändert haben und Git nicht wissen kann, welche Fassung du willst. Git hält an, markiert beide Fassungen in der Datei und wartet, bis du dich entscheidest. Das ist kein Fehler. Git rät nur nicht. Im Workshop 2 entsteht einer, wenn alle ihre Zeile ans Ende von `inhalt.csv` im Kochbuch schreiben."
     wo: "GitHub Desktop, Hinweisfenster beim Mergen; auf github.com der Knopf **Resolve conflicts**"
     bild: "github-pull-request"
 
@@ -146,7 +148,7 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "«Organisation»"
     kurz: "gemeinsamer Bereich auf GitHub, hier gitklar"
-    bedeutung: "Eine Organization ist ein gemeinsamer Bereich auf GitHub, in dem Repositories mehreren Personen gehören. gitklar ist eine. Deine Einladung bringt dich hinein, und dein Übungs-Repository liegt dort."
+    bedeutung: "Eine Organization ist ein gemeinsamer Bereich auf GitHub, in dem Repositories mehreren Personen gehören. gitklar ist eine. Deine Einladung bringt dich hinein. Dort liegen dein eigenes Repository `rezept-dein-benutzername`, dein Issue in `vorbereitung` und das gemeinsame Kochbuch."
     wo: "github.com/gitklar; die Einladung kommt per E-Mail mit dem Knopf **Join gitklar**"
     seite: "[Einladung annehmen](vorbereitung/einladung.html)"
     bild: "github-einladung"
@@ -187,15 +189,26 @@ begriffe:
     bedeutung: "Push kopiert deine Commits vom Laptop nach GitHub. Bis du pushst, sieht niemand sonst deine Commits, und GitHub hat keine Sicherung davon. Deshalb gehören Commit und Push zusammen: Commit sichert auf dem Laptop, Push sichert auf GitHub."
     wo: "GitHub Desktop, Knopf **Push origin** oben rechts"
     befehl: "`git push`"
-    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+    seite: "[Commit und Push vom Laptop](vorbereitung/erster-commit.html)"
     bild: "desktop-oben"
+
+  - term: "Review"
+    aliases: ["Reviews", "Request changes", "Approve", "Code review"]
+    gruppe: "Git und GitHub"
+    uebersetzt: "«Überprüfung», «Rezension», «Änderungen anfordern» (Request changes), «Genehmigen» (Approve)"
+    kurz: "einen Pull request lesen, kommentieren und beurteilen"
+    bedeutung: "Ein Review ist das Lesen eines Pull requests durch eine andere Person. Sie schaut sich im Reiter **Files changed** jede geänderte Zeile an, kann zu einzelnen Zeilen Kommentare schreiben und schliesst mit einem Urteil ab: **Comment** für eine Bemerkung, **Request changes** für die Bitte um Änderungen, **Approve** für ein Ja. Wer um Änderungen gebeten wird, ändert auf demselben Branch weiter. Der Pull request zeigt die neuen Commits von selbst."
+    wo: "github.com, Pull request, Reiter **Files changed**, Knopf **Review changes**"
+    seite: "[Rezept per Pull request einreichen](rezept-einreichen.html)"
+    bild: "github-pull-request"
 
   - term: "README"
     gruppe: "Git und GitHub"
     uebersetzt: "«LIESMICH», «README»"
     kurz: "die Startseite eines Repositorys"
-    bedeutung: "Die README ist eine Textdatei, `README.md`, die erklärt, was ein Repository enthält und wie man es benutzt. GitHub zeigt sie unter der Dateiliste an. Deshalb ist sie das Erste, was Besucher:innen lesen."
+    bedeutung: "Die README ist eine Textdatei, `README.md`, die erklärt, was ein Repository enthält und wie man es benutzt. GitHub zeigt sie unter der Dateiliste an. Deshalb ist sie das Erste, was Besucher:innen lesen. Deine erste schreibst du beim Anlegen deines Repositorys, im Browser."
     wo: "github.com, unter der Dateiliste eines Repositorys; in deinem Ordner als Datei `README.md`"
+    seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
     bild: "github-repository"
 
   - term: "Repository"
@@ -203,7 +216,8 @@ begriffe:
     gruppe: "Git und GitHub"
     uebersetzt: "bleibt meist «Repository», manchmal «Ablage», «Aufbewahrungsort» oder «Speicher»"
     kurz: "ein Projektordner mit seiner ganzen Geschichte"
-    bedeutung: "Ein Repository ist ein Ordner, dessen Geschichte Git festhält: alle Dateien und jeder Commit, der je gemacht wurde. Meist ist ein Projekt ein Repository. Dein Übungs-Repository liegt zweimal vor, einmal auf deinem Laptop und einmal auf GitHub."
+    bedeutung: "Ein Repository ist ein Ordner, dessen Geschichte Git festhält: alle Dateien und jeder Commit, der je gemacht wurde. Meist ist ein Projekt ein Repository. Dein Repository `rezept-dein-benutzername` liegt nach dem Klonen zweimal vor, einmal auf deinem Laptop und einmal auf GitHub."
+    seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
     wo: "GitHub Desktop, oben links **Current repository**; auf github.com die Seite eines Repositorys, Reiter **Code**"
     bild: "github-repository"
 
@@ -224,6 +238,36 @@ begriffe:
     kurz: "Fassungen festhalten und zurückholen können"
     bedeutung: "Versionskontrolle heisst, die Fassungen deiner Dateien so festzuhalten, dass du jede frühere Fassung wiederfindest und siehst, was sich zwischen zwei Fassungen geändert hat. Git ist ein Programm dafür."
 
+  # Dateien -----------------------------------------------------------------
+
+  - term: "CSV"
+    aliases: ["csv", "CSV-Datei", "zutaten.csv"]
+    gruppe: "Dateien"
+    uebersetzt: "«CSV», «kommagetrennte Werte»"
+    kurz: "eine Tabelle als reiner Text, Spalten durch Kommas getrennt"
+    bedeutung: "Eine CSV-Datei ist eine Tabelle als reiner Text. Jede Zeile der Datei ist eine Zeile der Tabelle, und Kommas trennen die Spalten. Die erste Zeile nennt die Spalten. GitHub zeigt eine CSV-Datei als Tabelle an. Weil sie reiner Text ist, kann Git bei jeder Fassung zeigen, welche Zeile sich geändert hat. Öffne sie zum Bearbeiten mit einem Textprogramm. Excel und Numbers können beim Speichern die Kommas durch Strichpunkte ersetzen."
+    wo: "in deinem Repository als `rezept/zutaten.csv`; im Kochbuch als `inhalt.csv`"
+    seite: "[Dein Rezept aufschreiben](vorbereitung/rezept-dokumentieren.html)"
+    bild: "github-csv-tabelle"
+
+  - term: "Markdown"
+    aliases: [".md", "Markdown-Datei"]
+    gruppe: "Dateien"
+    kurz: "reiner Text mit ein paar Zeichen für Formatierung"
+    bedeutung: "Markdown ist reiner Text mit ein paar Zeichen, die GitHub als Formatierung anzeigt: `#` am Zeilenanfang für eine Überschrift, `**fett**`, `-` für eine Liste, `![Beschreibung](foto.jpg)` für ein Bild. Dateien mit der Endung `.md` sind Markdown, auch die README. Beim Bearbeiten im Browser zeigt der Reiter **Preview**, wie GitHub die Datei anzeigen wird."
+    wo: "in deinem Repository als `README.md` und `rezept/rezept.md`; auf github.com der Reiter **Preview** beim Bearbeiten"
+    seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
+    bild: "github-datei-bearbeiten"
+
+  - term: "Location data"
+    aliases: ["Ortsangaben", "Ortsinformationen", "GPS", "EXIF", "Metadaten"]
+    gruppe: "Dateien"
+    uebersetzt: "«Ortsinformationen», «Standort», «GPS», «EXIF-Daten»"
+    kurz: "wo ein Foto aufgenommen wurde, versteckt in der Datei"
+    bedeutung: "Ein Handy speichert in jedem Foto Zusatzangaben, die man nicht sieht: Datum, Gerät und oft den Ort der Aufnahme, auf wenige Meter genau. Diese Angaben heissen Metadaten oder EXIF. Lädst du ein Foto in ein Repository hoch, bleiben sie in der Datei. Deshalb entfernst du die Ortsangaben vorher, auf macOS in Vorschau oder beim Export aus Fotos, auf Windows in den Eigenschaften der Datei."
+    wo: "macOS: Vorschau, **Werkzeuge**, **Informationen einblenden**, Reiter GPS; Windows: Rechtsklick, **Eigenschaften**, Reiter **Details**"
+    seite: "[Dein Rezept aufschreiben](vorbereitung/rezept-dokumentieren.html)"
+
   # Knöpfe und Fenster -------------------------------------------------------
 
   - term: "Authorize"
@@ -235,6 +279,36 @@ begriffe:
     wo: "Browser, während der Anmeldung in GitHub Desktop"
     seite: "[GitHub Desktop auf macOS](vorbereitung/github-desktop-macos.html) oder [auf Windows](vorbereitung/github-desktop-windows.html)"
     bild: "desktop-anmelden"
+
+  - term: "Add file"
+    aliases: ["Create new file", "Upload files"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Datei hinzufügen», «Neue Datei erstellen», «Dateien hochladen»"
+    kurz: "auf github.com eine Datei anlegen oder hochladen"
+    bedeutung: "**Add file** über der Dateiliste eines Repositorys öffnet zwei Wege: **Create new file** legt eine neue Textdatei an, **Upload files** lädt Dateien vom Laptop hoch, etwa Fotos. Schreibst du beim Anlegen einen Schrägstrich in den Namen, zum Beispiel `rezept/zutaten.csv`, entsteht dabei ein Ordner. Beides endet mit einem Commit."
+    wo: "github.com, Repository, über der Dateiliste"
+    seite: "[Dein Rezept aufschreiben](vorbereitung/rezept-dokumentieren.html)"
+    bild: "github-datei-anlegen"
+
+  - term: "Commit changes"
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Änderungen übernehmen», «Änderungen committen»"
+    kurz: "im Browser speichern, und damit committen"
+    bedeutung: "Auf github.com gibt es kein Speichern ohne Commit. **Commit changes** öffnet ein Fenster mit dem Feld **Commit message** für die Nachricht. Ein zweiter Klick auf **Commit changes** macht daraus einen Commit auf `main`, mit deinem Namen."
+    wo: "github.com, beim Bearbeiten, Anlegen oder Hochladen einer Datei, rechts oben"
+    seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
+    bild: "github-datei-bearbeiten"
+
+  - term: "Publish branch"
+    aliases: ["Publish"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Branch veröffentlichen»"
+    kurz: "einen neuen Branch zum ersten Mal nach GitHub schieben"
+    bedeutung: "Ein neuer Branch existiert zuerst nur auf deinem Laptop. **Publish branch** schiebt ihn zum ersten Mal nach GitHub, mit allen Commits darauf. Danach heisst der Knopf wieder **Push origin**. Erst ein veröffentlichter Branch kann einen Pull request bekommen."
+    wo: "GitHub Desktop, oben rechts, an der Stelle von **Push origin**"
+    befehl: "`git push -u origin name`"
+    seite: "[Rezept per Pull request einreichen](rezept-einreichen.html)"
+    bild: "desktop-publish-branch"
 
   - term: "Changes"
     aliases: ["Änderungen"]
@@ -269,7 +343,7 @@ begriffe:
     kurz: "der Ordner auf deinem Laptop"
     bedeutung: "**Local Path** im Klon-Fenster ist der Ordner auf deinem Laptop, in den GitHub Desktop das Repository legt. Im Kurs ist das **Dokumente/gitrepos**. Der Knopf **Choose** öffnet das Ordnerfenster deines Systems, und das spricht Deutsch, auch wenn GitHub Desktop Englisch spricht."
     wo: "GitHub Desktop, Fenster **Clone Repository**"
-    seite: "[Dein Übungs-Repository klonen](vorbereitung/klonen.html)"
+    seite: "[Dein Repository klonen](vorbereitung/klonen.html)"
     bild: "desktop-klonen"
 
   - term: "Open in Terminal"
@@ -280,6 +354,16 @@ begriffe:
     bedeutung: "**Open in Terminal** im Menü **Repository** öffnet ein Terminalfenster, das schon in deinem Repository steht. Dort tippst du Befehle wie `git status`. Im Workshop 1 machen wir das gemeinsam. In der Vorbereitung brauchst du es nicht."
     wo: "GitHub Desktop, Menü **Repository**"
     bild: "desktop-menue-repository"
+
+  - term: "Visibility"
+    aliases: ["Private", "Public", "privat", "öffentlich"]
+    gruppe: "Knöpfe und Fenster"
+    uebersetzt: "«Sichtbarkeit», «Privat», «Öffentlich»"
+    kurz: "wer ein Repository sehen kann"
+    bedeutung: "Beim Anlegen eines Repositorys wählst du die Sichtbarkeit. **Public** heisst, jede Person im Internet kann es lesen. **Private** heisst, nur du und die Personen, denen du oder die Organisation Zugriff geben. In gitklar sind dein eigenes Repository, `vorbereitung` und das Kochbuch privat. Neben dem Namen eines Repositorys zeigt GitHub die Sichtbarkeit als kleines Schild."
+    wo: "github.com, Seite **Create a new repository**; neben dem Namen jedes Repositorys"
+    seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
+    bild: "github-neues-repository"
 
   - term: "Settings"
     aliases: ["Options", "Preferences", "Einstellungen"]
@@ -296,7 +380,7 @@ begriffe:
     kurz: "den Ordner des Repositorys im Dateifenster öffnen"
     bedeutung: "**Show in Finder** auf macOS und **Show in Explorer** auf Windows öffnen den Ordner deines Repositorys im Dateifenster deines Systems. So findest du die Dateien, um sie mit einem Textprogramm zu öffnen."
     wo: "GitHub Desktop, Menü **Repository**"
-    seite: "[Erster Commit und Push](vorbereitung/erster-commit.html)"
+    seite: "[Commit und Push vom Laptop](vorbereitung/erster-commit.html)"
     bild: "desktop-menue-repository"
 
   - term: "Sign in"
@@ -485,44 +569,79 @@ bildschirme:
   - key: "github-repository"
     titel: "github.com: die Seite eines Repositorys"
     seite: "begriffe.html"
-    beschreibung: "Das Übungs-Repository auf github.com: Reiter **Code**, der grüne Knopf **Code** mit **Open with GitHub Desktop**, der Link **commits**, der Knopf **Fork** und die README unter der Dateiliste."
+    beschreibung: "Dein Repository `rezept-dein-benutzername` auf github.com: Reiter **Code**, der grüne Knopf **Code** mit **Open with GitHub Desktop**, der Link **commits**, der Knopf **Fork** und die README unter der Dateiliste."
 
   - key: "github-issue"
     titel: "github.com: ein Issue"
     seite: "begriffe.html"
-    beschreibung: "Der Reiter **Issues**, der Knopf **New issue** und das Issue «Deine Vorbereitung auf gitklar» mit den Kästchen zum Abhaken."
+    beschreibung: "Das Repository `gitklar/vorbereitung`, Reiter **Issues**, und darin das Issue «Deine Vorbereitung auf gitklar (dein-benutzername)» mit den Kästchen zum Abhaken und dem Feld **Add a comment**."
 
   - key: "github-pull-request"
     titel: "github.com: ein Pull request"
     seite: "begriffe.html"
     beschreibung: "Der Knopf **Compare & pull request**, der Reiter **Files changed** und der Knopf **Merge pull request**."
 
+  - key: "github-neues-repository"
+    titel: "github.com: Create a new repository"
+    seite: "vorbereitung/repository-anlegen.html"
+    beschreibung: "Die Seite **Create a new repository** mit **Owner** gitklar, dem Namen `rezept-dein-benutzername`, der Sichtbarkeit **Private**, **Add README** eingeschaltet und dem Knopf **Create repository**."
+
+  - key: "github-datei-bearbeiten"
+    titel: "github.com: eine Datei bearbeiten und committen"
+    seite: "vorbereitung/repository-anlegen.html"
+    beschreibung: "Die README im Bearbeiten, mit den Reitern **Edit** und **Preview**, und das Fenster nach **Commit changes...** mit dem Feld **Commit message** und dem Knopf **Commit changes**."
+
+  - key: "github-datei-anlegen"
+    titel: "github.com: Add file"
+    seite: "vorbereitung/rezept-dokumentieren.html"
+    beschreibung: "Das aufgeklappte Menü **Add file** mit **Create new file** und **Upload files**, und das Namensfeld mit `rezept/zutaten.csv`."
+
+  - key: "github-csv-tabelle"
+    titel: "github.com: zutaten.csv als Tabelle"
+    seite: "vorbereitung/rezept-dokumentieren.html"
+    beschreibung: "Die Datei `rezept/zutaten.csv`, die GitHub als Tabelle mit den Spalten zutat, menge, einheit und hinweis anzeigt."
+
+  - key: "desktop-neuer-branch"
+    titel: "GitHub Desktop: New branch"
+    seite: "rezept-einreichen.html"
+    beschreibung: "Das aufgeklappte **Current branch** mit dem Knopf **New branch** und das Fenster **Create a branch** mit dem Namen `rezept-linsensuppe`."
+
+  - key: "desktop-publish-branch"
+    titel: "GitHub Desktop: Publish branch"
+    seite: "rezept-einreichen.html"
+    beschreibung: "Die Leiste oben mit **Current branch: rezept-linsensuppe** und dem Knopf **Publish branch**, darunter der Kasten mit **Preview Pull Request**."
+
+  - key: "github-pr-vorlage"
+    titel: "github.com: der Pull request mit der Vorlage"
+    seite: "rezept-einreichen.html"
+    beschreibung: "Die Seite **Open a pull request** im Kochbuch mit **base: main**, **compare: rezept-linsensuppe**, dem Titel und der Vorlage mit den Kästchen."
+
   - key: "editor-source-control"
     titel: "VS Code: Source Control"
     seite: "begriffe.html"
-    beschreibung: "Die Seitenleiste **Source Control** in VS Code oder Positron mit dem Ordner des Übungs-Repositorys."
+    beschreibung: "Die Seitenleiste **Source Control** in VS Code oder Positron mit dem Ordner deines Repositorys `rezept-dein-benutzername`."
 
   # ki-werkzeuge.html: die KI-Werkzeuge ----------------------------------------
 
   - key: "claude-terminal"
     titel: "Claude Code im Terminal"
     seite: "ki-werkzeuge.html"
-    beschreibung: "Ein Terminalfenster im Übungs-Repository nach dem Befehl `claude`, mit der Antwort auf die Frage aus der Vorbereitung."
+    beschreibung: "Ein Terminalfenster in deinem Repository nach dem Befehl `claude`, mit der Antwort auf die Frage aus der Vorbereitung."
 
   - key: "claude-app-code"
     titel: "Claude-App: Reiter Code"
     seite: "ki-werkzeuge.html"
-    beschreibung: "Die Claude-App mit dem Reiter **Code** oben in der Seitenleiste, der Umgebung **Local**, dem geöffneten Übungs-Repository und der Anzeige der Änderungen (`+12 -1`)."
+    beschreibung: "Die Claude-App mit dem Reiter **Code** oben in der Seitenleiste, der Umgebung **Local**, dem geöffneten Repository `rezept-dein-benutzername` und der Anzeige der Änderungen (`+12 -1`)."
 
   - key: "claude-app-cowork"
     titel: "Claude-App: Cowork"
     seite: "ki-werkzeuge.html"
-    beschreibung: "Eine Cowork-Sitzung mit dem verbundenen Ordner des Übungs-Repositorys."
+    beschreibung: "Eine Cowork-Sitzung mit dem verbundenen Ordner deines Repositorys."
 
   - key: "chatgpt-app-codex"
     titel: "ChatGPT-App: Codex"
     seite: "ki-werkzeuge.html"
-    beschreibung: "Die Ansicht **Codex** in der ChatGPT-App mit dem geöffneten Übungs-Repository und den Git-Knöpfen für Stage, Commit, Push und Pull request."
+    beschreibung: "Die Ansicht **Codex** in der ChatGPT-App mit dem geöffneten Repository und den Git-Knöpfen für Stage, Commit, Push und Pull request."
 
   - key: "chatgpt-app-work"
     titel: "ChatGPT-App: Work"
