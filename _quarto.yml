@@ -51,6 +51,8 @@ website:
         - section: "Für alle"
           contents:
             - vorbereitung/einladung.qmd
+            - vorbereitung/repository-anlegen.qmd
+            - vorbereitung/rezept-dokumentieren.qmd
             - vorbereitung/klonen.qmd
             - vorbereitung/erster-commit.qmd
         - section: "Wenn du es hast"
@@ -58,6 +60,9 @@ website:
             - vorbereitung/claude-code.qmd
             - vorbereitung/editor.qmd
         - vorbereitung/fertig.qmd
+        - section: "Workshop verpasst?"
+          contents:
+            - rezept-einreichen.qmd
         - section: "Nachschlagen"
           contents:
             - werkzeuge.qmd

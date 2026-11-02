@@ -1,0 +1,72 @@
+---
+title: "Dein Repository anlegen"
+subtitle: "Etwa 10 Minuten"
+---
+
+<!-- zu prüfen: die Beschriftungen auf der Seite «Create a new repository». GitHub hat die Seite 2025 umgestaltet (README als Schalter statt Häkchen). Vor dem Versand mit dem Testkonto durchklicken. -->
+
+Ein {{< gl Repository >}} ist ein Projektordner, dessen Geschichte Git festhält. In diesem Schritt legst du dein eigenes an, im Browser, in der Organisation gitklar. Es heisst `rezept-` und dann dein Benutzername, zum Beispiel `rezept-anna-koch`, wenn dein Benutzername `anna-koch` ist. Im nächsten Schritt schreibst du darin ein Rezept auf.
+
+Alles in diesem Schritt passiert auf github.com. GitHub Desktop brauchst du erst beim [Klonen](klonen.qmd).
+
+## Schritte
+
+1. Melde dich auf [github.com](https://github.com) an und öffne [github.com/organizations/gitklar/repositories/new](https://github.com/organizations/gitklar/repositories/new). Das ist die Seite **Create a new repository**, mit gitklar schon als Besitzerin eingetragen.
+2. Prüfe das Feld **Owner**. Dort muss **gitklar** stehen. Steht dort dein eigener Benutzername, klicke darauf und wähle **gitklar**.
+3. Schreib bei **Repository name** `rezept-` und deinen Benutzernamen, genau so, wie er auf GitHub heisst.
+4. Bei **Description** kannst du einen Satz schreiben, zum Beispiel `Mein Rezept für gitklar`. Das Feld darf leer bleiben.
+5. Wähle bei der Sichtbarkeit **Private**. Warum, steht weiter unten.
+6. Schalte **Add README** ein. Je nach Ansicht ist das ein Häkchen oder ein Schalter. Die Felder für **.gitignore** und **license** lässt du, wie sie sind.
+7. Klicke auf **Create repository**. GitHub zeigt jetzt dein Repository, mit einer einzigen Datei: `README.md`.
+
+{{< glossar bild github-neues-repository >}}
+
+## Die README schreiben
+
+Die {{< gl README >}} ist die Startseite deines Repositorys. GitHub zeigt sie unter der Dateiliste an. Im Moment steht darin nur eine Überschrift mit dem Namen des Repositorys.
+
+1. Klicke rechts oben im Kasten der README auf den Stift (**Edit README**). Es öffnet sich ein Textfeld mit der Zeile `# rezept-dein-benutzername`.
+2. Lass die erste Zeile stehen. Schreib darunter, nach einer leeren Zeile, zwei Sätze: wer du bist, so viel du teilen willst, und welches Rezept hier hineinkommt. Zum Beispiel: `Hier schreibe ich mein Rezept für den gitklar-Kurs auf. Es sind die Pancakes, die es bei uns sonntags gibt.`
+3. Klicke oben auf **Preview**. So wird GitHub die Datei anzeigen. Mit **Edit** kommst du zurück zum Text.
+4. Klicke rechts oben auf **Commit changes...**. Es öffnet sich ein Fenster.
+5. Im Feld **Commit message** steht `Update README.md`. Ersetze es durch einen eigenen Satz, zum Beispiel `README mit zwei Sätzen`. Lass **Commit directly to the main branch** ausgewählt.
+6. Klicke auf **Commit changes**.
+
+{{< glossar bild github-datei-bearbeiten >}}
+
+## Was gerade passiert ist
+
+Du hast zwei {{< gl Commit display="Commits" >}} gemacht, ohne etwas zu installieren. Den ersten hat GitHub beim Anlegen für dich gemacht, mit der README. Den zweiten hast du mit **Commit changes** gemacht. Jedes Mal, wenn du im Browser eine Datei speicherst, entsteht ein Commit.
+
+Über der Dateiliste steht jetzt **2 Commits**. Klicke darauf. Du siehst beide, je mit deinem Namen, der Uhrzeit und der Nachricht. Klicke auf den oberen. GitHub zeigt dir, was sich geändert hat: die neuen Zeilen grün, mit einem Plus davor.
+
+## Markdown in drei Zeichen
+
+Die Endung `.md` steht für Markdown. Eine Markdown-Datei ist reiner Text mit ein paar Zeichen, die GitHub als Formatierung anzeigt:
+
+| Du schreibst | GitHub zeigt |
+|---|---|
+| `# Pancakes` | eine Überschrift |
+| `**heiss**` | **heiss**, fett |
+| `- Mehl` | einen Punkt in einer Liste |
+| `1. Teig rühren` | einen nummerierten Schritt |
+
+Mehr brauchst du für das Rezept nicht.
+
+## Geschafft, wenn
+
+Dein Repository unter `github.com/gitklar/rezept-dein-benutzername` existiert, neben dem Namen **Private** steht und die README deine zwei Sätze zeigt.
+
+## Wer dein Repository sieht
+
+Privat heisst: Nur du und die Kursleitung sehen es. Die anderen Teilnehmer:innen sehen es nicht. Im Workshop bringst du dein Rezept selbst in das gemeinsame Kochbuch, von deinem Laptop aus. Dafür muss niemand sonst dein Repository lesen können.
+
+Ein öffentliches Repository könnte jede Person im Internet lesen, auch deine Fotos. In der Organisation gitklar ist das abgeschaltet. Steht **Public** bei dir nicht zur Wahl, ist das so gewollt. Willst du dein Rezept später öffentlich zeigen, sprich mich an.
+
+## Hängt es?
+
+- **Bei Owner steht nur dein eigener Name.** Du hast die [Einladung](einladung.qmd) in die Organisation noch nicht angenommen, oder sie ist abgelaufen.
+- **«The repository rezept-... already exists».** Du hast es schon angelegt. Öffne [github.com/gitklar](https://github.com/gitklar) und such es dort.
+- **Das Repository liegt in deinem eigenen Konto statt in gitklar.** Öffne es, dann **Settings**, ganz unten **Transfer ownership**, und wähle **gitklar**. Oder schreib in dein Issue, dann mache ich es mit dir.
+- **Add README vergessen.** GitHub zeigt dann eine fast leere Seite mit Befehlen. Klicke dort auf **creating a new file**, nenne die Datei `README.md` und schreib eine Überschrift und deine zwei Sätze hinein.
+- Alles andere: Kommentar in dein Issue, mit Screenshot.
