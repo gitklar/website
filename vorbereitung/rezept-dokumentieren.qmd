@@ -18,7 +18,7 @@ Im Workshop 1 kopierst du diesen Ordner in das gemeinsame gitklar-Kochbuch. Desh
 Für die Fotos gelten drei Regeln, weil sie später im gemeinsamen Kochbuch stehen:
 
 - **Nur eigene Fotos.** Fotos aus dem Internet oder von anderen Personen dürfen nicht hinein.
-- **Keine Menschen.** Auch keine Gesichter im Hintergrund, keine Personen am Bildrand und keine Hände. Auf dem Foto ist nur das Essen zu sehen.
+- **Keine Menschen.** Keine Gesichter, auch nicht im Hintergrund, und keine Personen am Bildrand. Hände beim Kochen sind in Ordnung.
 - **Keine Ortsangaben.** Ein Handy speichert in jedem Foto, wo es aufgenommen wurde, oft auf wenige Meter genau. Bei Fotos in deiner Küche ist das deine Adresse. GitHub entfernt diese Angaben nicht, wenn du ein Foto in ein Repository hochlädst. Du entfernst sie vorher selbst.
 
 Das Foto muss eine JPG- oder PNG-Datei sein. iPhones speichern oft als HEIC, und das zeigt GitHub nicht an. Gib der Datei zum Schluss einen kurzen Namen in Kleinbuchstaben, ohne Leerzeichen: `foto-1.jpg`.
