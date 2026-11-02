@@ -24,9 +24,9 @@ Das Kochbuch ist das Repository [gitklar/kochbuch](https://github.com/gitklar/ko
 
 Ein Branch ist deine eigene Arbeitslinie im Kochbuch. Auf ihm kannst du Dateien hinzufügen, ohne die Hauptfassung `main` anzufassen.
 
-1. Denk dir einen Kurznamen für dein Gericht aus: Kleinbuchstaben, Ziffern und Bindestriche, keine Leerzeichen, keine Umlaute. Zum Beispiel `zuercher-geschnetzeltes` oder `linsensuppe`. Schau auf [github.com/gitklar/kochbuch](https://github.com/gitklar/kochbuch) im Ordner `rezepte` nach, ob es den Namen schon gibt. Wenn ja, hänge deinen Benutzernamen an.
+1. Dein Ordner im Kochbuch heisst wie dein GitHub-Benutzername, in Kleinbuchstaben, zum Beispiel `rezepte/dein-benutzername`. Weil jeder Benutzername nur einmal vorkommt, kann kein Ordner doppelt angelegt werden.
 2. Klicke in GitHub Desktop oben in der Mitte auf **Current branch**, dann auf **New branch**.
-3. Schreib als Namen `rezept-` und deinen Kurznamen, zum Beispiel `rezept-linsensuppe`. Klicke auf **Create branch**.
+3. Schreib als Namen `rezept-` und deinen Benutzernamen, zum Beispiel `rezept-dein-benutzername`. Klicke auf **Create branch**.
 4. Oben steht jetzt **Current branch: rezept-linsensuppe**.
 
 {{< glossar bild desktop-neuer-branch >}}
@@ -42,14 +42,14 @@ Du kopierst den Ordner `rezept` aus deinem eigenen Repository in das Kochbuch. D
 1. Öffne im Finder `Dokumente/gitrepos/rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Befehl** und **C**.
 3. Öffne `Dokumente/gitrepos/kochbuch/rezepte` und drücke **Befehl** und **V**. Jetzt liegt dort ein Ordner `rezept`.
-4. Klicke einmal auf den neuen Ordner, drücke die Eingabetaste und schreib deinen Kurznamen, zum Beispiel `linsensuppe`.
+4. Klicke einmal auf den neuen Ordner, drücke die Eingabetaste und schreib deinen Benutzernamen in Kleinbuchstaben.
 
 ## Windows
 
 1. Öffne im Explorer `Dokumente\gitrepos\rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Strg** und **C**.
 3. Öffne `Dokumente\gitrepos\kochbuch\rezepte` und drücke **Strg** und **V**. Jetzt liegt dort ein Ordner `rezept`.
-4. Klicke einmal auf den neuen Ordner, drücke **F2** und schreib deinen Kurznamen, zum Beispiel `linsensuppe`.
+4. Klicke einmal auf den neuen Ordner, drücke **F2** und schreib deinen Benutzernamen in Kleinbuchstaben.
 
 :::
 
@@ -57,7 +57,7 @@ Im Ordner `rezepte` liegen jetzt `_vorlage`, die Ordner der anderen und dein neu
 
 ## Schritt 4: committen
 
-1. Wechsle zu GitHub Desktop. Im Reiter **Changes** stehen links deine neuen Dateien, zum Beispiel `rezepte/linsensuppe/rezept.md`, jede mit einem Häkchen.
+1. Wechsle zu GitHub Desktop. Im Reiter **Changes** stehen links deine neuen Dateien, zum Beispiel `rezepte/dein-benutzername/rezept.md`, jede mit einem Häkchen.
 2. Schreib unten links bei **Summary** eine Nachricht, zum Beispiel `Rezept Linsensuppe hinzugefügt`.
 3. Der Knopf darunter heisst jetzt **Commit to rezept-linsensuppe**, mit dem Namen deines Branches. Steht dort **Commit to main**, bist du auf dem falschen Branch. Geh dann zurück zu Schritt 2.
 4. Klicke auf den Knopf.
@@ -75,7 +75,7 @@ Ein Pull request ist deine Bitte, deinen Branch zu prüfen und in `main` zu übe
 1. GitHub Desktop zeigt nach dem Veröffentlichen einen Kasten mit dem Knopf **Preview Pull Request** oder **Create Pull Request**. Klicke darauf, und wenn nötig noch einmal auf **Create pull request**. Dein Browser öffnet sich auf github.com.
 2. Oben steht **base: main** und **compare: rezept-linsensuppe**. So soll es sein.
 3. Schreib als Titel den Namen deines Gerichts, zum Beispiel `Linsensuppe`.
-4. Im Textfeld darunter steht schon eine Vorlage. Ergänze bei **Gericht** den Namen und bei **Ordner** deinen Kurznamen.
+4. Im Textfeld darunter steht schon eine Vorlage. Ergänze bei **Gericht** den Namen und bei **Ordner** deinen Benutzernamen.
 5. Hake die Kästchen ab, die für dein Rezept stimmen. Im Textfeld setzt du dafür ein `x` zwischen die eckigen Klammern: aus `- [ ]` wird `- [x]`. Passt ein Kästchen nicht, lass es leer und schreib einen Satz dazu.
 6. Klicke auf **Create pull request**.
 
