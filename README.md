@@ -8,6 +8,10 @@ The shared pages under `vorbereitung/` are the manual. A cohort is a Quarto prof
 
 Cohort-specific text lives in three places only: the profile values (`{{< meta cohort.label >}}` and the like), blocks marked `when-profile="cohort"` on the front page, and the profile file itself. Shared pages are never edited for one cohort.
 
+## The recipe pre-work and the catch-up page
+
+Since 2 November 2026 (decisions 0006 to 0012 in `gitklar-dev/admin`) the pre-work has each participant create a private repository `rezept-<username>` in the organisation (`vorbereitung/repository-anlegen.qmd`), write a recipe there in the browser (`vorbereitung/rezept-dokumentieren.qmd`: `rezept/zutaten.csv` with the fixed columns `zutat,menge,einheit,hinweis`, `rezept/rezept.md`, photos without people and without location data), clone it and commit from the laptop. The per-person issue lives in the shared repository `gitklar/vorbereitung`. In the workshops the recipes go into `gitklar/kochbuch` by pull request; `rezept-einreichen.qmd` (sidebar section "Workshop verpasst?") is the written version of workshop 1 for anyone who missed it. Steps that have not been tried with a test account carry an HTML comment `zu prüfen` at the top of the page source.
+
 ## Reference pages and the glossary
 
 `werkzeuge.qmd` (which tool does what), `ki-werkzeuge.qmd` (what Claude Code, Cowork, Codex and ChatGPT Work see of the folder and the repository, from the vendors' documentation, with the date of the last check), `glossar.qmd` and `begriffe.qmd` (the terms side by side in English and German) form the sidebar section "Nachschlagen". The glossary and the table are generated at render time from one file, `begriffe.yml`, by the shortcodes in `_extensions/ghe/gl` (copied from agentsforsci-ghe/website and adapted): `{{< glossar liste >}}` renders the entries, `{{< glossar tabelle >}}` the table, and `{{< gl commit >}}` marks a term on any page with a hover popover and a link to its entry. Edit `begriffe.yml` only; the fields are documented at the top of the file. Pandoc parses the file, so no extra tool is needed in the Action.
