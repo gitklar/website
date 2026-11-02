@@ -1,29 +1,35 @@
 ---
-title: "Erster Commit und Push"
+title: "Commit und Push vom Laptop"
 subtitle: "Etwa 15 Minuten"
 ---
 
-Ein Commit ist ein Schnappschuss deiner Dateien mit einer kurzen Nachricht dazu. Ein Push bringt deine Commits auf GitHub. Beides machst du jetzt einmal von Hand, damit du im Workshop weisst, was eine KI tut, wenn sie es für dich macht.
+<!-- zu prüfen: die Beschriftungen in GitHub Desktop, nach dem ersten Test mit einem Testkonto. -->
+
+Deine ersten Commits hast du im Browser gemacht. Jetzt machst du einen auf deinem Laptop und bringst ihn mit einem Push nach GitHub. Genau das tut eine KI, wenn sie für dich committet. Deshalb machst du es einmal selbst, von Hand.
 
 ## Schritte
 
-1. Öffne die Datei `projekt.md` aus deinem geklonten Ordner. In GitHub Desktop: Menü **Repository**, **Show in Finder** oder **Show in Explorer**, dann Rechtsklick auf `projekt.md`, **Öffnen mit**, und ein Textprogramm wählen: **TextEdit** auf macOS, **Editor** auf Windows. Zeigt TextEdit Formatierungsknöpfe, wähle im Menü **Format** den Punkt **In reinen Text umwandeln**.
-2. Beantworte die drei Fragen in der Datei, ein bis zwei Sätze pro Antwort. Lass die Zeilen mit `#` stehen, das sind die Überschriften. Speichere die Datei.
-3. Wechsle zu GitHub Desktop. Links steht jetzt `projekt.md` mit einem Häkchen, rechts siehst du deine Änderung: neue Zeilen grün, entfernte rot.
-4. Unten links, im Feld **Summary**, schreibst du eine kurze Nachricht, zum Beispiel `Mein Projekt beschrieben`. Klicke auf **Commit to main**.
-5. Oben erscheint **Push origin**. Klicke darauf. Nach ein paar Sekunden ist der Knopf wieder ruhig.
-6. Öffne im Browser [github.com/gitklar](https://github.com/gitklar), dann dein Repository, dann `projekt.md`. Dein Text steht dort.
+1. Öffne in GitHub Desktop das Menü **Repository**, **Show in Finder** oder **Show in Explorer**, und dann den Ordner `rezept`.
+2. Öffne `rezept.md` mit einem Textprogramm: Rechtsklick auf die Datei, **Öffnen mit**, und dann **TextEdit** auf macOS oder **Editor** auf Windows. Zeigt TextEdit Formatierungsknöpfe, wähle im Menü **Format** den Punkt **In reinen Text umwandeln**.
+3. Ergänze etwas an deinem Rezept, zum Beispiel einen Tipp am Ende: `Tipp: Der Teig wird luftiger, wenn du das Eiweiss getrennt schlägst.` Speichere die Datei.
+4. Wechsle zu GitHub Desktop. Links im Reiter **Changes** steht jetzt `rezept/rezept.md` mit einem Häkchen. Rechts siehst du deine Änderung: neue Zeilen grün, entfernte rot.
+5. Unten links, im Feld **Summary**, schreibst du eine kurze Nachricht, zum Beispiel `Tipp ergänzt`. Klicke auf **Commit to main**.
+6. Oben erscheint **Push origin**. Klicke darauf. Nach ein paar Sekunden ist der Knopf wieder ruhig.
+7. Öffne im Browser dein Repository `rezept-dein-benutzername` und dann `rezept/rezept.md`. Dein Tipp steht dort.
+
+Öffne `zutaten.csv` auf dem Laptop nur mit TextEdit oder dem Editor, nicht mit Excel oder Numbers. Diese Programme können beim Speichern die Kommas durch Strichpunkte ersetzen, und dann stimmt die Tabelle nicht mehr.
 
 ## Geschafft, wenn
 
-Dein Text in `projekt.md` auf GitHub sichtbar ist und oben im Repository **2 commits** oder mehr steht.
+Dein Tipp in `rezept.md` auf GitHub sichtbar ist und in GitHub Desktop im Reiter **History** dein neuer Commit ganz oben steht, über den Commits aus dem Browser.
 
 ## Was gerade passiert ist
 
-Git hat deine Änderung als Commit mit deiner Nachricht festgehalten, auf deinem Laptop. Der Push hat den Commit nach GitHub kopiert. Beides kannst du beliebig oft wiederholen. Jede Fassung bleibt erhalten, und du kannst zu jeder zurück.
+Git hat deine Änderung als Commit mit deiner Nachricht festgehalten, auf deinem Laptop. Der Push hat den Commit nach GitHub kopiert. Im Reiter **History** liegen jetzt beide Arten von Commits in einer Reihe: die aus dem Browser und der vom Laptop. Für Git sind sie gleich. Jeder trägt einen Namen, eine Zeit, eine Nachricht und eine Änderung. Jede Fassung bleibt erhalten, und du kannst zu jeder zurück.
 
 ## Hängt es?
 
-- **Links in GitHub Desktop erscheint keine Änderung.** Die Datei ist nicht gespeichert, oder du hast eine Kopie ausserhalb des Ordners bearbeitet. Prüfe den Pfad: `Dokumente/gitrepos/setup-dein-benutzername/projekt.md`.
+- **Links in GitHub Desktop erscheint keine Änderung.** Die Datei ist nicht gespeichert, oder du hast eine Kopie ausserhalb des Ordners bearbeitet. Prüfe den Pfad: `Dokumente/gitrepos/rezept-dein-benutzername/rezept/rezept.md`.
 - **Push origin schlägt fehl.** Meist ist die Anmeldung in GitHub Desktop abgelaufen. **Settings** oder **Options**, **Accounts**, neu anmelden.
+- **GitHub Desktop zeigt Pull origin statt Push origin.** Du hast nach dem Klonen noch etwas im Browser geändert. Klicke zuerst auf **Pull origin**, dann auf **Push origin**.
 - Alles andere: Kommentar in dein Issue, mit Screenshot.
