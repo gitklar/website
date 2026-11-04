@@ -3,21 +3,22 @@ title: "GitHub-Konto prüfen"
 subtitle: "Etwa 5 Minuten, nur wenn du dein Konto in der Umfrage angelegt hast"
 ---
 
-In der Umfrage vor dem Kurs hast du ein GitHub-Konto angelegt und mir den Benutzernamen genannt. Mit diesem Namen lade ich dich ein. Bevor die Einladung kommt, prüfst du, dass das Konto fertig ist.
+In der Umfrage vor dem Kurs hast du ein GitHub-Konto angelegt und mir den Benutzernamen genannt. Mit diesem Namen habe ich dich eingeladen. Prüfe jetzt, dass das Konto fertig ist. Ohne bestätigte E-Mail-Adresse lässt dich GitHub kein Repository anlegen und keinen Kommentar schreiben.
 
 ## Schritte
 
-1. Öffne [github.com](https://github.com) und klicke rechts oben auf **Sign in**. Melde dich mit deiner E-Mail-Adresse oder deinem Benutzernamen und deinem Passwort an.
-2. Zeigt GitHub oben einen gelben Hinweis **Please verify your email address**, öffne dein E-Mail-Programm, suche die Mail von GitHub mit diesem Betreff und klicke darin auf **Verify email address**. Ohne diesen Schritt kann GitHub dir die Einladung nicht zustellen.
-3. Klicke rechts oben auf dein rundes Profilbild. Im Menü steht dein Benutzername fett. Das ist der Name, den ich in der Einladung verwende.
-4. Stimmt er nicht mit dem Namen aus der Umfrage überein, schreib mir den richtigen per E-Mail an lars@lse.de.
+1. Öffne [github.com](https://github.com). Bist du nicht angemeldet, klicke rechts oben auf **Sign in** und melde dich mit deiner E-Mail-Adresse oder deinem Benutzernamen und deinem Passwort an.
+2. Zeigt GitHub oben einen gelben Hinweis **Please verify your email address**, öffne dein E-Mail-Programm, suche die Mail von GitHub mit diesem Betreff und klicke darin auf **Verify email address**. Ohne diesen Schritt kannst du im nächsten Schritt kein Repository anlegen.
+3. Klicke rechts oben auf dein rundes Profilbild. Im Menü steht dein Benutzername fett. Das ist der Name, mit dem du in gitklar erscheinst.
 
 ## Geschafft, wenn
 
-Du angemeldet bist, oben kein gelber Hinweis mehr steht und dein Benutzername im Menü dem aus der Umfrage entspricht.
+Du angemeldet bist und oben kein gelber Hinweis mehr steht.
 
 ## Hängt es?
 
 - **Passwort vergessen.** Auf der Anmeldeseite **Forgot password?**, dann der Mail von GitHub folgen.
 - **Die Bestätigungsmail kommt nicht.** Prüfe den Spam-Ordner. Sonst auf github.com rechts oben das Profilbild, **Settings**, **Emails**, **Resend verification email**.
-- **Du hast doch noch kein Konto.** Lege es jetzt an auf [github.com/signup](https://github.com/signup), mit der E-Mail-Adresse aus der Umfrage, und schick mir den Benutzernamen per E-Mail an lars@lse.de.
+- **Der Benutzername im Menü ist nicht der aus der Umfrage.** Du bist mit einem anderen Konto angemeldet. Melde dich ab und mit dem Konto aus der Umfrage wieder an. Hast du zwei Konten und willst das andere nehmen, schreib mir den Benutzernamen per E-Mail an lars@lse.de.
+
+{{< include _weiter.qmd >}}

@@ -24,3 +24,5 @@ Claude deine Commits mit deinen Nachrichten nennt.
 
 - **Claude findet keine Commits.** Der falsche Ordner ist offen. Prüfe den Pfad.
 - **Claude hat trotzdem etwas geändert.** Kein Problem. Schreib in dein Issue, was passiert ist, und lass GitHub Desktop offen. Wir schauen es im Workshop an.
+
+{{< include _weiter.qmd >}}

@@ -1,0 +1,3 @@
+## Wie es weitergeht
+
+Geh zurück zu deinem Issue «Deine Vorbereitung auf gitklar» und hake diesen Schritt ab. Der nächste Schritt steht gleich darunter. Hast du den Reiter mit dem Issue geschlossen, öffne es über dein Lesezeichen **gitklar - Vorbereitung** oder über [github.com/gitklar/vorbereitung/issues](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+assignee%3A%40me).

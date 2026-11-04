@@ -31,3 +31,11 @@
   border-radius: 0.25rem;
   max-width: 100%;
 }
+
+/* Glossary terms: the yellow of the bitz z under the term, so the dots
+   stand apart from the green links (Lars's review of 4 November 2026).
+   The selector beats the extension's a.gl rule. */
+body a.gl, body a.gl:hover, body a.gl:focus {
+  text-decoration-color: #f0b85c;
+  text-decoration-thickness: 3px;
+}
