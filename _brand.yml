@@ -1,0 +1,99 @@
+# Copy of _brand.yml from bitzgmbh/brand (version 2, 2026-11-04). Do not edit
+# here: change it in bitzgmbh/brand and copy it again.
+#
+# bitz brand definition. Single source of truth for colours, typography and
+# logo roles, in the brand.yml format that Quarto, bslib and the brand.yml R
+# package read. See README.md.
+#
+# Version 2 (2026-11-04): Atkinson Hyperlegible Next with forest green and
+# amber, chosen after two rounds of the design review board
+# (mockups/review/). It shares the type of openwashdata and has its own
+# colours.
+#
+# Rules:
+# - Screens use the light grey paper; slides and PDF use white (the
+#   templates switch to the white token).
+# - Amber carries the wordmark "z" and the links. Links are always
+#   underlined: amber is 2.99:1 against the body text, so the colour alone
+#   is not enough (WCAG 1.4.1).
+# - Every chart colour reaches 3:1 on paper and on white. The set stays
+#   apart under deuteranopia, protanopia and tritanopia (minimum CIELAB
+#   distance 22.4 in the colorspace simulation).
+meta:
+  name: bitz
+  link:
+    github: https://github.com/bitzgmbh
+
+color:
+  palette:
+    # Identity colour and its shades. Contrast on paper, rounded.
+    bitz-green: "#1e5a46"          # 7.3:1
+    bitz-green-dark: "#0f3a2c"     # 11.5:1
+    # Very light tint: code, table and callout backgrounds only.
+    bitz-green-tint: "#e6f0ec"
+    # Accent: the wordmark z and links. 5.1:1 on paper, 5.6:1 on white.
+    bitz-amber: "#9a5800"
+    # Core text and surface tokens.
+    ink: "#1e1e1e"                 # 15.2:1
+    paper: "#f4f4f4"               # screen background
+    white: "#ffffff"               # print background (slides, PDF)
+    # Muted text and captions (6.1:1); grey-light is for rules only.
+    grey: "#5c5c5c"
+    grey-light: "#d4d4d4"
+    # Categorical chart colours, in this order. Lowest: chart-5 at 3.3:1 on paper.
+    chart-1: "#1e5a46"             # green
+    chart-2: "#4a7ec0"             # blue, so green and amber never sit side by side
+    chart-3: "#9a5800"             # amber
+    chart-4: "#53317a"             # violet
+    chart-5: "#8b829c"             # grey violet, the lightest series
+    # Sequential ramp for heatmaps and continuous fills.
+    seq-low: "#b3cfc4"
+    seq-high: "#0f3a2c"
+  foreground: ink
+  background: paper
+  primary: bitz-green
+  secondary: grey
+  tertiary: bitz-green-tint
+  light: white
+  dark: bitz-green-dark
+
+typography:
+  fonts:
+    - family: Atkinson Hyperlegible Next
+      source: google
+      weight: [400, 600, 700]
+      style: [normal, italic]
+    - family: Atkinson Hyperlegible Mono
+      source: google
+      weight: [400, 500]
+  base:
+    family: Atkinson Hyperlegible Next
+    size: 11pt
+    line-height: 1.5
+  headings:
+    family: Atkinson Hyperlegible Next
+    weight: 700
+    color: primary
+    line-height: 1.2
+  monospace:
+    family: Atkinson Hyperlegible Mono
+    size: 0.9em
+  monospace-inline:
+    background-color: bitz-green-tint
+  monospace-block:
+    background-color: bitz-green-tint
+  link:
+    color: bitz-amber
+    decoration: underline
+
+logo:
+  images:
+    wordmark-light:
+      path: logos/wordmark-light.svg
+      alt: "bitz"
+    wordmark-dark:
+      path: logos/wordmark-dark.svg
+      alt: "bitz"
+  medium:
+    light: wordmark-light
+    dark: wordmark-dark

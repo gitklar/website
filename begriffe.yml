@@ -254,7 +254,7 @@ begriffe:
     aliases: [".md", "Markdown-Datei"]
     gruppe: "Dateien"
     kurz: "reiner Text mit ein paar Zeichen für Formatierung"
-    bedeutung: "Markdown ist reiner Text mit ein paar Zeichen, die GitHub als Formatierung anzeigt: `#` am Zeilenanfang für eine Überschrift, `**fett**`, `-` für eine Liste, `![Beschreibung](foto.jpg)` für ein Bild. Dateien mit der Endung `.md` sind Markdown, auch die README. Beim Bearbeiten im Browser zeigt der Reiter **Preview**, wie GitHub die Datei anzeigen wird."
+    bedeutung: "Markdown ist reiner Text mit ein paar Zeichen, die GitHub als Formatierung anzeigt: `#` am Zeilenanfang für eine Überschrift, `**fett**`, `-` für eine Liste. Dateien mit der Endung `.md` sind Markdown, auch die README. Beim Bearbeiten im Browser zeigt der Reiter **Preview**, wie GitHub die Datei anzeigen wird."
     wo: "in deinem Repository als `README.md` und `rezept/rezept.md`; auf github.com der Reiter **Preview** beim Bearbeiten"
     seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
     bild: "github-datei-bearbeiten"
@@ -264,9 +264,7 @@ begriffe:
     gruppe: "Dateien"
     uebersetzt: "«Ortsinformationen», «Standort», «GPS», «EXIF-Daten»"
     kurz: "wo ein Foto aufgenommen wurde, versteckt in der Datei"
-    bedeutung: "Ein Handy speichert in jedem Foto Zusatzangaben, die man nicht sieht: Datum, Gerät und oft den Ort der Aufnahme, auf wenige Meter genau. Diese Angaben heissen Metadaten oder EXIF. Lädst du ein Foto in ein Repository hoch, bleiben sie in der Datei. Deshalb entfernst du die Ortsangaben vorher, auf macOS in Vorschau oder beim Export aus Fotos, auf Windows in den Eigenschaften der Datei."
-    wo: "macOS: Vorschau, **Werkzeuge**, **Informationen einblenden**, Reiter GPS; Windows: Rechtsklick, **Eigenschaften**, Reiter **Details**"
-    seite: "[Dein Rezept aufschreiben](vorbereitung/rezept-dokumentieren.html)"
+    bedeutung: "Ein Handy speichert in jedem Foto Zusatzangaben, die man nicht sieht: Datum, Gerät und oft den Ort der Aufnahme, auf wenige Meter genau. Diese Angaben heissen Metadaten oder EXIF. Lädst du ein Foto in ein Repository hoch, bleiben sie in der Datei, und alle, die das Repository lesen können, können sie auslesen. In gitklar kommen deshalb keine Fotos in die Rezepte."
 
   # Knöpfe und Fenster -------------------------------------------------------
 
@@ -285,7 +283,7 @@ begriffe:
     gruppe: "Knöpfe und Fenster"
     uebersetzt: "«Datei hinzufügen», «Neue Datei erstellen», «Dateien hochladen»"
     kurz: "auf github.com eine Datei anlegen oder hochladen"
-    bedeutung: "**Add file** über der Dateiliste eines Repositorys öffnet zwei Wege: **Create new file** legt eine neue Textdatei an, **Upload files** lädt Dateien vom Laptop hoch, etwa Fotos. Schreibst du beim Anlegen einen Schrägstrich in den Namen, zum Beispiel `rezept/zutaten.csv`, entsteht dabei ein Ordner. Beides endet mit einem Commit."
+    bedeutung: "**Add file** über der Dateiliste eines Repositorys öffnet zwei Wege: **Create new file** legt eine neue Textdatei an, **Upload files** lädt Dateien vom Laptop hoch, etwa eine CSV-Datei aus einer Tabelle. Schreibst du beim Anlegen einen Schrägstrich in den Namen, zum Beispiel `rezept/zutaten.csv`, entsteht dabei ein Ordner. Beides endet mit einem Commit."
     wo: "github.com, Repository, über der Dateiliste"
     seite: "[Dein Rezept aufschreiben](vorbereitung/rezept-dokumentieren.html)"
     bild: "github-datei-anlegen"
@@ -341,7 +339,7 @@ begriffe:
     gruppe: "Knöpfe und Fenster"
     uebersetzt: "«Lokaler Pfad»"
     kurz: "der Ordner auf deinem Laptop"
-    bedeutung: "**Local Path** im Klon-Fenster ist der Ordner auf deinem Laptop, in den GitHub Desktop das Repository legt. Im Kurs ist das **Dokumente/gitrepos**. Der Knopf **Choose** öffnet das Ordnerfenster deines Systems, und das spricht Deutsch, auch wenn GitHub Desktop Englisch spricht."
+    bedeutung: "**Local Path** im Klon-Fenster ist der Ordner auf deinem Laptop, in den GitHub Desktop das Repository legt. Im Kurs ist das **Dokumente/gitrepos/gh-org-gitklar**. Der Knopf **Choose** öffnet das Ordnerfenster deines Systems, und das spricht Deutsch, auch wenn GitHub Desktop Englisch spricht."
     wo: "GitHub Desktop, Fenster **Clone Repository**"
     seite: "[Dein Repository klonen](vorbereitung/klonen.html)"
     bild: "desktop-klonen"
@@ -360,7 +358,7 @@ begriffe:
     gruppe: "Knöpfe und Fenster"
     uebersetzt: "«Sichtbarkeit», «Privat», «Öffentlich»"
     kurz: "wer ein Repository sehen kann"
-    bedeutung: "Beim Anlegen eines Repositorys wählst du die Sichtbarkeit. **Public** heisst, jede Person im Internet kann es lesen. **Private** heisst, nur du und die Personen, denen du oder die Organisation Zugriff geben. In gitklar sind dein eigenes Repository, `vorbereitung` und das Kochbuch privat. Neben dem Namen eines Repositorys zeigt GitHub die Sichtbarkeit als kleines Schild."
+    bedeutung: "Beim Anlegen eines Repositorys wählst du die Sichtbarkeit. **Public** heisst, jede Person im Internet kann es lesen. **Private** heisst, nur du und die Personen, denen du oder die Organisation Zugriff geben. In gitklar sind dein eigenes Repository, `vorbereitung` und das Kochbuch privat: Alle Teilnehmer:innen der Organisation können sie lesen, sonst niemand. Neben dem Namen eines Repositorys zeigt GitHub die Sichtbarkeit als kleines Schild."
     wo: "github.com, Seite **Create a new repository**; neben dem Namen jedes Repositorys"
     seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
     bild: "github-neues-repository"
@@ -488,7 +486,7 @@ begriffe:
     gruppe: "KI und Agenten"
     uebersetzt: "«Agent», «KI-Agent»"
     kurz: "KI, die in Schritten arbeitet: lesen, ändern, prüfen, weiter"
-    bedeutung: "Ein Agent ist ein Sprachmodell mit Werkzeugen, das in einer Schleife arbeitet: Es tut etwas, schaut sich das Ergebnis an, entscheidet den nächsten Schritt und macht weiter, bis die Aufgabe erledigt ist oder es dich braucht. Claude Code, Cowork, Codex und ChatGPT Work sind Agenten. Eine einzelne Frage mit Antwort ist keiner, weil dazwischen nichts passiert."
+    bedeutung: "Ein KI-Agent, kurz Agent, ist ein Sprachmodell wie Claude oder ChatGPT, das nicht nur antwortet, sondern selbst handelt: Es darf Dateien lesen und ändern und Befehle ausführen. Dabei arbeitet es in einer Schleife: Es tut etwas, schaut sich das Ergebnis an, entscheidet den nächsten Schritt und macht weiter, bis die Aufgabe erledigt ist oder es dich braucht. Claude Code, Cowork, Codex und ChatGPT Work sind Agenten. Eine einzelne Frage mit Antwort ist keiner, weil dazwischen nichts passiert."
 
   - term: "Sandbox"
     aliases: ["Sandkasten"]

@@ -1,15 +1,15 @@
 ---
 title: "Claude Code im Repository starten"
-subtitle: "Etwa 10 Minuten, nur wenn du Claude Code hast"
+subtitle: "Freiwillig, etwa 10 Minuten, nur wenn du Claude Code hast"
 ---
 
-Claude Code kann Git für dich bedienen. Vor dem Workshop soll es dir nur zeigen, was es über deinen Ordner weiss. Geändert wird noch nichts. Im Workshop lassen wir Claude etwas ändern und schauen uns gemeinsam an, was es getan hat.
+Dieser Schritt ist freiwillig. Claude Code, Codex und ähnliche Werkzeuge lernen wir in gitklar nicht. Im Workshop siehst du sie nur in kurzen Vorführungen. Hast du Claude Code und Lust darauf, kannst du hier ausprobieren, was es über deinen Ordner weiss. Geändert wird dabei nichts. Mit Codex geht es ähnlich.
 
 ## Schritte
 
 1. Öffne deinen geklonten Ordner in Claude Code.
-   - **Claude Code App:** **Open folder** oder das Ordner-Symbol, dann `Dokumente/gitrepos/rezept-dein-benutzername` wählen.
-   - **Claude Code im Terminal:** `cd ~/Documents/gitrepos/rezept-dein-benutzername`, dann `claude`.
+   - **Claude Code App:** **Open folder** oder das Ordner-Symbol, dann `Dokumente/gitrepos/gh-org-gitklar/rezept-dein-benutzername` wählen.
+   - **Claude Code im Terminal:** `cd ~/Documents/gitrepos/gh-org-gitklar/rezept-dein-benutzername`, dann `claude`.
 2. Schreib diese Frage:
 
    > Was weiss Git über diesen Ordner? Zeig mir die Commits und erkläre mir in drei Sätzen, was ein Commit ist. Ändere keine Datei.

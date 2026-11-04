@@ -23,7 +23,7 @@ Beide Workshops finden online auf Zoom statt und dauern zwei Stunden. Den Link b
 
 1. **Einladung.** Du bekommst eine E-Mail von GitHub mit der Einladung in die Organisation gitklar. Nimm sie an.
 2. **Dein Issue.** Im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung) liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen, dir zugewiesen. Es nennt die Schritte, die für dich gelten, in deiner Reihenfolge. Jeder Schritt verlinkt auf eine Seite hier.
-3. **Die Schritte.** Du legst dein eigenes Repository `rezept-dein-benutzername` an, schreibst darin ein Rezept auf, das du gern kochst, und arbeitest dann mit GitHub Desktop auf deinem Laptop daran weiter. Rechne mit etwa 75 Minuten, verteilt auf mehrere Tage, wenn du willst. Hake jeden Schritt im Issue ab.
+3. **Die Schritte.** Du legst dein eigenes Repository `rezept-dein-benutzername` an, schreibst darin ein Rezept auf, das du gern kochst, und arbeitest dann mit GitHub Desktop auf deinem Laptop daran weiter. Rechne mit etwa 1.5 Stunden, verteilt auf mehrere Tage, wenn du willst. Hake jeden Schritt im Issue ab.
 4. **Fertig melden.** Am Ende schreibst du einen Kommentar in dein Issue, der mit «Vorbereitung abgeschlossen» beginnt. Dann weiss ich, dass du bereit bist.
 
 ## In den Workshops
@@ -36,13 +36,22 @@ Aus allen Rezepten entsteht das gemeinsame gitklar-Kochbuch, ein Repository der 
 
 ::: {.content-visible unless-profile="cohort"}
 
-gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die mit KI arbeiten und ihre Arbeit sichern, nachvollziehen und teilen wollen. Zwei Online-Workshops von je zwei Stunden, davor eine Vorbereitung von etwa 75 Minuten, die jede Person in ihrem eigenen Tempo macht. Dabei schreibt jede Person ein Rezept auf, und in den Workshops entsteht daraus ein gemeinsames Kochbuch.
+gitklar ist ein Kurs von [Lars Schöbitz](https://www.lse.de) für Menschen, die mit KI arbeiten und ihre Arbeit sichern, nachvollziehen und teilen wollen. Zwei Online-Workshops von je zwei Stunden, davor eine Vorbereitung von etwa 1.5 Stunden, die jede Person in ihrem eigenen Tempo macht. Dabei schreibt jede Person ein Rezept auf, und in den Workshops entsteht daraus ein gemeinsames Kochbuch.
 
 ## Was du danach kannst
 
-- Deine Dateien in einem Repository führen, mit einer Geschichte, die du zurückdrehen kannst.
-- Änderungen von dir und von einer KI auseinanderhalten, bevor du sie behältst.
-- Deine Arbeit auf GitHub sichern und anderen zeigen, wenn du willst.
+<!-- Lernziele nach Bloom: anwenden (1, 2, 5, 6), analysieren (3, 4), verstehen (7, 8). -->
+
+Nach dem Kurs kannst du
+
+- mit GitHub Desktop ein Repository auf deinen Laptop klonen, Änderungen als Commits festhalten und sie auf GitHub pushen,
+- im Reiter **History** von GitHub Desktop frühere Versionen deiner Dateien finden, vergleichen und zu einer früheren Version zurückkehren,
+- vor einem Commit im Diff prüfen, welche Änderungen von dir und welche von einer KI stammen, und entscheiden, welche du behältst,
+- an der Liste der Commits nachvollziehen, wer was wann geändert hat und warum,
+- über einen Branch und einen Pull request zu einem gemeinsamen Repository beitragen und den Pull request einer anderen Person prüfen,
+- mit einer Lizenz wie CC BY 4.0 festlegen, wie andere mit deiner Arbeit weiterarbeiten dürfen,
+- benennen, was du über GitHub ausser deinen Inhalten noch teilst, zum Beispiel deinen Benutzernamen, die E-Mail-Adresse in deinen Commits und die Zeitpunkte deiner Arbeit,
+- erklären, was eine Markdown-Datei ist, und eine schreiben, die GitHub mit Überschriften und Listen anzeigt.
 
 ## Kurse
 
@@ -52,6 +61,6 @@ gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die m
 
 ## Vorbereitung
 
-Die Anleitungen zur Vorbereitung stehen für alle Kurse an einem Ort: [Vorbereitung](vorbereitung/index.qmd). Welche Schritte für dich gelten, steht in deinem Issue.
+Die Anleitungen zur Vorbereitung stehen für alle Kurse an einem Ort: [Vorbereitung](vorbereitung/index.qmd). Welche Schritte für dich gelten, erfährst du per E-Mail von mir. Darin steht der Link zu deinem {{< gl Issue >}} auf GitHub: einer persönlichen Liste deiner Schritte, die du nach und nach abhakst.
 
 :::

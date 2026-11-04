@@ -20,11 +20,11 @@ Hake jeden Schritt im Issue ab, sobald er erledigt ist. Ich sehe den Fortschritt
 | [GitHub-Konto prüfen](konto.qmd) | wer das Konto in der Umfrage angelegt hat | 5 Min. |
 | [Einladung annehmen](einladung.qmd) | alle | 2 Min. |
 | [Dein Repository anlegen](repository-anlegen.qmd) | alle | 10 Min. |
-| [Dein Rezept aufschreiben](rezept-dokumentieren.qmd) | alle | 25 Min. |
+| [Dein Rezept aufschreiben](rezept-dokumentieren.qmd) | alle | 30 Min. oder länger |
 | [Dein Repository klonen](klonen.qmd) | alle | 10 Min. |
-| [Commit und Push vom Laptop](erster-commit.qmd) | alle | 15 Min. |
-| [Claude Code im Repository starten](claude-code.qmd) | wer Claude Code hat | 10 Min. |
-| [Editor mit dem Repository verbinden](editor.qmd) | wer mit einem Editor schreibt | 10 Min. |
+| [Commit und Push vom Laptop](erster-commit.qmd), mit Sublime Text | alle | 20 Min. |
+| [Claude Code im Repository starten](claude-code.qmd) | freiwillig, wer Claude Code hat | 10 Min. |
+| [Editor mit dem Repository verbinden](editor.qmd) | freiwillig, wer mit einem Code-Editor schreibt | 10 Min. |
 | [Fertig melden](fertig.qmd) | alle | 2 Min. |
 
 ## Wenn etwas nicht klappt

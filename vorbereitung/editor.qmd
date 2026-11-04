@@ -1,13 +1,13 @@
 ---
 title: "Editor mit dem Repository verbinden"
-subtitle: "Etwa 10 Minuten, nur wenn du mit einem Editor schreibst"
+subtitle: "Freiwillig, etwa 10 Minuten, nur wenn du mit einem Code-Editor schreibst"
 ---
 
-Wenn du mit Visual Studio Code, Positron, Cursor oder einem ähnlichen Editor schreibst, kennt er Git schon. Im Workshop kannst du wahlweise dort oder in GitHub Desktop committen. Vor dem Workshop reicht es, den Ordner einmal zu öffnen und die Git-Ansicht zu finden.
+Dieser Schritt ist freiwillig. Im Kurs arbeiten alle mit GitHub Desktop und einem Texteditor wie Sublime Text (siehe [Commit und Push vom Laptop](erster-commit.qmd)). Wenn du mit Visual Studio Code, Positron, Cursor oder einem ähnlichen Code-Editor schreibst, kennt er Git schon. Hast du Lust darauf, öffne den Ordner einmal darin und finde die Git-Ansicht.
 
 ## Schritte
 
-1. Öffne im Editor den Ordner `Dokumente/gitrepos/rezept-dein-benutzername`. In VS Code: Menü **File**, **Open Folder**.
+1. Öffne im Editor den Ordner `Dokumente/gitrepos/gh-org-gitklar/rezept-dein-benutzername`. In VS Code: Menü **File**, **Open Folder**.
 2. Finde die Git-Ansicht. In VS Code heisst sie **Source Control**, das Symbol links zeigt drei verbundene Punkte. Sie zeigt `rezept-dein-benutzername` und, nach deinem [Commit vom Laptop](erster-commit.qmd), keine offenen Änderungen.
 3. Ändere nichts. Schliesse den Editor oder lass ihn offen.
 4. Nach Wunsch: In GitHub Desktop unter **Settings** oder **Options**, Reiter **Integrations**, deinen Editor als **External editor** wählen. Dann öffnet der Knopf **Open in ...** in GitHub Desktop den Ordner direkt im Editor.
