@@ -15,7 +15,7 @@ Alles in diesem Schritt passiert auf github.com. GitHub Desktop brauchst du erst
 2. Prüfe das Feld **Owner**. Dort muss **gitklar** stehen. Steht dort dein eigener Benutzername, klicke darauf und wähle **gitklar**.
 3. Schreib bei **Repository name** `rezept-` und deinen Benutzernamen, genau so, wie er auf GitHub heisst.
 4. Bei **Description** kannst du einen Satz schreiben, zum Beispiel `Mein Rezept für gitklar`. Das Feld darf leer bleiben.
-5. Wähle bei der Sichtbarkeit **Private**. Warum, steht weiter unten.
+5. Wähle bei der Sichtbarkeit **Private**, nicht **Public**. Warum, steht weiter unten.
 6. Schalte **Add README** ein. Je nach Ansicht ist das ein Häkchen oder ein Schalter. Die Felder für **.gitignore** und **license** lässt du, wie sie sind.
 7. Klicke auf **Create repository**. GitHub zeigt jetzt dein Repository, mit einer einzigen Datei: `README.md`.
 
@@ -61,7 +61,7 @@ Dein Repository unter `github.com/gitklar/rezept-dein-benutzername` existiert, n
 
 Privat heisst: Es ist nicht öffentlich im Internet. Alle Teilnehmer:innen in der Organisation gitklar und die Kursleitung können es lesen, ändern kannst nur du. So könnt ihr eure Rezepte schon vor dem Workshop gegenseitig anschauen. Im Workshop bringst du dein Rezept selbst in das gemeinsame Kochbuch, von deinem Laptop aus.
 
-Ein öffentliches Repository könnte jede Person im Internet lesen. In der Organisation gitklar ist das abgeschaltet. Steht **Public** bei dir nicht zur Wahl, ist das so gewollt. Willst du dein Rezept später öffentlich zeigen, sprich mich an.
+Ein öffentliches Repository, **Public**, könnte jede Person im Internet lesen. GitHub bietet dir beide Möglichkeiten an. Wähle für den Kurs **Private**. Hast du aus Versehen **Public** gewählt, ist das kein Drama: Schreib es in dein Issue, und ich stelle es um. Willst du dein Rezept später öffentlich zeigen, sprich mich an.
 
 ## Hängt es?
 
