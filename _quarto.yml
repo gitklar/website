@@ -22,6 +22,7 @@ website:
   description: "Git und GitHub für Menschen, die mit KI arbeiten. Ein Kurs von bitz."
   site-url: https://gitklar.ch/
   repo-url: https://github.com/gitklar/website
+  favicon: assets/avatar.png
   navbar:
     logo: logos/wordmark-dark.svg
     logo-alt: "bitz"
