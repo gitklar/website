@@ -1,0 +1,149 @@
+---
+title: "Dein Rezept aufschreiben"
+subtitle: "Etwa 25 Minuten"
+---
+
+<!-- zu prüfen: die Menünamen zum Entfernen der Ortsangaben auf einem deutschen macOS (Vorschau, Fotos) und einem deutschen Windows (Explorer), und die Beschriftungen von Add file auf github.com. -->
+
+Such dir ein Gericht aus, das du gern kochst und mit der Gruppe teilen magst. Du schreibst es in deinem Repository `rezept-dein-benutzername` auf, im Browser, in einem Ordner `rezept` mit zwei Dateien und ein oder zwei Fotos:
+
+- `zutaten.csv`: die Zutaten als Tabelle.
+- `rezept.md`: was das Gericht ist, die Fotos und die Schritte.
+- `foto-1.jpg`, wenn du willst `foto-2.jpg`: deine Fotos.
+
+Im Workshop 1 kopierst du diesen Ordner in das gemeinsame gitklar-Kochbuch. Deshalb ist die Form fest: Alle Rezepte im Kochbuch sind gleich aufgebaut.
+
+## Vorher: die Fotos vorbereiten
+
+Für die Fotos gelten drei Regeln, weil sie später im gemeinsamen Kochbuch stehen:
+
+- **Nur eigene Fotos.** Fotos aus dem Internet oder von anderen Personen dürfen nicht hinein.
+- **Keine Menschen.** Keine Gesichter, auch nicht im Hintergrund, und keine Personen am Bildrand. Hände beim Kochen sind in Ordnung.
+- **Keine Ortsangaben.** Ein Handy speichert in jedem Foto, wo es aufgenommen wurde, oft auf wenige Meter genau. Bei Fotos in deiner Küche ist das deine Adresse. GitHub entfernt diese Angaben nicht, wenn du ein Foto in ein Repository hochlädst. Du entfernst sie vorher selbst.
+
+Das Foto muss eine JPG- oder PNG-Datei sein. iPhones speichern oft als HEIC, und das zeigt GitHub nicht an. Gib der Datei zum Schluss einen kurzen Namen in Kleinbuchstaben, ohne Leerzeichen: `foto-1.jpg`.
+
+::: {.panel-tabset}
+
+## macOS
+
+**Foto aus der App Fotos (zum Beispiel vom iPhone):**
+
+1. Öffne die App **Fotos** und wähle das Foto aus.
+2. Menü **Ablage**, **Exportieren**, **1 Foto exportieren**.
+3. Wähle bei **Fotoart** **JPEG** und entferne das Häkchen bei **Ortsinformationen**.
+4. Klicke auf **Exportieren** und wähle als Ort den Schreibtisch oder den Ordner Downloads.
+
+**Foto, das schon als Datei vorliegt:**
+
+1. Öffne das Foto mit **Vorschau** (Doppelklick).
+2. Ist es eine HEIC-Datei: Menü **Ablage**, **Exportieren**, bei **Format** **JPEG** wählen, sichern, und die neue Datei öffnen.
+3. Menü **Werkzeuge**, **Informationen einblenden**. Es öffnet sich ein kleines Fenster.
+4. Gibt es dort einen Reiter **GPS**, klicke darauf und dann auf **Ortsinformationen entfernen**. Gibt es keinen Reiter GPS, enthält das Foto keine Ortsangaben.
+5. Sichere das Foto mit **Befehl** und **S**.
+
+**Umbenennen:** Im Finder einmal auf die Datei klicken, die Eingabetaste drücken und `foto-1.jpg` schreiben.
+
+## Windows
+
+1. Ist das Foto eine HEIC-Datei, öffne es in der App **Fotos**, klicke auf die drei Punkte oben, dann **Speichern unter**, und wähle als Dateityp **JPG**.
+2. Klicke im Explorer mit der rechten Maustaste auf das Foto, dann auf **Eigenschaften**.
+3. Wähle den Reiter **Details** und klicke ganz unten auf **Eigenschaften und persönliche Informationen entfernen**.
+4. Wähle **Kopie erstellen, bei der alle möglichen Eigenschaften entfernt sind** und klicke auf **OK**. Windows legt daneben eine Kopie ohne Ortsangaben an.
+5. Benenne die Kopie in `foto-1.jpg` um: Rechtsklick, **Umbenennen**. Lade nur die Kopie hoch.
+
+:::
+
+Ein Foto unter 3 MB reicht. Ist deines grösser, ist das in Ordnung, solange es unter 25 MB liegt. Grössere Dateien nimmt GitHub im Browser nicht an.
+
+## Schritt 1: die Zutaten in zutaten.csv
+
+CSV heisst «comma-separated values»: eine Tabelle als reiner Text. Jede Zeile ist eine Zeile der Tabelle, und Kommas trennen die Spalten. Die erste Zeile nennt die Spalten. Bei gitklar sind es immer diese vier, in dieser Reihenfolge:
+
+| Spalte | Was hineinkommt | Beispiel |
+|---|---|---|
+| `zutat` | der Name der Zutat | `Mehl` |
+| `menge` | eine Zahl, mit Punkt statt Komma | `250`, `0.5` |
+| `einheit` | die Einheit, darf leer bleiben | `g`, `ml`, `Stück`, `EL`, `Prise` |
+| `hinweis` | alles andere, darf leer bleiben | `zum Ausbacken` |
+
+: {tbl-colwidths="[15,45,40]"}
+
+So sieht das für Pancakes aus:
+
+```
+zutat,menge,einheit,hinweis
+Mehl,250,g,
+Milch,400,ml,
+Eier,2,Stück,
+Salz,1,Prise,
+Butter,20,g,zum Ausbacken
+Apfelmus,,,nach Geschmack
+```
+
+Jede Zeile hat drei Kommas, auch wenn Felder leer bleiben. Beim Apfelmus fehlen Menge und Einheit, darum stehen dort drei Kommas hintereinander. Braucht ein Hinweis selbst ein Komma, setze ihn in Anführungszeichen: `"fein gehackt, ohne Stiele"`.
+
+1. Öffne dein Repository auf github.com. Klicke über der Dateiliste auf **Add file**, dann **Create new file**.
+2. Schreib in das Namensfeld oben `rezept/zutaten.csv`. Sobald du den Schrägstrich tippst, macht GitHub daraus einen Ordner `rezept`, und im Feld bleibt `zutaten.csv`.
+3. Kopiere das Beispiel oben in das Textfeld und ändere es zu deinem Rezept. Die erste Zeile bleibt genau so.
+4. Klicke auf **Commit changes...**, schreib als Nachricht zum Beispiel `Zutaten aufgeschrieben` und klicke auf **Commit changes**.
+
+GitHub zeigt die Datei jetzt als Tabelle an. Steht oben stattdessen ein Hinweis auf einen Fehler, hat eine Zeile zu viele oder zu wenige Kommas. Klicke auf den Stift und korrigiere die Zeile. Jede Korrektur ist ein weiterer Commit.
+
+{{< glossar bild github-datei-anlegen >}}
+
+{{< glossar bild github-csv-tabelle >}}
+
+## Schritt 2: die Fotos hochladen
+
+1. Klicke in deinem Repository auf den Ordner `rezept`. Du siehst darin `zutaten.csv`.
+2. Klicke auf **Add file**, dann **Upload files**.
+3. Zieh dein Foto in das Feld, oder klicke auf **choose your files** und wähle es aus.
+4. Schreib bei **Commit changes** als Nachricht zum Beispiel `Foto hochgeladen` und klicke auf **Commit changes**.
+
+Prüfe danach, dass das Foto im Ordner `rezept` liegt, neben `zutaten.csv`, und `foto-1.jpg` heisst.
+
+## Schritt 3: das Rezept in rezept.md
+
+1. Klicke im Ordner `rezept` auf **Add file**, dann **Create new file**. Im Namensfeld steht schon `rezept/`. Schreib dahinter `rezept.md`.
+2. Kopiere diese Vorlage in das Textfeld und ersetze den Text durch dein Rezept:
+
+   ```
+   # Pancakes mit Apfelmus
+
+   Von: Vorname Nachname
+
+   Diese Pancakes gibt es bei uns am Sonntagmorgen. Das Rezept reicht für vier Personen.
+
+   ![Ein Stapel Pancakes auf einem Teller](foto-1.jpg)
+
+   ## Zubereitung
+
+   1. Mehl, Milch, Eier und Salz zu einem glatten Teig verrühren.
+   2. Den Teig zehn Minuten ruhen lassen.
+   3. Pro Pancake eine kleine Kelle Teig in die heisse Pfanne geben und backen, bis Blasen aufsteigen. Wenden und eine Minute weiterbacken.
+   4. Warm mit Apfelmus servieren.
+
+   Die Zutaten stehen in [zutaten.csv](zutaten.csv).
+   ```
+
+3. **Dein Name ist freiwillig.** Willst du ihn nicht im Kochbuch haben, lösch die Zeile `Von:`.
+4. Die Zeile mit `![...](foto-1.jpg)` zeigt dein Foto. In die eckigen Klammern schreibst du, was darauf zu sehen ist. Das liest ein Programm für Menschen vor, die nicht sehen können. In den runden Klammern steht der Dateiname, genau so geschrieben wie die Datei. Hast du ein zweites Foto, kopiere die Zeile und schreib `foto-2.jpg`.
+5. Klicke auf **Preview**. Du siehst Überschrift, Foto und Schritte so, wie GitHub sie anzeigen wird.
+6. Klicke auf **Commit changes...**, schreib als Nachricht zum Beispiel `Rezept aufgeschrieben` und klicke auf **Commit changes**.
+
+## Geschafft, wenn
+
+Der Ordner `rezept` in deinem Repository `zutaten.csv`, `rezept.md` und ein oder zwei Fotos enthält, `rezept.md` dein Foto zeigt und `zutaten.csv` als Tabelle erscheint.
+
+## Was gerade passiert ist
+
+Jedes Speichern war ein Commit. Klicke über der Dateiliste auf die Zahl der Commits. Du siehst jetzt fünf oder mehr, alle mit deinem Namen. Jeder Commit hält genau eine Änderung fest, mit deiner Nachricht dazu. Eine CSV-Datei und eine Markdown-Datei sind beide reiner Text. Deshalb kann Git bei jeder Fassung Zeile für Zeile zeigen, was sich geändert hat.
+
+## Hängt es?
+
+- **Das Foto erscheint nicht, nur der Text in den eckigen Klammern.** Der Dateiname in `rezept.md` stimmt nicht genau mit dem Namen der Datei überein. Gross- und Kleinschreibung zählen: `Foto-1.JPG` ist nicht `foto-1.jpg`. Oder das Foto ist eine HEIC-Datei.
+- **Das Foto liegt nicht im Ordner rezept.** Lade es noch einmal hoch, diesmal aus dem Ordner `rezept` heraus. Das falsche lösch so: Datei anklicken, die drei Punkte rechts oben, **Delete file**, dann **Commit changes**.
+- **GitHub zeigt die CSV nicht als Tabelle.** Zähl die Kommas in jeder Zeile. Es müssen drei sein, ausser in Anführungszeichen.
+- **Der Laptop öffnet CSV-Dateien mit Excel oder Numbers.** Hier im Browser ist das egal. Auf dem Laptop öffnest du `zutaten.csv` später mit TextEdit oder dem Windows-Editor. Excel und Numbers können beim Speichern die Kommas durch Strichpunkte ersetzen.
+- Alles andere: Kommentar in dein Issue, mit Screenshot.

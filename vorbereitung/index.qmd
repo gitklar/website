@@ -3,11 +3,11 @@ title: "Vorbereitung"
 subtitle: "Dein Laptop ist bereit, bevor der Kurs beginnt"
 ---
 
-Die Vorbereitung sorgt dafür, dass wir im Workshop mit Git arbeiten statt mit Installationen. Sie dauert 45 bis 60 Minuten. Du kannst sie auf mehrere Tage verteilen.
+Die Vorbereitung sorgt dafür, dass wir im Workshop mit Git arbeiten statt mit Installationen. Du legst dein eigenes Repository an und schreibst darin ein Rezept auf, das du gern kochst. Im Workshop bringen wir alle Rezepte im gemeinsamen gitklar-Kochbuch zusammen. Die Vorbereitung dauert etwa 75 Minuten. Du kannst sie auf mehrere Tage verteilen.
 
 ## Dein Issue sagt dir, was gilt
 
-Nicht jede Seite hier gilt für dich. In deinem Übungs-Repository auf GitHub liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar». Es nennt deine Schritte in deiner Reihenfolge, zusammengestellt aus deinen Antworten in der Umfrage: dein Betriebssystem, ob du Claude Code hast, ob du mit einem Editor schreibst. Jeder Schritt verlinkt auf die Seite hier, die ihn erklärt.
+Nicht jede Seite hier gilt für dich. Im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung) auf GitHub liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen. Es ist dir zugewiesen. Es nennt deine Schritte in deiner Reihenfolge, zusammengestellt aus deinen Antworten in der Umfrage: dein Betriebssystem, ob du Claude Code hast, ob du mit einem Editor schreibst. Jeder Schritt verlinkt auf die Seite hier, die ihn erklärt.
 
 Hake jeden Schritt im Issue ab, sobald er erledigt ist. Ich sehe den Fortschritt und melde mich, wenn etwas hängt.
 
@@ -16,9 +16,13 @@ Hake jeden Schritt im Issue ab, sobald er erledigt ist. Ich sehe den Fortschritt
 | Schritt | Für wen | Dauer |
 |---|---|---|
 | [GitHub Desktop auf macOS](github-desktop-macos.qmd) oder [auf Windows](github-desktop-windows.qmd) | alle, je nach Laptop | 10 Min. |
+| [Übersetzung für github.com ausschalten](../begriffe.qmd) | alle | 2 Min. |
+| [GitHub-Konto prüfen](konto.qmd) | wer das Konto in der Umfrage angelegt hat | 5 Min. |
 | [Einladung annehmen](einladung.qmd) | alle | 2 Min. |
-| [Dein Übungs-Repository klonen](klonen.qmd) | alle | 10 Min. |
-| [Erster Commit und Push](erster-commit.qmd) | alle | 15 Min. |
+| [Dein Repository anlegen](repository-anlegen.qmd) | alle | 10 Min. |
+| [Dein Rezept aufschreiben](rezept-dokumentieren.qmd) | alle | 25 Min. |
+| [Dein Repository klonen](klonen.qmd) | alle | 10 Min. |
+| [Commit und Push vom Laptop](erster-commit.qmd) | alle | 15 Min. |
 | [Claude Code im Repository starten](claude-code.qmd) | wer Claude Code hat | 10 Min. |
 | [Editor mit dem Repository verbinden](editor.qmd) | wer mit einem Editor schreibt | 10 Min. |
 | [Fertig melden](fertig.qmd) | alle | 2 Min. |

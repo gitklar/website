@@ -1,0 +1,8 @@
+title: gl
+author: Global Health Engineering, adapted for gitklar
+version: 1.2.0
+quarto-required: ">=1.4.0"
+contributes:
+  shortcodes:
+    - gl.lua
+    - glossar.lua

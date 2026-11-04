@@ -8,17 +8,17 @@ Claude Code kann Git für dich bedienen. Vor dem Workshop soll es dir nur zeigen
 ## Schritte
 
 1. Öffne deinen geklonten Ordner in Claude Code.
-   - **Claude Code App:** **Open folder** oder das Ordner-Symbol, dann `Dokumente/gitrepos/setup-dein-benutzername` wählen.
-   - **Claude Code im Terminal:** `cd ~/Documents/gitrepos/setup-dein-benutzername`, dann `claude`.
+   - **Claude Code App:** **Open folder** oder das Ordner-Symbol, dann `Dokumente/gitrepos/rezept-dein-benutzername` wählen.
+   - **Claude Code im Terminal:** `cd ~/Documents/gitrepos/rezept-dein-benutzername`, dann `claude`.
 2. Schreib diese Frage:
 
    > Was weiss Git über diesen Ordner? Zeig mir die Commits und erkläre mir in drei Sätzen, was ein Commit ist. Ändere keine Datei.
 
-3. Lies die Antwort. Claude nennt deinen Commit mit deiner Nachricht aus dem [ersten Commit](erster-commit.qmd). Schlägt Claude vor, etwas zu ändern, lehne ab.
+3. Lies die Antwort. Claude nennt deine Commits mit deinen Nachrichten: die aus dem Browser und den vom [Laptop](erster-commit.qmd). Schlägt Claude vor, etwas zu ändern, lehne ab.
 
 ## Geschafft, wenn
 
-Claude deinen Commit mit deiner Nachricht nennt.
+Claude deine Commits mit deinen Nachrichten nennt.
 
 ## Hängt es?
 

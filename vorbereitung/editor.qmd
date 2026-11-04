@@ -7,8 +7,8 @@ Wenn du mit Visual Studio Code, Positron, Cursor oder einem ähnlichen Editor sc
 
 ## Schritte
 
-1. Öffne im Editor den Ordner `Dokumente/gitrepos/setup-dein-benutzername`. In VS Code: Menü **File**, **Open Folder**.
-2. Finde die Git-Ansicht. In VS Code heisst sie **Source Control**, das Symbol links zeigt drei verbundene Punkte. Sie zeigt `setup-dein-benutzername` und, nach dem ersten Commit, keine offenen Änderungen.
+1. Öffne im Editor den Ordner `Dokumente/gitrepos/rezept-dein-benutzername`. In VS Code: Menü **File**, **Open Folder**.
+2. Finde die Git-Ansicht. In VS Code heisst sie **Source Control**, das Symbol links zeigt drei verbundene Punkte. Sie zeigt `rezept-dein-benutzername` und, nach deinem [Commit vom Laptop](erster-commit.qmd), keine offenen Änderungen.
 3. Ändere nichts. Schliesse den Editor oder lass ihn offen.
 4. Nach Wunsch: In GitHub Desktop unter **Settings** oder **Options**, Reiter **Integrations**, deinen Editor als **External editor** wählen. Dann öffnet der Knopf **Open in ...** in GitHub Desktop den Ordner direkt im Editor.
 

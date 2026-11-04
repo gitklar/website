@@ -28,6 +28,8 @@ website:
         text: Start
       - href: vorbereitung/index.qmd
         text: Vorbereitung
+      - href: werkzeuge.qmd
+        text: Nachschlagen
     right:
       - icon: github
         href: https://github.com/gitklar
@@ -43,9 +45,14 @@ website:
           contents:
             - vorbereitung/github-desktop-macos.qmd
             - vorbereitung/github-desktop-windows.qmd
+        - section: "Dein Konto"
+          contents:
+            - vorbereitung/konto.qmd
         - section: "Für alle"
           contents:
             - vorbereitung/einladung.qmd
+            - vorbereitung/repository-anlegen.qmd
+            - vorbereitung/rezept-dokumentieren.qmd
             - vorbereitung/klonen.qmd
             - vorbereitung/erster-commit.qmd
         - section: "Wenn du es hast"
@@ -53,6 +60,15 @@ website:
             - vorbereitung/claude-code.qmd
             - vorbereitung/editor.qmd
         - vorbereitung/fertig.qmd
+        - section: "Workshop verpasst?"
+          contents:
+            - rezept-einreichen.qmd
+        - section: "Nachschlagen"
+          contents:
+            - werkzeuge.qmd
+            - ki-werkzeuge.qmd
+            - glossar.qmd
+            - begriffe.qmd
   page-footer:
     left: "gitklar von bitz. Lars Schöbitz GmbH, Zürich. Kontakt: lars@lse.de"
     right: "[Quellcode](https://github.com/gitklar/website)"
@@ -69,6 +85,7 @@ cohort:
 format:
   html:
     theme: cosmo
+    css: styles.css
     toc: true
     toc-title: "Auf dieser Seite"
     link-external-newwindow: true

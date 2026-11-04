@@ -1,0 +1,16 @@
+---
+title: "Glossar"
+subtitle: "Die Begriffe des Kurses, auf Deutsch erklärt"
+---
+
+Die Begriffe, die dir in der Vorbereitung und in den Workshops begegnen. Die Stichwörter sind Englisch, weil GitHub und GitHub Desktop Englisch sprechen und du die Wörter so auf dem Bildschirm siehst. Die Erklärungen sind Deutsch und in Alltagssprache. Unter jeder Erklärung steht, wie ein übersetzter Browser den Begriff anzeigen kann, wo er im Kurs vorkommt und welcher Befehl im Terminal dahintersteckt.
+
+Die Seite hat vier Teile: **Git und GitHub** für die Begriffe selbst, **Knöpfe und Fenster** für die Beschriftungen in GitHub Desktop und auf github.com, **Werkzeuge** für die Programme, **KI und Agenten** für die Wörter rund um Claude Code, Cowork, Codex und ChatGPT Work. Dieselben Begriffe stehen in der [Liste auf Englisch und Deutsch](begriffe.qmd) nebeneinander. Auf den anderen Seiten zeigt ein gepunktet unterstrichenes Wort seine Erklärung, wenn du mit der Maus darauf bleibst.
+
+Welches Werkzeug ein Begriff betrifft, erklärt [Welches Werkzeug macht was](werkzeuge.qmd). Was die KI-Werkzeuge von deinem Ordner und deinem Repository sehen, steht auf [KI-Werkzeuge im Vergleich](ki-werkzeuge.qmd).
+
+{{< glossar liste >}}
+
+## Quellen
+
+Die Erklärungen zu Git und GitHub folgen in der Sache [Glosario](https://glosario.carpentries.org/), dem Glossar der Carpentries (CC BY 4.0), in eigenen deutschen Worten. Glosario hat für die meisten Git-Begriffe noch keine deutschen Einträge.

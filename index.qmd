@@ -21,10 +21,14 @@ Beide Workshops finden online auf Zoom statt und dauern zwei Stunden. Den Link b
 
 ## So läuft es
 
-1. **Einladung.** Du bekommst zwei E-Mails von GitHub: eine für die Organisation gitklar, eine für dein Übungs-Repository. Nimm beide an.
-2. **Dein Issue.** In deinem Übungs-Repository steht ein Issue mit dem Titel «Deine Vorbereitung auf gitklar». Es nennt die Schritte, die für dich gelten, in deiner Reihenfolge. Jeder Schritt verlinkt auf eine Seite hier.
-3. **Die Schritte.** Rechne mit 45 bis 60 Minuten, verteilt auf mehrere Tage, wenn du willst. Hake jeden Schritt im Issue ab.
-4. **Fertig melden.** Am Ende öffnest du ein Issue mit dem Titel «Vorbereitung abgeschlossen». Dann weiss ich, dass du bereit bist.
+1. **Einladung.** Du bekommst eine E-Mail von GitHub mit der Einladung in die Organisation gitklar. Nimm sie an.
+2. **Dein Issue.** Im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung) liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen, dir zugewiesen. Es nennt die Schritte, die für dich gelten, in deiner Reihenfolge. Jeder Schritt verlinkt auf eine Seite hier.
+3. **Die Schritte.** Du legst dein eigenes Repository `rezept-dein-benutzername` an, schreibst darin ein Rezept auf, das du gern kochst, und arbeitest dann mit GitHub Desktop auf deinem Laptop daran weiter. Rechne mit etwa 75 Minuten, verteilt auf mehrere Tage, wenn du willst. Hake jeden Schritt im Issue ab.
+4. **Fertig melden.** Am Ende schreibst du einen Kommentar in dein Issue, der mit «Vorbereitung abgeschlossen» beginnt. Dann weiss ich, dass du bereit bist.
+
+## In den Workshops
+
+Aus allen Rezepten entsteht das gemeinsame gitklar-Kochbuch, ein Repository der Organisation. Im Workshop 1 bringt jede Person ihr Rezept über einen eigenen Branch und einen Pull request hinein. Im Workshop 2 lest ihr die Pull requests der anderen zu zweit, kommentiert sie und löst gemeinsam einen Merge conflict. Wer den Workshop 1 verpasst, reicht das Rezept mit der Anleitung [Rezept per Pull request einreichen](rezept-einreichen.qmd) ein, vor dem Workshop 2.
 
 [Zur Vorbereitung](vorbereitung/index.qmd){.btn .btn-primary}
 
@@ -32,7 +36,7 @@ Beide Workshops finden online auf Zoom statt und dauern zwei Stunden. Den Link b
 
 ::: {.content-visible unless-profile="cohort"}
 
-gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die mit KI arbeiten und ihre Arbeit sichern, nachvollziehen und teilen wollen. Zwei Online-Workshops von je zwei Stunden, davor eine Vorbereitung von etwa einer Stunde, die jede Person in ihrem eigenen Tempo macht.
+gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die mit KI arbeiten und ihre Arbeit sichern, nachvollziehen und teilen wollen. Zwei Online-Workshops von je zwei Stunden, davor eine Vorbereitung von etwa 75 Minuten, die jede Person in ihrem eigenen Tempo macht. Dabei schreibt jede Person ein Rezept auf, und in den Workshops entsteht daraus ein gemeinsames Kochbuch.
 
 ## Was du danach kannst
 
@@ -44,7 +48,7 @@ gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die m
 
 | Kurs | Vorbereitung bis | Seite |
 |---|---|---|
-| AI Retreat Gruppe, Herbst 2026 | 13. November 2026 | [airetreat-01](airetreat-01/) |
+| AI Retreat Gruppe, Herbst 2026 | 12. November 2026 | [airetreat-01](airetreat-01/) |
 
 ## Vorbereitung
 
