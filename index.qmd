@@ -48,7 +48,7 @@ gitklar ist ein Kurs von [bitz](https://github.com/gitklar) für Menschen, die m
 
 | Kurs | Vorbereitung bis | Seite |
 |---|---|---|
-| AI Retreat Gruppe, Herbst 2026 | 13. November 2026 | [airetreat-01](airetreat-01/) |
+| AI Retreat Gruppe, Herbst 2026 | 12. November 2026 | [airetreat-01](airetreat-01/) |
 
 ## Vorbereitung
 
