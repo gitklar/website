@@ -3,7 +3,7 @@ title: "Vorbereitung"
 subtitle: "Dein Laptop ist bereit, bevor der Kurs beginnt"
 ---
 
-Die Vorbereitung sorgt dafür, dass wir im Workshop mit Git arbeiten statt mit Installationen. Du legst dein eigenes Repository an und schreibst darin ein Rezept auf, das du gern kochst. Im Workshop bringen wir alle Rezepte im gemeinsamen gitklar-Kochbuch zusammen. Die Vorbereitung dauert etwa 75 Minuten. Du kannst sie auf mehrere Tage verteilen.
+Die Vorbereitung sorgt dafür, dass wir im Workshop mit Git arbeiten statt mit Installationen. Du legst dein eigenes Repository an und schreibst darin ein Rezept auf, das du gern kochst. Im Workshop bringen wir alle Rezepte im gemeinsamen gitklar-Kochbuch zusammen. Die Vorbereitung dauert etwa 90 Minuten. Du kannst sie auf mehrere Tage verteilen.
 
 ## Dein Issue sagt dir, was gilt
 
@@ -15,17 +15,18 @@ Hake jeden Schritt im Issue ab, sobald er erledigt ist. Ich sehe den Fortschritt
 
 | Schritt | Für wen | Dauer |
 |---|---|---|
-| [GitHub Desktop auf macOS](github-desktop-macos.qmd) oder [auf Windows](github-desktop-windows.qmd) | alle, je nach Laptop | 10 Min. |
+| [Einladung annehmen](einladung.qmd) | alle | 2 Min. |
+| [Lesezeichen für den Kurs](lesezeichen.qmd) | alle | 5 Min. |
 | [Übersetzung für github.com ausschalten](../begriffe.qmd) | alle | 2 Min. |
 | [GitHub-Konto prüfen](konto.qmd) | wer das Konto in der Umfrage angelegt hat | 5 Min. |
-| [Einladung annehmen](einladung.qmd) | alle | 2 Min. |
 | [Dein Repository anlegen](repository-anlegen.qmd) | alle | 10 Min. |
 | [Dein Rezept aufschreiben](rezept-dokumentieren.qmd) | alle | 30 Min. oder länger |
+| [GitHub Desktop auf macOS](github-desktop-macos.qmd) oder [auf Windows](github-desktop-windows.qmd) | alle, je nach Laptop | 10 Min. |
 | [Dein Repository klonen](klonen.qmd) | alle | 10 Min. |
 | [Commit und Push vom Laptop](erster-commit.qmd), mit Sublime Text | alle | 20 Min. |
 | [Claude Code im Repository starten](claude-code.qmd) | freiwillig, wer Claude Code hat | 10 Min. |
 | [Editor mit dem Repository verbinden](editor.qmd) | freiwillig, wer mit einem Code-Editor schreibt | 10 Min. |
-| [Fertig melden](fertig.qmd) | alle | 2 Min. |
+| [Im Issue melden](erster-commit.qmd#im-issue-melden) | alle | 2 Min. |
 
 ## Wenn etwas nicht klappt
 

@@ -12,8 +12,10 @@ GitHub Desktop installiert sich in deinem Benutzerordner und braucht in der Rege
 1. Öffne [desktop.github.com](https://desktop.github.com/) und klicke auf **Download for Windows (64bit)**.
 2. Starte die heruntergeladene Datei **GitHubDesktopSetup-x64.exe**. Die Installation läuft ohne Rückfragen und öffnet das Programm am Ende von selbst.
 3. Klicke auf **Sign in to GitHub.com**. Dein Browser öffnet sich. Melde dich mit deinem GitHub-Konto an und klicke auf **Authorize desktop**. Der Browser fragt, ob er GitHub Desktop öffnen darf. Erlaube es.
-4. Zurück in GitHub Desktop siehst du **Configure Git**. Dein Name und deine E-Mail-Adresse stehen später in jedem Commit. Lass die vorgeschlagenen Werte stehen und klicke auf **Finish**.
-5. Es erscheint die Startansicht mit **Let's get started!**. Du kannst das Programm offen lassen oder schliessen. Der nächste Schritt in deinem Issue sagt, wie es weitergeht.
+4. Zurück in GitHub Desktop siehst du **Configure Git**. Dein Name und deine E-Mail-Adresse stehen später in jedem Commit, den du auf dem Laptop machst. Das gemeinsame Kochbuch wird am Ende des Kurses öffentlich, und mit ihm diese Angaben. Wähle bei **Email** die Adresse, die du dort zeigen magst. Willst du keine zeigen, wähle in der Liste die Adresse, die auf `@users.noreply.github.com` endet. GitHub ordnet deine Commits damit trotzdem deinem Konto zu. Klicke dann auf **Finish**.
+5. Es erscheint die Startansicht mit **Let's get started!**. Du kannst das Programm offen lassen oder schliessen. Dein Repository klonst du im nächsten Schritt.
+
+Die Fenster sehen auf Windows fast gleich aus wie auf macOS. Die Screenshots auf der [macOS-Seite](github-desktop-macos.qmd) helfen auch dir, ab Schritt 3.
 
 ## Geschafft, wenn
 
@@ -24,4 +26,7 @@ Im Menü **File**, **Options**, Reiter **Accounts** steht dein GitHub-Benutzerna
 - **Windows warnt vor einer unbekannten App.** Klicke auf **Weitere Informationen** und dann auf **Trotzdem ausführen**. Die Datei stammt von GitHub.
 - **Die Installation bricht ab.** Meist eine Firmenrichtlinie. Schreib in dein Issue, was die Meldung sagt.
 - **Der Browser kommt nicht zurück zur App.** Schliesse GitHub Desktop, starte es neu und versuche die Anmeldung noch einmal.
+- **Du hast bei Configure Git die falsche Adresse gewählt.** Menü **File**, **Options**, Reiter **Git**. Dort änderst du Name und E-Mail-Adresse.
 - Alles andere: Kommentar in dein Issue, mit Screenshot.
+
+{{< include _weiter.qmd >}}

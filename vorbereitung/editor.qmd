@@ -19,3 +19,5 @@ Die Git-Ansicht deines Editors deinen Ordner zeigt.
 ## Hängt es?
 
 - **Die Git-Ansicht ist leer oder sagt «no source control providers».** Der Ordner ist nicht der geklonte Ordner, oder der Editor findet Git nicht. Schreib in dein Issue, welchen Editor du nutzt.
+
+{{< include _weiter.qmd >}}
