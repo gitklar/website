@@ -15,7 +15,7 @@ Dein Zeichen, dass du bereit bist, ist ein Kommentar in deinem Issue. Ich bekomm
 
 Ein Beispiel:
 
-> Vorbereitung abgeschlossen. Ich habe etwa 80 Minuten gebraucht, am längsten für die Fotos. Beim Klonen fand ich mein Repository erst über das Suchfeld.
+> Vorbereitung abgeschlossen. Ich habe etwa 80 Minuten gebraucht, am längsten für die Zutaten. Beim Klonen fand ich mein Repository erst über das Suchfeld.
 
 ## Geschafft, wenn
 

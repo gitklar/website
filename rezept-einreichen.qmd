@@ -9,7 +9,7 @@ Im Workshop 1 hat jede Person ihr Rezept in das gemeinsame gitklar-Kochbuch gebr
 
 ## Bevor du anfängst
 
-Du brauchst die fertige Vorbereitung: dein Repository `rezept-dein-benutzername` mit dem Ordner `rezept`, geklont mit GitHub Desktop nach `Dokumente/gitrepos`. Fehlt dir etwas davon, beginne bei der [Vorbereitung](vorbereitung/index.qmd).
+Du brauchst die fertige Vorbereitung: dein Repository `rezept-dein-benutzername` mit dem Ordner `rezept`, geklont mit GitHub Desktop nach `Dokumente/gitrepos/gh-org-gitklar`. Fehlt dir etwas davon, beginne bei der [Vorbereitung](vorbereitung/index.qmd).
 
 Das Kochbuch ist das Repository [gitklar/kochbuch](https://github.com/gitklar/kochbuch). Alle Teilnehmer:innen können es lesen und Branches hineinschieben. Jedes Rezept liegt dort in einem eigenen Ordner unter `rezepte/`.
 
@@ -17,7 +17,7 @@ Das Kochbuch ist das Repository [gitklar/kochbuch](https://github.com/gitklar/ko
 
 1. Öffne GitHub Desktop. Menü **File**, **Clone Repository**.
 2. Reiter **GitHub.com**, dann **gitklar/kochbuch** anklicken. Tippe `kochbuch` in das Suchfeld, wenn die Liste lang ist.
-3. Bei **Local Path** auf **Choose** klicken und **Dokumente/gitrepos** wählen.
+3. Bei **Local Path** auf **Choose** klicken und **Dokumente/gitrepos/gh-org-gitklar** wählen.
 4. Klicke auf **Clone**. Oben links steht jetzt **Current repository: kochbuch**.
 
 ## Schritt 2: einen Branch anlegen
@@ -39,21 +39,21 @@ Du kopierst den Ordner `rezept` aus deinem eigenen Repository in das Kochbuch. D
 
 ## macOS
 
-1. Öffne im Finder `Dokumente/gitrepos/rezept-dein-benutzername`.
+1. Öffne im Finder `Dokumente/gitrepos/gh-org-gitklar/rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Befehl** und **C**.
-3. Öffne `Dokumente/gitrepos/kochbuch/rezepte` und drücke **Befehl** und **V**. Jetzt liegt dort ein Ordner `rezept`.
+3. Öffne `Dokumente/gitrepos/gh-org-gitklar/kochbuch/rezepte` und drücke **Befehl** und **V**. Jetzt liegt dort ein Ordner `rezept`.
 4. Klicke einmal auf den neuen Ordner, drücke die Eingabetaste und schreib deinen Benutzernamen in Kleinbuchstaben.
 
 ## Windows
 
-1. Öffne im Explorer `Dokumente\gitrepos\rezept-dein-benutzername`.
+1. Öffne im Explorer `Dokumente\gitrepos\gh-org-gitklar\rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Strg** und **C**.
-3. Öffne `Dokumente\gitrepos\kochbuch\rezepte` und drücke **Strg** und **V**. Jetzt liegt dort ein Ordner `rezept`.
+3. Öffne `Dokumente\gitrepos\gh-org-gitklar\kochbuch\rezepte` und drücke **Strg** und **V**. Jetzt liegt dort ein Ordner `rezept`.
 4. Klicke einmal auf den neuen Ordner, drücke **F2** und schreib deinen Benutzernamen in Kleinbuchstaben.
 
 :::
 
-Im Ordner `rezepte` liegen jetzt `_vorlage`, die Ordner der anderen und dein neuer Ordner mit `zutaten.csv`, `rezept.md` und deinen Fotos.
+Im Ordner `rezepte` liegen jetzt `_vorlage`, die Ordner der anderen und dein neuer Ordner mit `zutaten.csv` und `rezept.md`.
 
 ## Schritt 4: committen
 

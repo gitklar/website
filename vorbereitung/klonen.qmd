@@ -9,22 +9,39 @@ Bis jetzt liegt dein Repository `rezept-dein-benutzername` nur auf GitHub. Klone
 
 ## Vorher: ein Ordner für alle Repositories
 
-Leg im Ordner **Dokumente** (macOS: Documents) einen Ordner namens **gitrepos** an. Jedes Repository, das du je klonst, kommt dort hinein. Dann findest du sie wieder.
+Leg im Ordner **Dokumente** (macOS: Documents) einen Ordner namens **gitrepos** an. Jedes Repository, das du je klonst, kommt dort hinein. Darin legst du einen Ordner pro Ort auf GitHub an, an dem Repositories liegen:
+
+- **gh-org-gitklar** für die Repositories der Organisation gitklar, also dein `rezept-dein-benutzername` und später das Kochbuch.
+- **gh-dein-benutzername** für Repositories, die du später in deinem eigenen Konto anlegst. Diesen Ordner brauchst du im Kurs noch nicht.
+
+```
+Dokumente/
+└── gitrepos/
+    ├── gh-org-gitklar/
+    │   └── rezept-dein-benutzername/
+    └── gh-dein-benutzername/
+```
+
+So siehst du am Ordner, wohin ein Repository auf GitHub gehört. Kommt später eine weitere Organisation dazu, bekommt sie ihren eigenen Ordner `gh-org-` und den Namen der Organisation.
+
+Leg den Ordner `gitrepos` nicht in einen Ordner, der mit iCloud, OneDrive oder Dropbox synchronisiert wird. Git und die Synchronisation kommen sich sonst in die Quere.
+
+Für jetzt brauchst du `Dokumente/gitrepos/gh-org-gitklar`. Leg die beiden Ordner im Finder (macOS) oder im Explorer (Windows) an.
 
 ## Schritte
 
 1. Öffne GitHub Desktop. Klicke im Menü auf **File**, dann **Clone Repository**.
-2. Wähle den Reiter **GitHub.com**. In der Liste erscheint unter **gitklar** dein Repository **gitklar/rezept-dein-benutzername**. Klicke es an. Siehst du es nicht, klicke rechts oben auf das Aktualisieren-Symbol oder tippe `rezept` in das Suchfeld.
-3. Bei **Local Path** klicke auf **Choose** und wähle den Ordner **Dokumente/gitrepos**. GitHub Desktop hängt den Namen des Repositorys von selbst an.
+2. Wähle den Reiter **GitHub.com**. In der Liste erscheint unter **gitklar** dein Repository **gitklar/rezept-dein-benutzername**. Klicke es an. In der Liste stehen auch die Repositories der anderen Teilnehmer:innen. Tippe deinen Benutzernamen in das Suchfeld, dann bleibt nur deines übrig. Siehst du es nicht, klicke rechts oben auf das Aktualisieren-Symbol.
+3. Bei **Local Path** klicke auf **Choose** und wähle den Ordner **Dokumente/gitrepos/gh-org-gitklar**. GitHub Desktop hängt den Namen des Repositorys von selbst an.
 4. Klicke auf **Clone**.
-5. GitHub Desktop zeigt jetzt dein Repository. Oben links steht **Current repository: rezept-dein-benutzername**. Klicke im Menü **Repository** auf **Show in Finder** (macOS) oder **Show in Explorer** (Windows). Du siehst die Datei `README.md` und den Ordner `rezept` mit deinen Dateien und Fotos.
+5. GitHub Desktop zeigt jetzt dein Repository. Oben links steht **Current repository: rezept-dein-benutzername**. Klicke im Menü **Repository** auf **Show in Finder** (macOS) oder **Show in Explorer** (Windows). Du siehst die Datei `README.md` und den Ordner `rezept` mit deinen Dateien.
 6. Klicke in GitHub Desktop links auf den Reiter **History**. Dort stehen alle Commits, die du im Browser gemacht hast, mit deinem Namen und deinen Nachrichten.
 
-Ein anderer Weg zum selben Ziel: Öffne dein Repository auf github.com, klicke auf den grünen Knopf **Code** und dann auf **Open with GitHub Desktop**.
+Ein anderer Weg zum selben Ziel: Öffne dein Repository auf github.com, klicke auf den grünen Knopf **Code** und dann auf **Open with GitHub Desktop**. Auch dann wählst du bei **Local Path** den Ordner `Dokumente/gitrepos/gh-org-gitklar`.
 
 ## Geschafft, wenn
 
-Der Ordner `Dokumente/gitrepos/rezept-dein-benutzername` existiert, darin `README.md` und der Ordner `rezept` liegen, und der Reiter **History** deine Commits aus dem Browser zeigt.
+Der Ordner `Dokumente/gitrepos/gh-org-gitklar/rezept-dein-benutzername` existiert, darin `README.md` und der Ordner `rezept` liegen, und der Reiter **History** deine Commits aus dem Browser zeigt.
 
 ## Hängt es?
 

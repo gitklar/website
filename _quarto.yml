@@ -23,6 +23,8 @@ website:
   site-url: https://gitklar.ch/
   repo-url: https://github.com/gitklar/website
   navbar:
+    logo: logos/wordmark-dark.svg
+    logo-alt: "bitz"
     left:
       - href: index.qmd
         text: Start
@@ -36,6 +38,7 @@ website:
         aria-label: GitHub
   sidebar:
     - id: vorbereitung
+      logo: false
       title: Vorbereitung
       style: docked
       collapse-level: 2
@@ -55,7 +58,7 @@ website:
             - vorbereitung/rezept-dokumentieren.qmd
             - vorbereitung/klonen.qmd
             - vorbereitung/erster-commit.qmd
-        - section: "Wenn du es hast"
+        - section: "Freiwillig"
           contents:
             - vorbereitung/claude-code.qmd
             - vorbereitung/editor.qmd
@@ -84,7 +87,7 @@ cohort:
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, brand, gitklar.scss]
     css: styles.css
     toc: true
     toc-title: "Auf dieser Seite"

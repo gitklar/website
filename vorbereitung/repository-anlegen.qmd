@@ -59,9 +59,9 @@ Dein Repository unter `github.com/gitklar/rezept-dein-benutzername` existiert, n
 
 ## Wer dein Repository sieht
 
-Privat heisst: Nur du und die Kursleitung sehen es. Die anderen Teilnehmer:innen sehen es nicht. Im Workshop bringst du dein Rezept selbst in das gemeinsame Kochbuch, von deinem Laptop aus. Dafür muss niemand sonst dein Repository lesen können.
+Privat heisst: Es ist nicht öffentlich im Internet. Alle Teilnehmer:innen in der Organisation gitklar und die Kursleitung können es lesen, ändern kannst nur du. So könnt ihr eure Rezepte schon vor dem Workshop gegenseitig anschauen. Im Workshop bringst du dein Rezept selbst in das gemeinsame Kochbuch, von deinem Laptop aus.
 
-Ein öffentliches Repository könnte jede Person im Internet lesen, auch deine Fotos. In der Organisation gitklar ist das abgeschaltet. Steht **Public** bei dir nicht zur Wahl, ist das so gewollt. Willst du dein Rezept später öffentlich zeigen, sprich mich an.
+Ein öffentliches Repository könnte jede Person im Internet lesen. In der Organisation gitklar ist das abgeschaltet. Steht **Public** bei dir nicht zur Wahl, ist das so gewollt. Willst du dein Rezept später öffentlich zeigen, sprich mich an.
 
 ## Hängt es?
 

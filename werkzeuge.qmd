@@ -7,7 +7,7 @@ Im Kurs sind mehrere Programme gleichzeitig auf deinem Bildschirm, und ihre Name
 
 ## Die Werkzeuge in je einem Satz
 
-**{{< gl Git >}}** ist ein Programm auf deinem Laptop, das die Geschichte deiner Dateien festhält: jeden {{< gl Commit >}}, jeden {{< gl Branch >}}, jeden {{< gl Merge >}}. Git braucht kein Internet.
+**{{< gl Git >}}** ist ein Programm auf deinem Laptop, das die Versionen deiner Dateien festhält, also jede Veränderung: jeden {{< gl Commit >}}, jeden {{< gl Branch >}}, jeden {{< gl Merge >}}. Git braucht kein Internet.
 
 **{{< gl GitHub >}}** ist eine Website, github.com, die eine Kopie deines {{< gl Repository display="Repositorys" >}} im Internet hält. Alles, was andere Menschen betrifft, passiert dort: {{< gl "Pull request" display="Pull requests" >}}, Reviews, {{< gl Issue display="Issues" >}}, Einladungen. GitHub baut auf Git auf, ist aber ein eigenes Produkt einer eigenen Firma.
 
@@ -15,11 +15,11 @@ Im Kurs sind mehrere Programme gleichzeitig auf deinem Bildschirm, und ihre Name
 
 **Das {{< gl Terminal >}}** ist das Fenster, in dem du dieselben Befehle als Text tippst. Es ist karg und verzeiht keine Tippfehler. Im Workshop 1 öffnen wir es einmal, damit du gesehen hast, was GitHub Desktop vor dir verbirgt.
 
-**{{< gl "Claude Code" >}}** ist der KI-Agent. Er liest und ändert Dateien in deinem Ordner, führt Befehle aus und bedient Git, auf einen Satz in Alltagssprache hin. Im Terminal wird aus `git commit -m "..."` wieder «Sichere meine Änderung». Dieser Kurs lehrt Claude Code nicht. Du siehst es in Screencasts.
+**{{< gl "Claude Code" >}}** ist ein {{< gl KI-Agent >}}. Er liest und ändert Dateien in deinem Ordner, führt Befehle aus und bedient Git, auf einen Satz in Alltagssprache hin. Im Terminal wird aus `git commit -m "..."` wieder «Sichere meine Änderung». Dieser Kurs lehrt Claude Code nicht. Du siehst es in Screencasts.
 
 ## Eine Faustregel
 
-- Hält es die **Geschichte deiner Dateien** fest oder bewegt sie, ist es Git.
+- Hält es **Versionen und Veränderungen deiner Dateien** fest oder bewegt sie, ist es Git.
 - Betrifft es **eine andere Person oder den Browser**, ist es GitHub.
 - Ist es **ein Knopf**, ist es GitHub Desktop, das Git für dich bedient.
 - Ist es **ein getippter Befehl**, ist es das Terminal, das Git direkt bedient.
@@ -63,7 +63,7 @@ Agenten wie Claude Code lehrt der Kurs nicht. Du siehst sie in Screencasts, dami
 
 ## Häufige Verwechslungen
 
-**Git ist nicht GitHub.** Git ist das Programm auf deinem Laptop, das die Geschichte führt. GitHub ist die Website, die eine Kopie hält und die Zusammenarbeit dazugibt. Git ohne GitHub geht. GitHub ohne Git ergibt wenig Sinn.
+**Git ist nicht GitHub.** Git ist das Programm auf deinem Laptop, das die Versionen deiner Dateien festhält. GitHub ist die Website, die eine Kopie hält und die Zusammenarbeit dazugibt. Git ohne GitHub geht. GitHub ohne Git ergibt wenig Sinn.
 
 **Pull ist nicht Pull request.** Pull holt Änderungen von GitHub auf deinen Laptop. Ein Pull request ist die Bitte auf GitHub, dass jemand einen Branch prüft und übernimmt. Trotz des gemeinsamen Wortes ist das eine ein Datentransfer und das andere ein Gespräch.
 
