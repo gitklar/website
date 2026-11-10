@@ -99,3 +99,7 @@ format:
     lightbox: true
     code-copy: true
     code-overflow: wrap
+    include-in-header:
+      # Plausible analytics, no cookies
+      - text: |
+          <script defer data-domain="gitklar.ch" src="https://plausible.io/js/script.js"></script>
