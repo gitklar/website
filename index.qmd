@@ -30,6 +30,8 @@ Beide Workshops finden online auf Zoom statt und dauern zwei Stunden. Den Link b
 
 Aus allen Rezepten entsteht das gemeinsame gitklar-Kochbuch, ein Repository der Organisation. Im Workshop 1 bringt jede Person ihr Rezept über einen eigenen Branch und einen Pull request hinein. Im Workshop 2 lest ihr die Pull requests der anderen zu zweit, kommentiert sie und löst gemeinsam einen Merge conflict. Wer den Workshop 1 verpasst, reicht das Rezept mit der Anleitung [Rezept per Pull request einreichen](rezept-einreichen.qmd) ein, vor dem Workshop 2.
 
+Die Folien zum Workshop 1: [Vom eigenen Rezept zum Pull request](workshop/workshop-1.qmd).
+
 [Zur Vorbereitung](vorbereitung/index.qmd){.btn .btn-primary}
 
 :::

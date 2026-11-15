@@ -13,6 +13,10 @@ format:
     slide-number: true
     toc: false
     lightbox: false
+    include-in-header:
+      # Plausible analytics, no cookies, as on the rest of the site
+      - text: |
+          <script defer data-domain="gitklar.ch" src="https://plausible.io/js/script.js"></script>
 ---
 
 <!--
