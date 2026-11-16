@@ -293,7 +293,7 @@ Ihr müsst nichts tippen.
 
 # Branch und Pull request {background-color="#1e5a46"}
 
-## Ein eigener Branch, dann die Bitte
+## Branch anlegen, dann Pull request öffnen
 
 ::: {.r-stack}
 ![](bilder/block-b-03.png){.fragment .fade-in width="62%" fig-alt="Kim hat den Branch pancakes angelegt. Im Graphen steht neben main die Spalte pancakes, noch ohne eigenen Commit."}
