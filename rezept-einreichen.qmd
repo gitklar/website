@@ -1,11 +1,14 @@
 ---
 title: "Rezept per Pull request einreichen"
-subtitle: "Für alle, die den Workshop 1 verpasst haben. Etwa 30 Minuten"
+subtitle: "Die Schritte aus dem Workshop 1. Etwa 30 Minuten"
 ---
 
 <!-- zu prüfen: alle Schritte in GitHub Desktop (Clone Repository, New branch, Commit to Branch, Publish branch, Preview Pull Request oder Create Pull Request) sind noch nicht mit einem Testkonto durchgespielt. Danach Beschriftungen und Reihenfolge prüfen und die Screenshots aufnehmen. -->
 
-Im Workshop 1 hat jede Person ihr Rezept in das gemeinsame gitklar-Kochbuch gebracht, über einen eigenen {{< gl Branch >}} und einen {{< gl "Pull request" >}}. Hast du den Workshop verpasst, machst du hier dieselben Schritte allein. Die Aufzeichnung des Workshops zeigt sie ebenfalls. Reich dein Rezept vor dem Workshop 2 ein. Dort lesen wir die Pull requests zu zweit.
+Diese Seite ist die Anleitung für die Übung im Workshop 1. Du bringst dein Rezept in das gemeinsame gitklar-Kochbuch, über einen eigenen {{< gl Branch >}} und einen {{< gl "Pull request" >}}.
+
+- **Im Workshop 1:** Ihr arbeitet zu zweit in einem Breakout-Raum die Schritte 1 bis 6 durch. Eine Person teilt den Bildschirm, die andere liest mit. Steht der Pull request, tauscht ihr. Schritt 7 kommt nach der Übung.
+- **Nicht fertig geworden oder nicht dabei gewesen?** Dann machst du dieselben Schritte allein, bis Dienstag, 1. Dezember. Die Aufzeichnung des Workshops zeigt sie ebenfalls. Im Workshop 2 lesen wir die Pull requests zu zweit.
 
 ## Bevor du anfängst
 

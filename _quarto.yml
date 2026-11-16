@@ -65,7 +65,7 @@ website:
           contents:
             - vorbereitung/claude-code.qmd
             - vorbereitung/editor.qmd
-        - section: "Workshop verpasst?"
+        - section: "Im Workshop 1"
           contents:
             - rezept-einreichen.qmd
         - section: "Nachschlagen"
