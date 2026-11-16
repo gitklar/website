@@ -15,6 +15,9 @@ project:
     - "*.qmd"
     - "vorbereitung/*.qmd"
     - "workshop/*.qmd"
+  # the practice games, a copy of the static pages of gitklar/spiel
+  resources:
+    - "spiel/**"
 
 lang: de
 
