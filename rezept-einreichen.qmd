@@ -3,7 +3,7 @@ title: "Rezept per Pull request einreichen"
 subtitle: "Die Schritte aus dem Workshop 1. Etwa 30 Minuten"
 ---
 
-<!-- zu prüfen: alle Schritte in GitHub Desktop (Clone Repository, New branch, Commit to Branch, Publish branch, Preview Pull Request oder Create Pull Request) sind noch nicht mit einem Testkonto durchgespielt. Danach Beschriftungen und Reihenfolge prüfen und die Screenshots aufnehmen. -->
+<!-- Schritte und Screenshots am 16. November 2026 mit einem Testkonto auf macOS durchgespielt. zu prüfen: dieselben Schritte auf Windows. -->
 
 Diese Seite ist die Anleitung für die Übung im Workshop 1. Du bringst dein Rezept in das gemeinsame gitklar-Kochbuch, über einen eigenen {{< gl Branch >}} und einen {{< gl "Pull request" >}}.
 
@@ -18,27 +18,40 @@ Das Kochbuch ist das Repository [gitklar/kochbuch](https://github.com/gitklar/ko
 
 ## Schritt 1: das Kochbuch klonen
 
-1. Öffne GitHub Desktop. Menü **File**, **Clone Repository**.
-2. Reiter **GitHub.com**, dann **gitklar/kochbuch** anklicken. Tippe `kochbuch` in das Suchfeld, wenn die Liste lang ist.
-3. Bei **Local Path** auf **Choose** klicken und den Ordner **Dokumente/gitrepos/gh-org-gitklar** wählen, in dem schon dein Repository `rezept-dein-benutzername` liegt. Lege dabei keinen neuen Ordner an. Im Feld steht danach ein Pfad, der auf `gitrepos/gh-org-gitklar/kochbuch` endet. Steht dort `Untitled` oder ein anderer Ordner dazwischen, wähle den Ordner noch einmal.
-4. Klicke auf **Clone**. Oben links steht jetzt **Current repository: kochbuch**.
+1. Öffne GitHub Desktop. Klicke oben links auf **Current Repository**.
 
-::: {.callout-note}
-## Das Kochbuch steht nicht in der Liste?
+   ![](bilder/rezept-einreichen/01-current-repository.png){.bild-screenshot fig-alt="GitHub Desktop: oben links ist das Feld Current Repository mit rezept-rainbow-train markiert"}
 
-GitHub Desktop zeigt manchmal «Sorry, I can't find any repository matching». Die Liste ist dann nicht aktuell. Klicke im selben Fenster auf den Reiter **URL** und schreib in das Feld **Repository URL or GitHub username and repository** den Text `gitklar/kochbuch`. Wähle den **Local Path** wie in Punkt 3 und klicke auf **Clone**.
-:::
+2. Klicke auf **Add**, dann auf **Clone Repository…**.
+
+   ![](bilder/rezept-einreichen/02-add-clone.png){.bild-screenshot fig-alt="GitHub Desktop: die aufgeklappte Liste der Repositorys, ein Pfeil zeigt auf den Knopf Add, im Menü ist Clone Repository markiert"}
+
+3. Klicke im Fenster **Clone a Repository** auf den Reiter **URL**. Tippe in das Feld darunter `gitklar/kochbuch`. Im Reiter **GitHub.com** fehlt das Kochbuch oft in der Liste, darum der Weg über **URL**.
+4. Prüfe das Feld **Local Path**. Der Pfad soll auf `gitrepos/gh-org-gitklar/kochbuch` enden, also in dem Ordner liegen, in dem schon dein Repository `rezept-dein-benutzername` liegt. Steht dort etwas anderes, klicke auf **Choose…** und wähle den Ordner **Dokumente/gitrepos/gh-org-gitklar**. Lege dabei keinen neuen Ordner an.
+5. Klicke auf **Clone**.
+
+   ![](bilder/rezept-einreichen/03-url.png){.bild-screenshot fig-alt="GitHub Desktop: das Fenster Clone a Repository, der Reiter URL ist markiert, im Feld steht gitklar/kochbuch, der Local Path endet auf gitrepos/gh-org-gitklar/kochbuch, der Knopf Clone ist markiert"}
+
+6. Oben links steht jetzt **Current Repository: kochbuch**.
+
+   ![](bilder/rezept-einreichen/04-geklont.png){.bild-screenshot fig-alt="GitHub Desktop: Current Repository kochbuch, Current Branch main, in der Mitte No local changes"}
 
 ## Schritt 2: einen Branch anlegen
 
 Ein Branch ist deine eigene Arbeitslinie im Kochbuch. Auf ihm kannst du Dateien hinzufügen, ohne die Hauptfassung `main` anzufassen.
 
 1. Dein Ordner im Kochbuch heisst wie dein GitHub-Benutzername, in Kleinbuchstaben, zum Beispiel `rezepte/dein-benutzername`. Weil jeder Benutzername nur einmal vorkommt, kann kein Ordner doppelt angelegt werden.
-2. Klicke in GitHub Desktop oben in der Mitte auf **Current branch**, dann auf **New branch**.
-3. Schreib als Namen `rezept-` und deinen Benutzernamen, zum Beispiel `rezept-dein-benutzername`. Klicke auf **Create branch**.
-4. Oben steht jetzt **Current branch: rezept-dein-benutzername**.
+2. Klicke in GitHub Desktop oben in der Mitte auf **Current Branch**, dann auf **New Branch**.
+
+   ![](bilder/rezept-einreichen/05-new-branch.png){.bild-screenshot fig-alt="GitHub Desktop: das aufgeklappte Feld Current Branch mit main und origin/dev, der Knopf New Branch ist markiert"}
+
+3. Schreib als Namen `rezept-` und deinen Benutzernamen, zum Beispiel `rezept-dein-benutzername`. Klicke auf **Create Branch**.
 
 {{< glossar bild desktop-neuer-branch >}}
+
+4. Oben steht jetzt **Current Branch: rezept-dein-benutzername**.
+
+   ![](bilder/rezept-einreichen/07-branch-angelegt.png){.bild-screenshot fig-alt="GitHub Desktop: Current Branch rezept-rainbow-train, rechts daneben Publish branch, unten links der Knopf Commit to rezept-rainbow-train"}
 
 ## Schritt 3: deinen Rezeptordner kopieren
 
@@ -51,29 +64,33 @@ Du kopierst den Ordner `rezept` aus deinem eigenen Repository in das Kochbuch. D
 1. Öffne im Finder `Dokumente/gitrepos/gh-org-gitklar/rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Befehl** und **C**.
 3. Öffne `Dokumente/gitrepos/gh-org-gitklar/kochbuch/rezepte` und drücke **Befehl** und **V**. Jetzt liegt dort ein Ordner `rezept`.
-4. Klicke einmal auf den neuen Ordner, drücke die Eingabetaste und schreib deinen Benutzernamen in Kleinbuchstaben.
+4. Benenne den Ordner `rezept` um, sodass er wie dein Benutzername heisst. Klicke dazu einmal auf den neuen Ordner, drücke die Eingabetaste, schreib deinen Benutzernamen in Kleinbuchstaben und drücke noch einmal die Eingabetaste.
 
 ## Windows
 
 1. Öffne im Explorer `Dokumente\gitrepos\gh-org-gitklar\rezept-dein-benutzername`.
 2. Klicke einmal auf den Ordner `rezept` und drücke **Strg** und **C**.
 3. Öffne `Dokumente\gitrepos\gh-org-gitklar\kochbuch\rezepte` und drücke **Strg** und **V**. Jetzt liegt dort ein Ordner `rezept`.
-4. Klicke einmal auf den neuen Ordner, drücke **F2** und schreib deinen Benutzernamen in Kleinbuchstaben.
+4. Benenne den Ordner `rezept` um, sodass er wie dein Benutzername heisst. Klicke dazu einmal auf den neuen Ordner, drücke **F2**, schreib deinen Benutzernamen in Kleinbuchstaben und drücke die Eingabetaste.
 
 :::
 
-Im Ordner `rezepte` liegen jetzt `_vorlage`, die Ordner der anderen und dein neuer Ordner mit `zutaten.csv` und `rezept.md`.
+Im Ordner `rezepte` liegen jetzt `_vorlage` und dein neuer Ordner mit `zutaten.csv` und `rezept.md`.
+
+![](bilder/rezept-einreichen/08-finder-umbenannt.png){.bild-screenshot fig-alt="Finder auf macOS: im Ordner kochbuch/rezepte liegen _vorlage und der Ordner rainbow-train, darin rezept.md und zutaten.csv"}
 
 ## Schritt 4: committen
 
 1. Wechsle zu GitHub Desktop. Im Reiter **Changes** stehen links deine neuen Dateien, zum Beispiel `rezepte/dein-benutzername/rezept.md`, jede mit einem Häkchen. Fehlt ein Häkchen, klicke auf das Kästchen vor der Datei.
 2. Schreib unten links bei **Summary** eine Nachricht, zum Beispiel `Rezept Linsensuppe hinzugefügt`.
-3. Der Knopf darunter heisst jetzt **Commit to rezept-dein-benutzername**, mit dem Namen deines Branches. Steht dort **Commit to main**, bist du auf dem falschen Branch. Geh dann zurück zu Schritt 2.
-4. Klicke auf den Knopf.
+3. Der Knopf darunter heisst jetzt **Commit 2 files to rezept-dein-benutzername**, mit der Zahl deiner Dateien und dem Namen deines Branches. Endet er auf **to main**, bist du auf dem falschen Branch. Geh dann zurück zu Schritt 2.
+4. Klicke auf den Knopf **Commit 2 files to rezept-dein-benutzername**.
+
+   ![](bilder/rezept-einreichen/09-changes.png){.bild-screenshot fig-alt="GitHub Desktop: im Reiter Changes stehen zwei Dateien mit Häkchen, bei Summary steht Rezept Pancakes hinzugefügt, der Knopf darunter heisst Commit 2 files to rezept-rainbow-train"}
 
 ## Schritt 5: den Branch veröffentlichen
 
-Dein Branch existiert bis jetzt nur auf deinem Laptop. Klicke oben rechts auf **Publish branch**. GitHub Desktop schiebt den Branch mit deinem Commit nach GitHub.
+Dein Branch existiert bis jetzt nur auf deinem Laptop. Klicke auf **Publish branch**, oben in der Leiste oder auf den blauen Knopf in der Mitte. GitHub Desktop schiebt den Branch mit deinem Commit nach GitHub.
 
 {{< glossar bild desktop-publish-branch >}}
 
@@ -81,14 +98,27 @@ Dein Branch existiert bis jetzt nur auf deinem Laptop. Klicke oben rechts auf **
 
 Ein Pull request ist deine Bitte, deinen Branch zu prüfen und in `main` zu übernehmen.
 
-1. GitHub Desktop zeigt nach dem Veröffentlichen einen Kasten mit dem Knopf **Preview Pull Request** oder **Create Pull Request**. Klicke darauf, und wenn nötig noch einmal auf **Create pull request**. Dein Browser öffnet sich auf github.com.
-2. Oben steht **base: main** und **compare: rezept-dein-benutzername**. So soll es sein.
-3. Schreib als Titel den Namen deines Gerichts, zum Beispiel `Linsensuppe`.
-4. Im Textfeld darunter steht schon eine Vorlage mit drei Zeilen. Ergänze bei **Gericht** den Namen. Schreib bei **Name im Buch**, was im öffentlichen Kochbuch bei deinem Rezept stehen soll: dein Benutzername, ein anderer Name oder «kein Name». Bei **Link** kannst du eine Website oder ein Profil angeben, wenn du magst.
-5. Klicke auf **Create pull request**. Damit bist du einverstanden, dass dein Rezept unter der Lizenz CC BY 4.0 im gitklar-Kochbuch steht.
-6. Klicke auf der Seite des Pull requests nicht auf **Try the Overview page**. Der Knopf schaltet auf eine neue Ansicht um, die anders aussieht als in dieser Anleitung.
+1. GitHub Desktop zeigt nach dem Veröffentlichen den blauen Knopf **Preview Pull Request**. Klicke darauf.
+
+   ![](bilder/rezept-einreichen/11-preview-pr.png){.bild-screenshot fig-alt="GitHub Desktop: nach dem Veröffentlichen steht in der Mitte der Kasten Preview the Pull Request from your current branch mit dem Knopf Preview Pull Request"}
+
+2. Das Fenster **Open a Pull Request** zeigt deine Dateien. Klicke unten rechts auf **Create Pull Request**. Dein Browser öffnet sich auf github.com.
+
+   ![](bilder/rezept-einreichen/12-open-pr-desktop.png){.bild-screenshot fig-alt="GitHub Desktop: das Fenster Open a Pull Request mit base main, den zwei Dateien und unten rechts dem Knopf Create Pull Request"}
+
+3. Oben steht **base: main** und **compare: rezept-dein-benutzername**. So soll es sein.
+4. Bei **Add a title** steht deine Commit-Nachricht. Ersetze sie durch den Namen deines Gerichts, zum Beispiel `Linsensuppe`.
+5. Im Textfeld darunter steht schon eine Vorlage mit drei Zeilen. Ergänze bei **Gericht** den Namen. Schreib bei **Name im Buch**, was im öffentlichen Kochbuch bei deinem Rezept stehen soll: dein Benutzername, ein anderer Name oder «kein Name». Bei **Link** kannst du eine Website oder ein Profil angeben, wenn du magst.
 
 {{< glossar bild github-pr-vorlage >}}
+
+6. Klicke auf **Create pull request**. Damit bist du einverstanden, dass dein Rezept unter der Lizenz CC BY 4.0 im gitklar-Kochbuch steht.
+
+   ![](bilder/rezept-einreichen/14-pr-ausgefuellt.png){.bild-screenshot fig-alt="github.com: der Titel Pancakes, die drei ausgefüllten Zeilen der Vorlage und darunter der grüne Knopf Create pull request"}
+
+7. Dein Pull request ist offen. Klicke auf dieser Seite nicht auf **Try the Overview page**. Der Knopf schaltet auf eine neue Ansicht um, die anders aussieht als in dieser Anleitung.
+
+   ![](bilder/rezept-einreichen/15-pr-offen.png){.bild-screenshot fig-alt="github.com: der offene Pull request Pancakes mit der Marke Open, den drei Zeilen und dem Commit Rezept Pancakes hinzugefügt"}
 
 ## Schritt 7: auf das Review warten
 

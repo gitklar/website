@@ -613,17 +613,20 @@ bildschirme:
   - key: "desktop-neuer-branch"
     titel: "GitHub Desktop: New branch"
     seite: "rezept-einreichen.html"
-    beschreibung: "Das aufgeklappte **Current branch** mit dem Knopf **New branch** und das Fenster **Create a branch** mit dem Namen `rezept-linsensuppe`."
+    datei: "bilder/rezept-einreichen/06-create-branch.png"
+    beschreibung: "Das Fenster **Create a Branch** mit dem Namen `rezept-rainbow-train` und dem Knopf **Create Branch**."
 
   - key: "desktop-publish-branch"
     titel: "GitHub Desktop: Publish branch"
     seite: "rezept-einreichen.html"
-    beschreibung: "Die Leiste oben mit **Current branch: rezept-linsensuppe** und dem Knopf **Publish branch**, darunter der Kasten mit **Preview Pull Request**."
+    datei: "bilder/rezept-einreichen/10-publish-branch.png"
+    beschreibung: "Die Leiste oben mit **Current Branch: rezept-rainbow-train** und **Publish branch**, in der Mitte der Kasten **Publish your branch** mit dem blauen Knopf."
 
   - key: "github-pr-vorlage"
     titel: "github.com: der Pull request mit der Vorlage"
     seite: "rezept-einreichen.html"
-    beschreibung: "Die Seite **Open a pull request** im Kochbuch mit **base: main**, **compare: rezept-linsensuppe**, dem Titel und der Vorlage mit den Kästchen."
+    datei: "bilder/rezept-einreichen/13-pr-vorlage.png"
+    beschreibung: "Die Seite **Open a pull request** im Kochbuch mit **base: main**, **compare: rezept-rainbow-train**, dem Titel und der Vorlage mit drei Zeilen."
 
   - key: "editor-source-control"
     titel: "VS Code: Source Control"
