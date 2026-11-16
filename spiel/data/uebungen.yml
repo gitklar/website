@@ -1,0 +1,175 @@
+# Die Übungen des gitklar Spiels. Eine Datei für die drei Stufen; das Skript
+# js/spiel.js liest sie beim Laden der Seite. Nach jeder Änderung:
+#
+#   node scripts/validate.mjs
+#
+# Stufe 1, Zuordnen, hat hier keine eigenen Aufgaben: sie zieht ihre Paare aus
+# data/begriffe.yml, der Kopie des Glossars der Kurswebsite. Der Abschnitt
+# `zuordnen` sagt nur, welche Felder einander zugeordnet werden.
+#
+# Felder je Modus in `zuordnen`:
+#   id         Kennung
+#   titel      Überschrift der Runde
+#   links      Feld aus begriffe.yml für die linke Spalte (term oder befehl)
+#   rechts     Feld für die rechte Spalte (kurz oder term)
+#   je_gruppe  true: alle Paare einer Runde kommen aus derselben Gruppe
+#   nur_mit    Feld, das gefüllt sein muss (zum Beispiel befehl)
+#
+# Felder je Aufgabe in `luecken` (Stufe 2, Lückentext):
+#   id         Kennung
+#   aufgabe    was zu tun ist, ein Satz in Alltagssprache
+#   befehl     der Befehl, Wort für Wort als Liste; das erste Wort ist git
+#   fest       Positionen (ab 0), die nie zur Lücke werden, etwa eine Adresse
+#   begriff    der Begriff aus begriffe.yml, dessen Erklärung gezeigt wird
+#   hinweis    wo dasselbe in GitHub Desktop passiert (freiwillig)
+#
+# `ablenker_woerter` sind Wörter, die zusätzlich in der Wortauswahl auftauchen.
+#
+# Felder je Ablauf in `reihenfolgen` (Stufe 3, Reihenfolge):
+#   id          Kennung
+#   titel       Überschrift
+#   stufe       leicht, mittel oder schwer
+#   einleitung  ein, zwei Sätze, worum es geht
+#   schritte    die Schritte in der richtigen Reihenfolge; je `text` und,
+#               wenn es einen gibt, der `befehl` im Terminal
+#   ablenker    Schritte, die nicht dazugehören; je `text`
+#
+# Alle Werte in Anführungszeichen. Kein Markdown.
+
+zuordnen:
+  - id: "bedeutung"
+    titel: "Begriff und Bedeutung"
+    links: "term"
+    rechts: "kurz"
+    je_gruppe: true
+  - id: "befehl"
+    titel: "Befehl und Begriff"
+    links: "befehl"
+    rechts: "term"
+    nur_mit: "befehl"
+
+luecken:
+  - id: "clone"
+    aufgabe: "Hol dir dein Übungs-Repository von GitHub auf deinen Laptop."
+    befehl: ["git", "clone", "https://github.com/gitklar/setup-kim.git"]
+    fest: [2]
+    begriff: "Clone"
+    hinweis: "In GitHub Desktop: Menü File, Clone Repository."
+  - id: "status"
+    aufgabe: "Zeig, was sich seit dem letzten Commit geändert hat."
+    befehl: ["git", "status"]
+    begriff: "Changes"
+    hinweis: "In GitHub Desktop: die Liste Changes links."
+  - id: "log"
+    aufgabe: "Zeig alle Commits der Reihe nach."
+    befehl: ["git", "log"]
+    begriff: "History"
+    hinweis: "In GitHub Desktop: der Reiter History links."
+  - id: "add"
+    aufgabe: "Merk die Datei projekt.md für den nächsten Commit vor."
+    befehl: ["git", "add", "projekt.md"]
+    begriff: "Stage"
+    hinweis: "In GitHub Desktop: das Häkchen vor der Datei."
+  - id: "commit"
+    aufgabe: "Halte die Änderung fest, mit der Nachricht Mein Projekt beschrieben."
+    befehl: ["git", "commit", "-m", "\"Mein Projekt beschrieben\""]
+    fest: [3]
+    begriff: "Commit"
+    hinweis: "In GitHub Desktop: Summary ausfüllen, dann Commit to main."
+  - id: "push"
+    aufgabe: "Kopiere deine Commits nach GitHub."
+    befehl: ["git", "push"]
+    begriff: "Push"
+    hinweis: "In GitHub Desktop: der Knopf Push origin."
+  - id: "pull"
+    aufgabe: "Hol neue Commits von GitHub auf deinen Laptop."
+    befehl: ["git", "pull"]
+    begriff: "Pull"
+    hinweis: "In GitHub Desktop: Fetch origin, dann Pull origin."
+  - id: "branch"
+    aufgabe: "Leg einen neuen Branch mit dem Namen neue-idee an."
+    befehl: ["git", "branch", "neue-idee"]
+    begriff: "Branch"
+    hinweis: "In GitHub Desktop: Current branch, dann New branch."
+  - id: "switch"
+    aufgabe: "Wechsle auf den Branch neue-idee."
+    befehl: ["git", "switch", "neue-idee"]
+    begriff: "Branch"
+    hinweis: "In GitHub Desktop: Current branch, dann den Branch anklicken."
+  - id: "merge"
+    aufgabe: "Übernimm die Änderungen von neue-idee in den Branch, auf dem du gerade bist."
+    befehl: ["git", "merge", "neue-idee"]
+    begriff: "Merge"
+    hinweis: "Auf github.com: der Knopf Merge pull request."
+  - id: "diff"
+    aufgabe: "Zeig Zeile für Zeile, was sich geändert hat."
+    befehl: ["git", "diff"]
+    begriff: "Diff"
+    hinweis: "In GitHub Desktop: rechts neben der Dateiliste, grün und rot."
+  - id: "remote"
+    aufgabe: "Zeig, wo die Kopie deines Repositorys auf GitHub liegt."
+    befehl: ["git", "remote", "-v"]
+    begriff: "origin"
+    hinweis: "In GitHub Desktop: Menü Repository, View on GitHub."
+
+ablenker_woerter: ["save", "upload", "send", "copy", "sync", "undo", "open", "delete", "update", "start", "main", "-a"]
+
+reihenfolgen:
+  - id: "erster-commit"
+    titel: "Dein erster Commit"
+    stufe: "leicht"
+    einleitung: "Die Schritte der Vorbereitung, so wie du sie mit GitHub Desktop machst. Bring sie in die richtige Reihenfolge. Zwei Karten gehören nicht dazu."
+    schritte:
+      - text: "Das Übungs-Repository klonen"
+        befehl: "git clone"
+      - text: "Die Datei projekt.md öffnen und die drei Fragen beantworten"
+      - text: "Die Datei speichern"
+      - text: "In GitHub Desktop prüfen: die Datei steht unter Changes, die Änderung rechts in Grün"
+        befehl: "git status"
+      - text: "Eine kurze Nachricht schreiben und committen"
+        befehl: "git commit -m \"Mein Projekt beschrieben\""
+      - text: "Die Commits nach GitHub schicken"
+        befehl: "git push"
+      - text: "Auf github.com prüfen, ob der Text da ist"
+    ablenker:
+      - text: "Die Datei als Anhang per E-Mail verschicken"
+      - text: "Das Repository noch einmal klonen"
+  - id: "aenderung-sichern"
+    titel: "Eine Änderung sichern"
+    stufe: "mittel"
+    einleitung: "Jede weitere Änderung geht denselben Weg. Im Terminal sind es vier Befehle. Eine Karte gehört nicht dazu."
+    schritte:
+      - text: "Schauen, was sich geändert hat"
+        befehl: "git status"
+      - text: "Die Datei für den Commit vormerken"
+        befehl: "git add projekt.md"
+      - text: "Mit einer Nachricht festhalten"
+        befehl: "git commit -m \"Zweite Frage ergänzt\""
+      - text: "Nach GitHub kopieren"
+        befehl: "git push"
+    ablenker:
+      - text: "Die Datei auf github.com von Hand hochladen"
+  - id: "branch-und-pull-request"
+    titel: "Branch und Pull Request"
+    stufe: "schwer"
+    einleitung: "So arbeitest du an einer Idee, ohne main anzufassen, und lässt sie prüfen. Das ist der Ablauf von Workshop 2. Zwei Karten gehören nicht dazu."
+    schritte:
+      - text: "Neue Commits von GitHub holen, damit main aktuell ist"
+        befehl: "git pull"
+      - text: "Einen Branch anlegen"
+        befehl: "git branch neue-idee"
+      - text: "Auf den Branch wechseln"
+        befehl: "git switch neue-idee"
+      - text: "Dateien ändern und speichern"
+      - text: "Committen"
+        befehl: "git commit -m \"Neue Idee beschrieben\""
+      - text: "Den Branch nach GitHub schicken"
+        befehl: "git push"
+      - text: "Auf github.com einen Pull request öffnen"
+      - text: "Jemand prüft die Änderung und schreibt Kommentare"
+      - text: "Den Pull request mergen"
+      - text: "Auf dem Laptop zurück auf main wechseln und pullen"
+        befehl: "git switch main"
+    ablenker:
+      - text: "Direkt auf main committen, ohne Branch"
+      - text: "Den Branch löschen, bevor er auf GitHub ist"

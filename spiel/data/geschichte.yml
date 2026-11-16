@@ -1,0 +1,260 @@
+# Die Geschichten des zweiten Spiels: zwei Personen, ein Repository. Jede
+# Geschichte ist eine Folge von Szenen. Eine Szene hat einen Text, Aktionen,
+# die das Bild (den Commit-Graphen) verändern, und manchmal eine Frage.
+# js/geschichte.js spielt die Szenen ab; js/geschichte-modell.js baut aus den
+# Aktionen den Graphen. Nach jeder Änderung:
+#
+#   node scripts/validate.mjs
+#
+# Felder je Geschichte:
+#   id, titel, kurz   Kennung, Überschrift, ein Satz für die Übersicht
+#   modi              zuschauen (ohne Fragen), mitmachen (mit Fragen)
+#   personen          je kuerzel (ein Buchstabe), name, farbe
+#   szenen            die Szenen, in dieser Reihenfolge
+#
+# Felder je Szene:
+#   text        was gerade passiert, ein bis drei Sätze
+#   aktionen    Liste von Aktionen (freiwillig), siehe unten
+#   zeigt       wo das passiert: desktop, terminal, github (je ein Satz, freiwillig)
+#   frage       eine Frage (freiwillig), nur im Modus mitmachen gestellt
+#   ende        true bei der letzten Szene
+#
+# Aktionen (typ):
+#   commit    id, branch, autor, text, aufGitHub (true: direkt auf GitHub entstanden)
+#   clone     autor                       die Person holt sich eine Kopie
+#   branch    name, von (Branch), autor, spur (1 rechts, -1 links)
+#   push      branch                      alle Commits des Branches liegen auf GitHub
+#   pr        id, branch, autor, titel    Pull request von branch nach main
+#   review    pr, von, text, status       status: aenderung oder ok
+#   konflikt  pr                          GitHub kann nicht mergen
+#   mergeIn   id, in (Branch), autor, text   main in den Branch holen, Konflikt lösen (Commit auf dem Branch)
+#   merge     id, pr, von, text           Pull request mergen, Merge-Commit auf main
+#   pull      autor                       main auf dem Laptop holt die neuen Commits
+#
+# Fragen (typ):
+#   wahl   text, optionen (Liste), richtig (Position ab 0), erklaerung
+#   tipp   text, ziel (Commit-id), erklaerung   die Person tippt im Bild auf einen Commit
+#
+# Alle Werte in Anführungszeichen. Kein Markdown.
+
+geschichten:
+  - id: "rezeptbuch"
+    titel: "Zwei Personen, ein Repository"
+    kurz: "Kim und Robin schreiben am selben Rezeptbuch, jede Person auf einem eigenen Branch, und bringen ihre Arbeit über Pull requests zusammen."
+    modi: ["zuschauen", "mitmachen"]
+    personen:
+      - kuerzel: "K"
+        name: "Kim"
+        farbe: "#ff7518"
+      - kuerzel: "R"
+        name: "Robin"
+        farbe: "#2780e3"
+    szenen:
+      - text: "Kim legt auf GitHub das Repository rezeptbuch an. Der erste Commit enthält die Datei rezepte.md mit einer Überschrift. Das ist der Anfang von main."
+        aktionen:
+          - { typ: "commit", id: "c1", branch: "main", autor: "K", text: "Rezeptbuch angelegt", aufGitHub: true }
+        zeigt:
+          github: "New repository, Häkchen bei Add a README, dann Create repository."
+      - text: "Kim klont das Repository auf den eigenen Laptop. Robin auch. Beide haben jetzt dieselbe Kopie, und main zeigt bei beiden auf denselben Commit."
+        aktionen:
+          - { typ: "clone", autor: "K" }
+          - { typ: "clone", autor: "R" }
+        zeigt:
+          desktop: "File, Clone Repository, das Repository wählen."
+          terminal: "git clone https://github.com/rezeptbuch/rezeptbuch.git"
+      - text: "Kim will ein Pancakes-Rezept schreiben, ohne main anzufassen. Kim legt den Branch pancakes an. Er zweigt vom ersten Commit ab."
+        aktionen:
+          - { typ: "branch", name: "pancakes", von: "main", autor: "K", spur: 1 }
+        zeigt:
+          desktop: "Current branch, New branch, Name pancakes."
+          terminal: "git branch pancakes, dann git switch pancakes"
+      - text: "Kim schreibt das Rezept und committet. Der Commit liegt nur auf Kims Laptop. Im Bild ist er deshalb gestrichelt."
+        aktionen:
+          - { typ: "commit", id: "c2", branch: "pancakes", autor: "K", text: "Pancakes-Rezept" }
+        zeigt:
+          desktop: "Summary ausfüllen, Commit to pancakes."
+          terminal: "git add rezepte.md, dann git commit -m \"Pancakes-Rezept\""
+      - text: "Noch ein Commit: die Mengen für vier Personen. Zwei Commits auf dem Branch, beide nur bei Kim."
+        aktionen:
+          - { typ: "commit", id: "c3", branch: "pancakes", autor: "K", text: "Mengen für vier Personen" }
+      - text: "Kim pusht. Jetzt liegen Kims Commits auch auf GitHub, und die Striche werden durchgezogen."
+        aktionen:
+          - { typ: "push", branch: "pancakes" }
+        zeigt:
+          desktop: "Der Knopf Publish branch, später Push origin."
+          terminal: "git push"
+        frage:
+          typ: "wahl"
+          text: "Was sieht Robin jetzt auf dem eigenen Laptop?"
+          optionen:
+            - "Nichts Neues. Kims Commits liegen auf GitHub, nicht auf Robins Laptop."
+            - "Kims zwei Commits auf Robins main."
+            - "Kims Branch pancakes, automatisch auch bei Robin."
+          richtig: 0
+          erklaerung: "Ein Push bringt Commits vom Laptop nach GitHub. Auf Robins Laptop kommt nichts an, bis Robin selbst etwas holt."
+      - text: "Kim öffnet auf GitHub einen Pull request: die Bitte, pancakes in main zu übernehmen. Kim bittet Robin, einen Blick darauf zu werfen."
+        aktionen:
+          - { typ: "pr", id: 1, branch: "pancakes", autor: "K", titel: "Pancakes-Rezept" }
+        zeigt:
+          github: "Der Knopf Compare & pull request, Titel und ein Satz, dann Create pull request."
+      - text: "Robin arbeitet derweil an einem Salat und legt den eigenen Branch salat an. Der Branch zweigt vom selben Commit ab wie Kims Branch."
+        aktionen:
+          - { typ: "branch", name: "salat", von: "main", autor: "R", spur: -1 }
+        zeigt:
+          desktop: "Current branch, New branch, Name salat."
+          terminal: "git switch -c salat"
+      - text: "Robin schreibt das Salat-Rezept und committet. Der Commit liegt nur auf Robins Laptop."
+        aktionen:
+          - { typ: "commit", id: "c4", branch: "salat", autor: "R", text: "Salat-Rezept" }
+      - text: "Noch ein Commit: das Dressing. Zwei Commits für den Salat, beide nur auf Robins Laptop."
+        aktionen:
+          - { typ: "commit", id: "c5", branch: "salat", autor: "R", text: "Dressing ergänzt" }
+        frage:
+          typ: "tipp"
+          text: "Tippe im Bild auf den Commit, von dem beide Branches abzweigen."
+          ziel: "c1"
+          erklaerung: "Beide Branches beginnen beim ersten Commit auf main. Alles, was danach kommt, gehört zu einem der Branches."
+      - text: "Robin pusht. Jetzt liegen Robins Commits auch auf GitHub."
+        aktionen:
+          - { typ: "push", branch: "salat" }
+      - text: "Robin öffnet einen eigenen Pull request. Jetzt sind zwei Pull requests offen."
+        aktionen:
+          - { typ: "pr", id: 2, branch: "salat", autor: "R", titel: "Salat-Rezept" }
+      - text: "Robin liest Kims Pull request und merkt, dass die Backzeit fehlt. Robin schreibt einen Kommentar und bittet um eine Änderung."
+        aktionen:
+          - { typ: "review", pr: 1, von: "R", text: "Die Backzeit fehlt.", status: "aenderung" }
+        zeigt:
+          github: "Files changed, auf eine Zeile tippen, Kommentar, Request changes."
+      - text: "Kim ergänzt die Backzeit in einem weiteren Commit. Er liegt erst auf Kims Laptop."
+        aktionen:
+          - { typ: "commit", id: "c6", branch: "pancakes", autor: "K", text: "Backzeit ergänzt" }
+      - text: "Kim pusht. Der offene Pull request zeigt den neuen Commit von selbst."
+        aktionen:
+          - { typ: "push", branch: "pancakes" }
+        frage:
+          typ: "wahl"
+          text: "Muss Kim für die Backzeit einen neuen Pull request öffnen?"
+          optionen:
+            - "Nein. Der offene Pull request zeigt jeden neuen Commit auf dem Branch."
+            - "Ja, pro Commit einen Pull request."
+            - "Ja, weil Robin einen Kommentar geschrieben hat."
+          richtig: 0
+          erklaerung: "Ein Pull request gehört zum Branch, nicht zu einem Commit. Solange er offen ist, sammelt er alle neuen Commits des Branches ein."
+      - text: "Robin ist zufrieden und mergt. Auf main entsteht ein Merge-Commit, der Kims drei Commits übernimmt. Der Pull request ist damit erledigt."
+        aktionen:
+          - { typ: "merge", id: "c7", pr: 1, von: "R", text: "Pancakes gemergt" }
+        zeigt:
+          github: "Approve, dann Merge pull request, Confirm merge."
+          terminal: "git switch main, dann git merge pancakes"
+      - text: "Jetzt Robins Pull request. main hat sich inzwischen bewegt, aber Robin hat andere Zeilen geändert als Kim. GitHub kann ohne Nachfrage mergen."
+        aktionen:
+          - { typ: "merge", id: "c8", pr: 2, von: "K", text: "Salat gemergt" }
+        frage:
+          typ: "tipp"
+          text: "Tippe auf den Commit, der jetzt beide Rezepte enthält."
+          ziel: "c8"
+          erklaerung: "Der zweite Merge-Commit hat zwei Eltern: den ersten Merge-Commit mit den Pancakes und Robins letzten Salat-Commit. Er enthält alles."
+      - text: "Auf den Laptops zeigt main noch auf den ersten Commit. Kim und Robin pullen, und beide Kopien holen die neuen Commits von GitHub."
+        aktionen:
+          - { typ: "pull", autor: "K" }
+          - { typ: "pull", autor: "R" }
+        zeigt:
+          desktop: "Fetch origin, dann Pull origin."
+          terminal: "git switch main, dann git pull"
+        frage:
+          typ: "wahl"
+          text: "Was holt git pull auf Robins Laptop?"
+          optionen:
+            - "Die neuen Commits von GitHub, damit Robins main wieder dem main auf GitHub entspricht."
+            - "Die Dateien von Kims Laptop."
+            - "Nur den letzten Merge-Commit, der Rest fehlt."
+          richtig: 0
+          erklaerung: "Pull holt alle Commits, die auf GitHub neu sind, und rückt den eigenen main nach. Laptops reden nie direkt miteinander, immer über GitHub."
+      - text: "Zwei Personen, ein Repository, zwei Branches, zwei Pull requests. Auf main liegt am Ende beides, und niemand hat der anderen Person dazwischengefunkt."
+        ende: true
+
+  - id: "konflikt"
+    titel: "Der Konflikt"
+    kurz: "Kim und Robin ändern dieselbe Zeile. GitHub kann den zweiten Pull request nicht mergen, und Robin löst den Konflikt."
+    modi: ["zuschauen", "mitmachen"]
+    personen:
+      - kuerzel: "K"
+        name: "Kim"
+        farbe: "#ff7518"
+      - kuerzel: "R"
+        name: "Robin"
+        farbe: "#2780e3"
+    szenen:
+      - text: "Das Rezeptbuch hat inzwischen ein paar Rezepte. Kim und Robin haben beide eine aktuelle Kopie."
+        aktionen:
+          - { typ: "commit", id: "c1", branch: "main", autor: "K", text: "Rezeptbuch mit drei Rezepten", aufGitHub: true }
+          - { typ: "clone", autor: "K" }
+          - { typ: "clone", autor: "R" }
+      - text: "Kim findet den Titel langweilig. Auf dem Branch titel-kim ändert Kim die erste Zeile in Unser Rezeptbuch und pusht."
+        aktionen:
+          - { typ: "branch", name: "titel-kim", von: "main", autor: "K", spur: 1 }
+          - { typ: "commit", id: "c2", branch: "titel-kim", autor: "K", text: "Titel: Unser Rezeptbuch" }
+          - { typ: "push", branch: "titel-kim" }
+          - { typ: "pr", id: 1, branch: "titel-kim", autor: "K", titel: "Neuer Titel" }
+      - text: "Robin hat am selben Tag dieselbe Idee. Auf dem Branch titel-robin wird aus der ersten Zeile Rezepte für alle. Robin pusht und öffnet ebenfalls einen Pull request."
+        aktionen:
+          - { typ: "branch", name: "titel-robin", von: "main", autor: "R", spur: -1 }
+          - { typ: "commit", id: "c3", branch: "titel-robin", autor: "R", text: "Titel: Rezepte für alle" }
+          - { typ: "push", branch: "titel-robin" }
+          - { typ: "pr", id: 2, branch: "titel-robin", autor: "R", titel: "Titel geändert" }
+        frage:
+          typ: "wahl"
+          text: "Beide Pull requests sind offen. Gibt es jetzt schon ein Problem?"
+          optionen:
+            - "Noch nicht. Erst wenn der erste gemergt ist, passt der zweite nicht mehr auf main."
+            - "Ja, GitHub löscht einen der beiden Branches."
+            - "Ja, Kims Commit überschreibt Robins Commit."
+          richtig: 0
+          erklaerung: "Zwei Branches dürfen dieselbe Zeile ändern. Der Konflikt entsteht erst beim Zusammenführen, wenn Git nicht weiss, welche Fassung gelten soll."
+      - text: "Kims Pull request wird zuerst gemergt. main hat jetzt den Titel Unser Rezeptbuch."
+        aktionen:
+          - { typ: "merge", id: "c4", pr: 1, von: "R", text: "Neuer Titel gemergt" }
+      - text: "Robins Pull request lässt sich nicht mergen. GitHub meldet einen Merge conflict: dieselbe Zeile wurde auf main und auf titel-robin verschieden geändert."
+        aktionen:
+          - { typ: "konflikt", pr: 2 }
+        zeigt:
+          github: "Im Pull request steht This branch has conflicts that must be resolved."
+        frage:
+          typ: "wahl"
+          text: "Warum kann GitHub Robins Pull request nicht mergen?"
+          optionen:
+            - "Weil dieselbe Zeile auf main und auf Robins Branch verschieden geändert wurde."
+            - "Weil Robins Pull request älter ist als Kims."
+            - "Weil Robin nicht gepusht hat."
+          richtig: 0
+          erklaerung: "Git führt Änderungen an verschiedenen Zeilen von selbst zusammen. Bei derselben Zeile fragt es einen Menschen."
+      - text: "Robin holt main in den eigenen Branch. Git zeigt beide Fassungen der Zeile und fragt, welche gelten soll. Robin entscheidet sich für Unser Rezeptbuch für alle und committet die Lösung."
+        aktionen:
+          - { typ: "mergeIn", id: "c5", in: "titel-robin", autor: "R", text: "Konflikt gelöst: Unser Rezeptbuch für alle" }
+        zeigt:
+          desktop: "Branch, Update from main, dann die Datei öffnen, die Markierungen auflösen, committen."
+          terminal: "git merge main, die Datei bereinigen, dann git add und git commit"
+        frage:
+          typ: "tipp"
+          text: "Tippe auf den Commit, in dem Robin den Konflikt gelöst hat."
+          ziel: "c5"
+          erklaerung: "Der Commit auf Robins Branch hat zwei Eltern: Robins eigenen Titel-Commit und den main mit Kims Titel. Er enthält die Entscheidung."
+      - text: "Robin pusht. Der Pull request zeigt den neuen Commit, der Konflikt ist weg, und Kim mergt."
+        aktionen:
+          - { typ: "push", branch: "titel-robin" }
+          - { typ: "merge", id: "c6", pr: 2, von: "K", text: "Titel gemergt" }
+      - text: "Beide pullen. Am Ende steht auf allen Kopien dieselbe erste Zeile, und die Geschichte dahinter ist in den Commits nachzulesen."
+        aktionen:
+          - { typ: "pull", autor: "K" }
+          - { typ: "pull", autor: "R" }
+        frage:
+          typ: "wahl"
+          text: "Was hätte den Konflikt vermieden?"
+          optionen:
+            - "Nichts Technisches. Ein Satz im Chat, wer den Titel ändert, oder die Pull requests nacheinander lesen."
+            - "Beide Commits direkt auf main machen."
+            - "Keine Branches benutzen."
+          richtig: 0
+          erklaerung: "Konflikte sind kein Fehler, sondern das Zeichen, dass zwei Personen dasselbe meinten. Absprache und kleine Pull requests halten sie selten und klein."
+      - text: "Ein Konflikt ist Git, das fragt: Welche Fassung soll gelten? Die Antwort gibt ein Mensch, in einem Commit."
+        ende: true

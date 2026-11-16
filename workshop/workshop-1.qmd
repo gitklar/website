@@ -447,6 +447,15 @@ Push abgelehnt: der Commit trägt die eigentliche E-Mail-Adresse, und im Konto i
 -   **Aus den Rezepten wird ein Buch**, öffentlich im Internet. Am 2. Dezember seht ihr, wie ein Merge darin erscheint.
 :::
 
+## Zum Üben bis zum 2. Dezember {.smaller}
+
+Zwei kleine Spiele im Browser, auch auf dem Handy: [gitklar.ch/spiel](https://gitklar.ch/spiel/)
+
+-   **Geschichte.** Kim und Robin schreiben am selben Rezeptbuch. Die Bilder von heute, zum Durchklicken, mit kurzen Fragen dazu.
+-   **Runden.** Begriffe zuordnen, Befehle ergänzen, Schritte in die richtige Reihenfolge bringen. Eine Runde dauert zwei bis vier Minuten.
+
+Deine Antworten bleiben in deinem Browser. Fehler sind Teil der Übung.
+
 ## Workshop 2 {.smaller}
 
 **Mittwoch, 2. Dezember 2026, 09:30 bis 11:30 Uhr**, derselbe Zoom-Link
@@ -465,3 +474,13 @@ Was hat heute gehakt? Schreib es jetzt in den Chat. Für alles danach bekommst d
 ::: {.notes}
 11:13, 10 Minuten. Die Aufzeichnung kommt per E-Mail. Rückmeldungen aus dem Chat sichern.
 :::
+
+# Danke {background-color="#1e5a46"}
+
+## Danke!
+
+Folien erstellt mit revealjs und Quarto: <https://quarto.org/docs/presentations/revealjs/>
+
+Diese Folien: <https://gitklar.ch/workshop/workshop-1.html>
+
+Kurswebsite: <https://gitklar.ch/airetreat-01/>

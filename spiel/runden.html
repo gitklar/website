@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>gitklar üben: Runden</title>
+  <meta name="description" content="Ein kleines Spiel zu den Git-Befehlen: Begriffe zuordnen, Befehle ergänzen, Abläufe ordnen.">
+  <link rel="stylesheet" href="css/spiel.css?v=0.8">
+  <script defer data-domain="gitklar.ch" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <header class="kopf">
+    <a class="marke" href="index.html">gitklar üben</a>
+    <nav class="nav" aria-label="Spiele">
+      <a href="runden.html" aria-current="page">Runden</a>
+      <a href="geschichte.html">Geschichte</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="view-start" class="view">
+      <h1>Die Git-Befehle, Runde für Runde</h1>
+      <p class="lead">Drei kleine Übungen zu dem, was du in der Vorbereitung und in den Workshops machst. Eine Runde dauert zwei bis vier Minuten. Fehler sind Teil der Übung. Deine Antworten bleiben in deinem Browser.</p>
+      <div class="stufen" id="stufen"></div>
+      <p class="klein">Dein Fortschritt bleibt in diesem Browser gespeichert, sonst nirgends. <button class="link" id="btn-reset" type="button">Fortschritt löschen</button></p>
+    </section>
+
+    <section id="view-level" class="view" hidden>
+      <div class="leiste">
+        <button class="btn btn-leise" id="btn-back" type="button">Zur Übersicht</button>
+        <span class="progress" id="progress"></span>
+      </div>
+      <h1 id="level-title"></h1>
+      <p class="lead" id="level-intro"></p>
+      <div id="stage"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      <div id="actions" class="actions"></div>
+    </section>
+
+    <section id="view-error" class="view" hidden>
+      <h1>Die Übungen konnten nicht geladen werden</h1>
+      <p>Die Seite lädt ihre Daten nach und braucht dafür einen Webserver. Öffne sie über eine Adresse mit http, nicht als Datei. Lokal: <code>python3 -m http.server 8789</code>, dann <code>http://localhost:8789/</code>.</p>
+      <p class="klein" id="error-detail"></p>
+    </section>
+  </main>
+
+  <footer class="fuss">
+    <p>gitklar von bitz. Die Begriffe kommen aus dem <a href="https://gitklar.ch/glossar.html">Glossar</a> der Kurswebsite. <a href="https://github.com/gitklar/website/tree/main/spiel">Quellcode</a>.</p>
+  </footer>
+
+  <script src="js/vendor/js-yaml.min.js"></script>
+  <script src="js/spiel.js?v=0.8"></script>
+</body>
+</html>

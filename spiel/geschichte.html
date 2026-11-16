@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>gitklar üben: Geschichte</title>
+  <meta name="description" content="Zwei Personen, ein Repository: Kim und Robin arbeiten mit Branches und Pull requests. Zuschauen, dann Fragen beantworten.">
+  <link rel="stylesheet" href="css/spiel.css?v=0.8">
+  <script defer data-domain="gitklar.ch" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <header class="kopf">
+    <a class="marke" href="index.html">gitklar üben</a>
+    <nav class="nav" aria-label="Spiele">
+      <a href="runden.html">Runden</a>
+      <a href="geschichte.html" aria-current="page">Geschichte</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <section id="view-start" class="view">
+      <h1>Zwei Personen, ein Repository</h1>
+      <p class="lead">Kim und Robin schreiben am selben Rezeptbuch. Du klickst dich Schritt für Schritt durch und siehst im Bild, wie Commits, Branches und Pull requests entstehen. Im Modus Mitmachen stellt die Geschichte zwischendurch kurze Fragen.</p>
+      <div class="stufen" id="karten"></div>
+      <p class="klein">Dein Fortschritt bleibt in diesem Browser gespeichert, sonst nirgends. <button class="link" id="btn-reset" type="button">Fortschritt löschen</button></p>
+    </section>
+
+    <section id="view-spiel" class="view" hidden>
+      <div class="leiste">
+        <button class="btn btn-leise" id="btn-back" type="button">Zur Übersicht</button>
+        <span class="progress" id="progress"></span>
+      </div>
+      <h1 id="titel"></h1>
+      <div class="spiel-grid">
+        <div class="spiel-links">
+          <p class="szene" id="szene-text"></p>
+          <div class="graph-wrap orte-wrap" id="orte"></div>
+          <p class="klein legende legende-orte">Drei Orte, ein Repository. Ein leerer Kreis heisst: Dieser Commit ist hier noch nicht angekommen.</p>
+          <div class="graph-wrap" id="graph"></div>
+          <p class="klein legende">Gestrichelt: nur auf dem Laptop. Durchgezogen: auf GitHub. Dicker Rand: hier steht der Branch gerade.</p>
+        </div>
+        <div class="spiel-rechts">
+          <div class="panel" id="frage" hidden></div>
+          <div class="panel" id="zeigt" hidden></div>
+          <div class="panel" id="prs" hidden></div>
+          <div class="panel" id="laptops"></div>
+        </div>
+      </div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden></div>
+      <div id="actions" class="actions"></div>
+    </section>
+
+    <section id="view-error" class="view" hidden>
+      <h1>Die Geschichte konnte nicht geladen werden</h1>
+      <p>Die Seite lädt ihre Daten nach und braucht dafür einen Webserver. Öffne sie über eine Adresse mit http, nicht als Datei. Lokal: <code>python3 -m http.server 8789</code>, dann <code>http://localhost:8789/geschichte.html</code>.</p>
+      <p class="klein" id="error-detail"></p>
+    </section>
+  </main>
+
+  <footer class="fuss">
+    <p>gitklar von bitz. Kim und Robin sind erfunden. <a href="https://github.com/gitklar/website/tree/main/spiel">Quellcode</a>.</p>
+  </footer>
+
+  <script src="js/vendor/js-yaml.min.js"></script>
+  <script src="js/geschichte-modell.js?v=0.8"></script>
+  <script src="js/geschichte.js?v=0.8"></script>
+</body>
+</html>
