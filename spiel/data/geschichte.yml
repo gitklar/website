@@ -60,19 +60,19 @@ geschichten:
           - { typ: "clone", autor: "K" }
           - { typ: "clone", autor: "R" }
         zeigt:
-          desktop: "File, Clone Repository, das Repository wählen."
+          desktop: "Current Repository, Add, Clone Repository, Reiter URL."
           terminal: "git clone https://github.com/rezeptbuch/rezeptbuch.git"
       - text: "Kim will ein Pancakes-Rezept schreiben, ohne main anzufassen. Kim legt den Branch pancakes an. Er zweigt vom ersten Commit ab."
         aktionen:
           - { typ: "branch", name: "pancakes", von: "main", autor: "K", spur: 1 }
         zeigt:
-          desktop: "Current branch, New branch, Name pancakes."
+          desktop: "Current Branch, New Branch, Name pancakes."
           terminal: "git branch pancakes, dann git switch pancakes"
       - text: "Kim schreibt das Rezept und committet. Der Commit liegt nur auf Kims Laptop. Im Bild ist er deshalb gestrichelt."
         aktionen:
           - { typ: "commit", id: "c2", branch: "pancakes", autor: "K", text: "Pancakes-Rezept" }
         zeigt:
-          desktop: "Summary ausfüllen, Commit to pancakes."
+          desktop: "Summary ausfüllen, dann der Knopf Commit 1 file to pancakes."
           terminal: "git add rezepte.md, dann git commit -m \"Pancakes-Rezept\""
       - text: "Noch ein Commit: die Mengen für vier Personen. Zwei Commits auf dem Branch, beide nur bei Kim."
         aktionen:
@@ -96,12 +96,13 @@ geschichten:
         aktionen:
           - { typ: "pr", id: 1, branch: "pancakes", autor: "K", titel: "Pancakes-Rezept" }
         zeigt:
-          github: "Der Knopf Compare & pull request, Titel und ein Satz, dann Create pull request."
+          desktop: "Preview Pull Request, dann Create Pull Request."
+          github: "Titel und ein Satz, dann Create pull request."
       - text: "Robin arbeitet derweil an einem Salat und legt den eigenen Branch salat an. Der Branch zweigt vom selben Commit ab wie Kims Branch."
         aktionen:
           - { typ: "branch", name: "salat", von: "main", autor: "R", spur: -1 }
         zeigt:
-          desktop: "Current branch, New branch, Name salat."
+          desktop: "Current Branch, New Branch, Name salat."
           terminal: "git switch -c salat"
       - text: "Robin schreibt das Salat-Rezept und committet. Der Commit liegt nur auf Robins Laptop."
         aktionen:

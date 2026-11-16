@@ -40,7 +40,7 @@ begriffe:
     kurz: "eigene Arbeitslinie im Repository"
     bedeutung: "Ein Branch ist eine eigene Arbeitslinie innerhalb eines Repositorys. Du legst einen Branch an, wenn du Dateien ändern willst, ohne die Hauptfassung des Projekts anzufassen. Sind die Änderungen geprüft, führst du sie in die Hauptfassung zurück. In der Vorbereitung arbeitest du nur auf `main`. Im Workshop 1 legst du im Kochbuch deinen ersten eigenen Branch an, zum Beispiel `rezept-linsensuppe`."
     seite: "[Rezept per Pull request einreichen](rezept-einreichen.html)"
-    wo: "GitHub Desktop, Knopf **Current branch** oben in der Mitte; auf github.com die Auswahl links über der Dateiliste"
+    wo: "GitHub Desktop, Knopf **Current Branch** oben in der Mitte; auf github.com die Auswahl links über der Dateiliste"
     befehl: "`git branch`, `git switch`"
     bild: "desktop-oben"
 
@@ -50,7 +50,7 @@ begriffe:
     uebersetzt: "«Klonen», «Repository klonen»"
     kurz: "vollständige Kopie auf deinem Laptop anlegen"
     bedeutung: "Klonen heisst, eine vollständige Kopie eines Repositorys von GitHub auf deinen Laptop zu holen, samt der Geschichte aller Änderungen und der Verbindung zurück zu GitHub. Du klonst einmal, danach arbeitest du in diesem Ordner."
-    wo: "GitHub Desktop, Menü **File**, **Clone Repository**; auf github.com der grüne Knopf **Code**"
+    wo: "GitHub Desktop, **Current Repository**, **Add**, **Clone Repository**, oder Menü **File**, **Clone Repository**; auf github.com der grüne Knopf **Code**"
     befehl: "`git clone`"
     seite: "[Dein Repository klonen](vorbereitung/klonen.html)"
     bild: "desktop-klonen"
@@ -61,7 +61,7 @@ begriffe:
     uebersetzt: "«Commit», «Festschreiben», «Übernehmen», «Bestätigen»"
     kurz: "gespeicherte Fassung deiner Dateien mit einer Nachricht"
     bedeutung: "Ein Commit ist eine gespeicherte Fassung deines Projekts. Beim Commit hält Git den genauen Inhalt deiner Dateien in diesem Moment fest, zusammen mit einer Nachricht, die sagt, was du geändert hast und warum. Du kannst jederzeit zu jedem früheren Commit zurück."
-    wo: "GitHub Desktop, Knopf **Commit to main** unten links; auf github.com der Knopf **Commit changes** beim Bearbeiten einer Datei"
+    wo: "GitHub Desktop, Knopf **Commit to main** unten links, mit geänderten Dateien zum Beispiel **Commit 2 files to main**; auf github.com der Knopf **Commit changes** beim Bearbeiten einer Datei"
     befehl: "`git commit -m \"Nachricht\"`"
     seite: "[Commit und Push vom Laptop](vorbereitung/erster-commit.html)"
     bild: "desktop-changes"
@@ -121,7 +121,7 @@ begriffe:
     uebersetzt: "bleibt meist «main», selten «Haupt»"
     kurz: "der Hauptzweig eines Repositorys"
     bedeutung: "`main` ist der Hauptzweig eines Repositorys, die Fassung, die immer funktionieren soll. In der Vorbereitung committest du direkt auf `main`. Im Kurs lernst du, Änderungen auf einem eigenen Branch zu machen und über einen Pull request nach `main` zu bringen. Ältere Projekte nennen diesen Branch `master`."
-    wo: "GitHub Desktop, Knopf **Commit to main**; **Current branch** zeigt **main**"
+    wo: "GitHub Desktop, Knopf **Commit to main**; **Current Branch** zeigt **main**"
     bild: "desktop-oben"
 
   - term: "Merge"
@@ -178,7 +178,7 @@ begriffe:
     uebersetzt: "«Pull-Anfrage», «Pull-Request», «Zugriffsanfrage», «Abrufanforderung»"
     kurz: "die Bitte, einen Branch zu prüfen und zu übernehmen"
     bedeutung: "Ein Pull request ist die Bitte auf GitHub, die Änderungen eines Branches zu prüfen und in einen anderen Branch zu übernehmen, meist nach `main`. Die prüfende Person liest das Diff, kommentiert und merged am Ende. Mit Pull hat er trotz des Namens nichts zu tun: Pull ist ein Datentransfer, ein Pull request ist ein Gespräch, und es gibt ihn nur auf GitHub, nicht in Git."
-    wo: "github.com, Reiter **Pull requests**, Knopf **Compare & pull request**; GitHub Desktop, Menü **Branch**, **Create pull request**"
+    wo: "github.com, Reiter **Pull requests**, Knopf **Compare & pull request**; GitHub Desktop, Knopf **Preview Pull Request** nach dem Veröffentlichen eines Branches"
     bild: "github-pull-request"
 
   - term: "Push"
@@ -218,7 +218,7 @@ begriffe:
     kurz: "ein Projektordner mit seiner ganzen Geschichte"
     bedeutung: "Ein Repository ist ein Ordner, dessen Geschichte Git festhält: alle Dateien und jeder Commit, der je gemacht wurde. Meist ist ein Projekt ein Repository. Dein Repository `rezept-dein-benutzername` liegt nach dem Klonen zweimal vor, einmal auf deinem Laptop und einmal auf GitHub."
     seite: "[Dein Repository anlegen](vorbereitung/repository-anlegen.html)"
-    wo: "GitHub Desktop, oben links **Current repository**; auf github.com die Seite eines Repositorys, Reiter **Code**"
+    wo: "GitHub Desktop, oben links **Current Repository**; auf github.com die Seite eines Repositorys, Reiter **Code**"
     bild: "github-repository"
 
   - term: "Stage"
@@ -326,11 +326,11 @@ begriffe:
     wo: "github.com, Repository, rechts über der Dateiliste"
     bild: "github-repository"
 
-  - term: "Current repository"
+  - term: "Current Repository"
     gruppe: "Knöpfe und Fenster"
     uebersetzt: "«Aktuelles Repository»"
     kurz: "das Repository, das GitHub Desktop gerade zeigt"
-    bedeutung: "GitHub Desktop zeigt immer ein Repository auf einmal. Welches, steht oben links unter **Current repository**. Ein Klick darauf öffnet die Liste aller Repositories auf deinem Laptop, die GitHub Desktop kennt."
+    bedeutung: "GitHub Desktop zeigt immer ein Repository auf einmal. Welches, steht oben links unter **Current Repository**. Ein Klick darauf öffnet die Liste aller Repositories auf deinem Laptop, die GitHub Desktop kennt."
     wo: "GitHub Desktop, oben links"
     bild: "desktop-oben"
 
@@ -544,7 +544,7 @@ bildschirme:
     titel: "GitHub Desktop: die Leiste oben"
     seite: "begriffe.html"
     datei: "bilder/vorbereitung/commit-04-push.png"
-    beschreibung: "Die drei Knöpfe oben: **Current repository**, **Current branch** mit **main**, und **Fetch origin** beziehungsweise **Push origin**."
+    beschreibung: "Die drei Knöpfe oben: **Current Repository**, **Current Branch** mit **main**, und **Fetch origin** beziehungsweise **Push origin**."
 
   - key: "desktop-changes"
     titel: "GitHub Desktop: Reiter Changes"
@@ -611,7 +611,7 @@ bildschirme:
     beschreibung: "Die Datei `rezept/zutaten.csv`, die GitHub als Tabelle mit den Spalten zutat, menge, einheit und hinweis anzeigt."
 
   - key: "desktop-neuer-branch"
-    titel: "GitHub Desktop: New branch"
+    titel: "GitHub Desktop: New Branch"
     seite: "rezept-einreichen.html"
     datei: "bilder/rezept-einreichen/06-create-branch.png"
     beschreibung: "Das Fenster **Create a Branch** mit dem Namen `rezept-rainbow-train` und dem Knopf **Create Branch**."
