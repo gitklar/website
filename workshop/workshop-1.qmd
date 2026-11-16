@@ -33,9 +33,9 @@ Rendern: quarto render workshop/workshop-1.qmd
 ## Zum Ankommen {.smaller}
 
 ::: aufgabe
-Schreib in den Chat: **Was möchtest du nach diesem Kurs mit Git oder GitHub tun können?** TODO: Die Frage steht schon in der survey. Gibt es etwas spannenderes was geteilt werden könnte?
+Schreib in den Chat: **Welches Rezept bringst du heute mit?**
 
-Ein Satz reicht.
+Der Name des Gerichts reicht. Noch keines? Dann das, was du zuletzt gekocht hast.
 :::
 
 ::: hand
@@ -101,10 +101,35 @@ Ihr seid also richtig hier. Der Kurs setzt nichts voraus ausser der Vorbereitung
 Zahlen aus der Umfrage vom Oktober, 27 Antworten mit Einwilligung. Nur Summen, keine Namen.
 :::
 
-## TODO: Zeige eine weitere Grafik / Zahlen / Wünsche
+## Was ihr vorhabt {.smaller}
 
-Was ihr gerne können möchtet: Kategorisiere, zähle. 
-Noch eine andere Idee?
+Aus euren Antworten auf die Fragen nach dem Ziel und dem eigenen Vorhaben:
+
+::: {.zahlen}
+::: {.zahl}
+[15]{.gross}
+
+wollen verstehen, was GitHub ist und wofür es sich lohnt
+:::
+
+::: {.zahl}
+[11]{.gross}
+
+wollen eine eigene Website bauen
+:::
+
+::: {.zahl}
+[6]{.gross}
+
+wollen Versionen behalten und nichts mehr verlieren
+:::
+:::
+
+Dazu kommen je 6 mit einer eigenen App, mit einer Notizsammlung und mit dem Wunsch, im Repository mit KI zu arbeiten. 4 wollen Dateien oder Agenten mit anderen teilen.
+
+::: {.notes}
+Von Hand aus den Freitexten der 27 Antworten gezählt, eine Antwort kann in mehreren Gruppen stehen. Nur Summen, keine Namen. Heute geht es um die erste und die dritte Zahl.
+:::
 
 ## So arbeiten wir {.smaller}
 
@@ -164,20 +189,26 @@ Steffis Trainings-App, öffentlich auf GitHub: `skiefa/marathon-strength`
 -   8\. Oktober: «Öffentlichen Code neutralisiert (kein Name, keine Pulswerte)»
 -   21\. Oktober: «Heute: neue Tageskarte». 27. Oktober: «Tageskarte entfernt»
 
-TODO: Frage: Wann arbeitet Steffi?
+::: aufgabe
+Frage an euch: **An welchem Wochentag arbeitet Steffi an der App?**
+:::
+
+::: {.fragment}
+17 der 23 Commits sind von einem Donnerstag, die meisten zwischen 11 und 14 Uhr.
+:::
 
 Git vergisst nichts. Das ist der Nutzen, und es ist der Grund, bewusst zu wählen, was in einem Commit steht.
 
 ## Ein Repository, mehrere Orte
 
 ::: {.r-stack}
-![](bilder/block-a-01.png){.fragment .fade-in width="96%" fig-alt="Drei Kästen: Robins Laptop und Kims Laptop sind leer und gestrichelt, mit den Worten noch keine Kopie. Im Kasten GitHub liegt ein Commit. Darunter der Commit-Graph mit dem ersten Commit auf main."}
+![](bilder/block-a-01.png){.fragment .fade-in width="96%" fig-alt="Drei Kästen: Robins Laptop und Kims Laptop sind leer und gestrichelt, mit den Worten noch keine Kopie. Im Kasten GitHub liegt ein Commit. Unter den Laptops steht lokal, unter GitHub steht remote. Darunter der Commit-Graph mit dem ersten Commit auf main."}
 
 ![](bilder/block-a-02.png){.fragment .fade-in width="96%" fig-alt="Von GitHub zeigt je ein Pfeil mit dem Wort clone zu Robins Laptop und zu Kims Laptop. Alle drei Kästen enthalten jetzt denselben Commit."}
 :::
 
 ::: {.notes}
-09:50. Block A der Geschichte. Kim legt das Repository auf GitHub an. Kim und Robin klonen: drei Orte, derselbe Stand. Laptops reden nie direkt miteinander, immer über GitHub. Wörter: lokal ist der Laptop, remote ist GitHub. TODO: lokal und remote sollten auf der Grafik auftauchen.
+09:50. Block A der Geschichte. Kim legt das Repository auf GitHub an. Kim und Robin klonen: drei Orte, derselbe Stand. Laptops reden nie direkt miteinander, immer über GitHub. Wörter: lokal ist der Laptop, remote ist GitHub. Beide stehen unter den Kästen.
 :::
 
 ## Deine Commits in GitHub Desktop {.smaller}
