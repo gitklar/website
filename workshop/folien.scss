@@ -1,0 +1,54 @@
+/*-- scss:defaults --*/
+
+$presentation-font-size-root: 34px !default;
+$presentation-h2-font-size: 1.4em !default;
+
+/*-- scss:rules --*/
+
+// Section slides carry the bitz green; the title stands in white on it.
+.reveal .slide.has-dark-background h1,
+.reveal section.has-dark-background h1 { color: #ffffff; }
+
+// A task for the room: what to do, step by step.
+.reveal .slide .aufgabe {
+  font-size: 0.85em;
+  padding: 0.3em 0.7em;
+  margin: 0.4em 0;
+  border-left: solid 6px #1e5a46;
+  background-color: #e6f0ec;
+}
+
+// A spoken aside or the signal the room gives back.
+.reveal .hand {
+  color: #9a5800;
+  font-weight: 700;
+  margin-top: 0.6em;
+}
+
+// One highlighted word in a sentence.
+.reveal .marke { background-color: #f0b85c; padding: 0 0.15em; }
+
+// Three numbers side by side.
+.reveal .zahlen { display: flex; gap: 1.2em; justify-content: center; margin: 0.6em 0; text-align: center; }
+.reveal .zahl { flex: 1; }
+.reveal .gross { font-size: 2.6em; font-weight: 700; color: #1e5a46; line-height: 1.1; }
+
+.reveal table { font-size: 0.8em; }
+.reveal .r-stack img { margin: 0 auto; }
+
+// Slides stand on white (brand rule), so the stills from the game have no visible edge.
+// The white goes on the viewport only. On the sections it also covered the
+// green of the section slides, because their wrapping section is no dark slide.
+.reveal-viewport { background-color: #ffffff; }
+
+// Who works right now: I show, we do it together, you work. First thing on the slide.
+.reveal .dran { display: inline-block; padding: 0.05em 0.6em; border-radius: 0.9em; font-size: 0.75em; font-weight: 700; margin-right: 0.3em; }
+.reveal .dran.ich { background-color: #1e5a46; color: #ffffff; }
+.reveal .dran.wir { background-color: #f0b85c; color: #1a1a1a; }
+.reveal .dran.ihr { background-color: #9a5800; color: #ffffff; }
+
+// The key to the story pictures.
+.reveal .legende { font-size: 0.6em; margin-top: 0.3em; }
+
+// Terminal output as text, dark like a terminal window.
+.reveal pre.terminal { background-color: #1a1a1a; color: #f2f2f2; padding: 0.6em 0.8em; border-radius: 6px; font-size: 0.75em; line-height: 1.35; width: 100%; box-shadow: none; }

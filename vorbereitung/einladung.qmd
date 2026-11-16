@@ -21,7 +21,7 @@ Einladungen gelten sieben Tage. Ist deine abgelaufen, schreib mir, und ich schic
 
 ## Geschafft, wenn
 
-Du dein Issue im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+assignee%3A%40me) siehst.
+Du dein Issue im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+involves%3A%40me) siehst.
 
 ## Wer was sieht
 
