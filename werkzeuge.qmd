@@ -29,18 +29,18 @@ Im Kurs sind mehrere Programme gleichzeitig auf deinem Bildschirm, und ihre Name
 
 | Was du tust | Wo du klickst | Befehl darunter | Werkzeug |
 |---|---|---|---|
-| Repository klonen | GitHub Desktop: **File**, **Clone Repository** | `git clone` | Git |
+| Repository klonen | GitHub Desktop: **Current Repository**, **Add**, **Clone Repository** | `git clone` | Git |
 | Änderungen sehen | GitHub Desktop: Reiter **Changes** | `git status`, `git diff` | Git |
 | Datei für den Commit vormerken | GitHub Desktop: Häkchen vor der Datei | `git add` | Git |
 | Commit | GitHub Desktop: **Summary**, dann **Commit to main** | `git commit -m "Nachricht"` | Git |
 | Push | GitHub Desktop: **Push origin** | `git push` | Git |
 | Neues von GitHub holen | GitHub Desktop: **Fetch origin**, dann **Pull origin** | `git fetch`, `git pull` | Git |
 | Geschichte ansehen | GitHub Desktop: Reiter **History** | `git log` | Git |
-| Branch anlegen | GitHub Desktop: **Current branch**, **New branch** | `git switch -c name` | Git |
-| Branch wechseln | GitHub Desktop: **Current branch** | `git switch name` | Git |
+| Branch anlegen | GitHub Desktop: **Current Branch**, **New Branch** | `git switch -c name` | Git |
+| Branch wechseln | GitHub Desktop: **Current Branch** | `git switch name` | Git |
 | Terminal im Repository öffnen | GitHub Desktop: **Repository**, **Open in Terminal** | kein Befehl | GitHub Desktop |
 | Einladung annehmen | GitHub: E-Mail, **Join gitklar** | kein Befehl | GitHub |
-| Pull request öffnen | GitHub: **Compare & pull request** | kein Befehl | GitHub |
+| Pull request öffnen | GitHub Desktop: **Preview Pull Request**; GitHub: **Compare & pull request** | kein Befehl | GitHub |
 | Pull request prüfen | GitHub: **Files changed** | kein Befehl | GitHub |
 | Pull request mergen | GitHub: **Merge pull request** | `git merge`, auf GitHubs Servern | Git, über GitHub |
 | Issue öffnen | GitHub: **Issues**, **New issue** | kein Befehl | GitHub |

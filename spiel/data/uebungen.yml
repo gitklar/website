@@ -54,7 +54,7 @@ luecken:
     befehl: ["git", "clone", "https://github.com/gitklar/setup-kim.git"]
     fest: [2]
     begriff: "Clone"
-    hinweis: "In GitHub Desktop: Menü File, Clone Repository."
+    hinweis: "In GitHub Desktop: Current Repository, Add, Clone Repository."
   - id: "status"
     aufgabe: "Zeig, was sich seit dem letzten Commit geändert hat."
     befehl: ["git", "status"]
@@ -75,7 +75,7 @@ luecken:
     befehl: ["git", "commit", "-m", "\"Mein Projekt beschrieben\""]
     fest: [3]
     begriff: "Commit"
-    hinweis: "In GitHub Desktop: Summary ausfüllen, dann Commit to main."
+    hinweis: "In GitHub Desktop: Summary ausfüllen, dann der Knopf Commit 1 file to main."
   - id: "push"
     aufgabe: "Kopiere deine Commits nach GitHub."
     befehl: ["git", "push"]
@@ -90,12 +90,12 @@ luecken:
     aufgabe: "Leg einen neuen Branch mit dem Namen neue-idee an."
     befehl: ["git", "branch", "neue-idee"]
     begriff: "Branch"
-    hinweis: "In GitHub Desktop: Current branch, dann New branch."
+    hinweis: "In GitHub Desktop: Current Branch, dann New Branch."
   - id: "switch"
     aufgabe: "Wechsle auf den Branch neue-idee."
     befehl: ["git", "switch", "neue-idee"]
     begriff: "Branch"
-    hinweis: "In GitHub Desktop: Current branch, dann den Branch anklicken."
+    hinweis: "In GitHub Desktop: Current Branch, dann den Branch anklicken."
   - id: "merge"
     aufgabe: "Übernimm die Änderungen von neue-idee in den Branch, auf dem du gerade bist."
     befehl: ["git", "merge", "neue-idee"]
