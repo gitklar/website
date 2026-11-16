@@ -83,7 +83,7 @@ Das war die Vorbereitung. Du hast ein Repository auf GitHub und auf deinem Lapto
 
 Dein Zeichen, dass du bereit bist, ist ein Kommentar in deinem Issue. Ich bekomme eine Nachricht, sobald du ihn schreibst, und weiss, dass ich für dich nichts mehr prüfen muss.
 
-1. Öffne dein Issue über das Lesezeichen **gitklar - Vorbereitung** oder über [github.com/gitklar/vorbereitung/issues](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+assignee%3A%40me). Hake die Kästchen ab, die noch offen sind.
+1. Öffne dein Issue über das Lesezeichen **gitklar - Vorbereitung** oder über [github.com/gitklar/vorbereitung/issues](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+involves%3A%40me). Hake die Kästchen ab, die noch offen sind.
 2. Scroll ganz nach unten zum Feld **Add a comment**.
 3. Schreib einen Kommentar mit den Worten **Vorbereitung abgeschlossen**. Dazu, wenn du magst, zwei Sätze: Was hat gehakt, wie lange hast du gebraucht, was war unklar. Das hilft der nächsten Gruppe.
 4. Klicke auf **Comment**, nicht auf **Close with comment**. Das Issue bleibt offen, bis der Kurs vorbei ist.
