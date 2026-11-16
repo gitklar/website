@@ -1,0 +1,17 @@
+# Data check for the practice games: the exercise files must load with the
+# parser the page uses and pass the structural checks.
+name: spiel-check
+on:
+  push:
+    paths: ["spiel/**", "begriffe.yml"]
+  pull_request:
+    paths: ["spiel/**", "begriffe.yml"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node spiel/scripts/validate.mjs

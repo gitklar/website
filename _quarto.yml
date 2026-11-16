@@ -15,9 +15,13 @@ project:
     - "*.qmd"
     - "vorbereitung/*.qmd"
     - "workshop/*.qmd"
-  # the practice games, a copy of the static pages of gitklar/spiel
+  # the practice games: static pages, published as they are (spiel/README.md)
   resources:
-    - "spiel/**"
+    - "spiel/*.html"
+    - "spiel/LICENSE"
+    - "spiel/css/**"
+    - "spiel/js/**"
+    - "spiel/data/**"
 
 lang: de
 
