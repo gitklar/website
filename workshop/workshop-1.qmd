@@ -33,25 +33,25 @@ Rendern: quarto render workshop/workshop-1.qmd
 ## Zum Ankommen {.smaller}
 
 ::: aufgabe
-Schreib in den Chat: **Was möchtest du nach diesem Kurs mit Git oder GitHub tun können?**
+Schreib in den Chat: **Was möchtest du nach diesem Kurs mit Git oder GitHub tun können?** TODO: Die Frage steht schon in der survey. Gibt es etwas spannenderes was geteilt werden könnte?
 
 Ein Satz reicht.
 :::
 
 ::: hand
-Der Zoom-Passcode steht in der Kalendereinladung «gitklar Kurs». Wir zeichnen auf.
+Wir zeichnen auf.
 :::
 
 ::: {.notes}
 09:30, 5 Minuten. Aufnahme starten und sagen. Zwei, drei Ziele aus dem Chat vorlesen.
 :::
 
-## Ihr habt schon angefangen
+## Ihr habt das Wichtigste schon gemacht
 
 ::: incremental
 -   Repository angelegt, Rezept geschrieben, geklont, committet, gepusht: in 60 bis 90 Minuten.
--   Heute gehen wir dieselben Schritte gemeinsam durch.
--   Für Fragen zwischen den Workshops bekommst du nach dem Workshop ein eigenes Issue. Dafür bin ich da.
+-   Heute gehen wir dieselben Schritte gemeinsam durch. Macht euch Notizen und schreibt Fragen auf.
+-   Für Fragen zwischen den Workshops bekommst du nach dem Workshop ein eigenes Issue. Alle Fragen werden von mir beantwortet.
 :::
 
 ::: {.notes}
@@ -64,11 +64,11 @@ Die Vorbereitung hat schon gelehrt, was der Workshop zeigen soll. Wer noch nicht
 -   Heute [ist]{.marke} Git und GitHub für die Zusammenarbeit: Commit, Push, Branch, Pull request.
 -   Heute ist [kein]{.marke} KI-Workshop. Was Agenten wie Claude Code im Repository tun, baut genau auf diesen Schritten auf.
 -   Hier darf etwas [schiefgehen]{.marke}. Alles, was wir heute tun, lässt sich rückgängig machen.
--   Wir arbeiten mit [GitHub Desktop]{.marke}. Das Werkzeug ist in einem Kurs auch für mich neu. Sonst arbeite ich mit Entwicklungsumgebungen für Code, und die meisten hier arbeiten nicht mit Code.
+-   Wir arbeiten mit [GitHub Desktop]{.marke}. Das Werkzeug ist in einem Kurs auch für mich neu. 
 :::
 
 ::: {.notes}
-09:35. Die zwei Ankersätze laut sagen: kein KI-Workshop, alles ist rückgängig machbar.
+09:35. Die zwei Ankersätze laut sagen: kein KI-Workshop, alles ist rückgängig machbar. Sonst arbeite ich mit Entwicklungsumgebungen für Code, und die meisten hier arbeiten nicht mit Code.
 :::
 
 ## Wo ihr steht {.smaller}
@@ -91,7 +91,7 @@ programmieren nicht
 ::: {.zahl}
 [16]{.gross}
 
-arbeiten schon mit Claude Code
+arbeiten mit Claude Code
 :::
 :::
 
@@ -100,6 +100,11 @@ Ihr seid also richtig hier. Der Kurs setzt nichts voraus ausser der Vorbereitung
 ::: {.notes}
 Zahlen aus der Umfrage vom Oktober, 27 Antworten mit Einwilligung. Nur Summen, keine Namen.
 :::
+
+## TODO: Zeige eine weitere Grafik / Zahlen / Wünsche
+
+Was ihr gerne können möchtet: Kategorisiere, zähle. 
+Noch eine andere Idee?
 
 ## So arbeiten wir {.smaller}
 
@@ -159,18 +164,20 @@ Steffis Trainings-App, öffentlich auf GitHub: `skiefa/marathon-strength`
 -   8\. Oktober: «Öffentlichen Code neutralisiert (kein Name, keine Pulswerte)»
 -   21\. Oktober: «Heute: neue Tageskarte». 27. Oktober: «Tageskarte entfernt»
 
+TODO: Frage: Wann arbeitet Steffi?
+
 Git vergisst nichts. Das ist der Nutzen, und es ist der Grund, bewusst zu wählen, was in einem Commit steht.
 
 ## Ein Repository, mehrere Orte
 
 ::: {.r-stack}
-![](bilder/block-a-01.png){.fragment .fade-in width="78%" fig-alt="Drei Kästen: Robins Laptop und Kims Laptop sind leer und gestrichelt, mit den Worten noch keine Kopie. Im Kasten GitHub liegt ein Commit. Darunter der Commit-Graph mit dem ersten Commit auf main."}
+![](bilder/block-a-01.png){.fragment .fade-in width="96%" fig-alt="Drei Kästen: Robins Laptop und Kims Laptop sind leer und gestrichelt, mit den Worten noch keine Kopie. Im Kasten GitHub liegt ein Commit. Darunter der Commit-Graph mit dem ersten Commit auf main."}
 
-![](bilder/block-a-02.png){.fragment .fade-in width="78%" fig-alt="Von GitHub zeigt je ein Pfeil mit dem Wort clone zu Robins Laptop und zu Kims Laptop. Alle drei Kästen enthalten jetzt denselben Commit."}
+![](bilder/block-a-02.png){.fragment .fade-in width="96%" fig-alt="Von GitHub zeigt je ein Pfeil mit dem Wort clone zu Robins Laptop und zu Kims Laptop. Alle drei Kästen enthalten jetzt denselben Commit."}
 :::
 
 ::: {.notes}
-09:50. Block A der Geschichte. Kim legt das Repository auf GitHub an. Kim und Robin klonen: drei Orte, derselbe Stand. Laptops reden nie direkt miteinander, immer über GitHub. Wörter: lokal ist der Laptop, remote ist GitHub.
+09:50. Block A der Geschichte. Kim legt das Repository auf GitHub an. Kim und Robin klonen: drei Orte, derselbe Stand. Laptops reden nie direkt miteinander, immer über GitHub. Wörter: lokal ist der Laptop, remote ist GitHub. TODO: lokal und remote sollten auf der Grafik auftauchen.
 :::
 
 ## Deine Commits in GitHub Desktop {.smaller}
@@ -310,14 +317,14 @@ Danach bringe ich ein Rezept ins Kochbuch, und dann ihr.
 ## Von deinem Repository ins Kochbuch {.smaller}
 
 ::::: columns
-::: {.column width="50%"}
+::: {.column width="49.5%"}
 ### Vorher
 
 -   Dein Rezept liegt in deinem eigenen Repository `rezept-dein-benutzername`
 -   Nur du schreibst dort
 :::
 
-::: {.column width="50%"}
+::: {.column width="49.5%"}
 ### Nachher
 
 -   Dein Rezept liegt zusätzlich im gemeinsamen Repository `kochbuch` auf GitHub (`github.com/gitklar/kochbuch`), dort auf deinem eigenen Branch
