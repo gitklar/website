@@ -7,7 +7,7 @@ subtitle: "Die Schritte aus dem Workshop 1. Etwa 30 Minuten"
 
 Diese Seite ist die Anleitung für die Übung im Workshop 1. Du bringst dein Rezept in das gemeinsame gitklar-Kochbuch, über einen eigenen {{< gl Branch >}} und einen {{< gl "Pull request" >}}.
 
-- **Im Workshop 1:** Ihr arbeitet zu zweit in einem Breakout-Raum die Schritte 1 bis 6 durch. Eine Person teilt den Bildschirm, die andere liest mit. Steht der Pull request, tauscht ihr. Schritt 7 kommt nach der Übung.
+- **Im Workshop 1:** Ihr arbeitet zu zweit in einem Breakout-Raum die Schritte 1 bis 6 gemeinsam durch, Schritt für Schritt und beide zur selben Zeit am eigenen Laptop. Eine Person kann den Bildschirm teilen. Ihr dürft es auch nacheinander machen, wenn euch das besser gelingt. Schritt 7 kommt nach der Übung.
 - **Nicht fertig geworden oder nicht dabei gewesen?** Dann machst du dieselben Schritte allein, bis Dienstag, 1. Dezember. Die Aufzeichnung des Workshops zeigt sie ebenfalls. Im Workshop 2 lesen wir die Pull requests zu zweit.
 
 ## Bevor du anfängst

@@ -35,6 +35,9 @@
 
   function $(id) { return document.getElementById(id); }
 
+  // Counts for the course statistics (decision 0009): one event without any
+  // personal data, only when the Plausible script of the website is loaded.
+  function melde(name, props) { try { if (typeof window.plausible === "function") window.plausible(name, { props: props }); } catch (e) { /* ignore */ } }
   function el(tag, attrs) {
     var node = document.createElement(tag);
     attrs = attrs || {};
@@ -161,6 +164,11 @@
     var g = state.geschichte, i = state.index, szene = g.szenen[i];
     var model = M.aufbauen(g, i);
     state.model = model;
+    state.gemeldet = state.gemeldet || {};
+    if (!state.gemeldet[i] && !document.body.classList.contains("nur-bild")) {
+      state.gemeldet[i] = true;
+      melde("Geschichte Szene", { geschichte: g.id, modus: state.modus || "zuschauen", szene: String(i + 1) + " von " + g.szenen.length });
+    }
     state.ersterVersuchFalsch = false;
     $("progress").textContent = "Schritt " + (i + 1) + " von " + g.szenen.length;
     $("szene-text").textContent = szene.text;
@@ -191,6 +199,7 @@
     var fragen = g.szenen.filter(function (x) { return x.frage; }).length;
     if (!state.fertig) {
       state.fertig = true;
+      melde("Geschichte beendet", { geschichte: g.id, modus: modus });
       var p = loadProgress();
       var key = g.id + ":" + modus;
       p[key] = p[key] || { runden: 0, best: 0 };

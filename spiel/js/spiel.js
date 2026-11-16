@@ -27,6 +27,9 @@
   function $(id) { return document.getElementById(id); }
 
   // el("button", {class: "btn", onclick: fn}, "text", childNode, ...)
+  // Counts for the course statistics (decision 0009): one event without any
+  // personal data, only when the Plausible script of the website is loaded.
+  function melde(name, props) { try { if (typeof window.plausible === "function") window.plausible(name, { props: props }); } catch (e) { /* ignore */ } }
   function el(tag, attrs) {
     var node = document.createElement(tag);
     attrs = attrs || {};
@@ -281,6 +284,7 @@
         p.zuordnen.runden++;
         p.zuordnen.best = (p.zuordnen.best === null || f < p.zuordnen.best) ? f : p.zuordnen.best;
       });
+      melde("Runde beendet", { stufe: "1 Zuordnen" });
       setFeedback("ok", ["Alle " + total + " Paare gefunden" + (f === 0 ? ", ohne Fehlversuch." : ", mit " + f + (f === 1 ? " Fehlversuch." : " Fehlversuchen."))]);
       endOfRound("Noch eine Runde", startZuordnen);
     }
@@ -432,6 +436,7 @@
       p.luecken.runden++;
       if (r > p.luecken.best) p.luecken.best = r;
     });
+    melde("Runde beendet", { stufe: "2 Lückentext" });
     clear($("stage"));
     setProgress("");
     setFeedback("ok", [r + " von " + total + " Befehlen beim ersten Versuch richtig."]);
@@ -541,6 +546,7 @@
   function finishAblauf(versuche) {
     var r = state.ablauf;
     state.finished = true;
+    melde("Runde beendet", { stufe: "3 Reihenfolge", geloest: versuche === null ? "Lösung angesehen" : "selbst" });
     updateProgress(function (p) {
       p.reihenfolge = p.reihenfolge || { geloest: {} };
       var prev = p.reihenfolge.geloest[r.id];

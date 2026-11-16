@@ -402,8 +402,9 @@ Mit dem Pull request stimmst du zu, dass dein Rezept unter CC BY 4.0 im Kochbuch
 ::: aufgabe
 Ihr arbeitet zu zweit in einem Breakout-Raum, 30 Minuten.
 
-1.  Eine Person teilt den Bildschirm und geht die Schritte 1 bis 6 auf der Seite durch. Die andere liest mit und hilft.
-2.  Steht der Pull request, tauscht ihr.
+1.  Geht die Schritte 1 bis 6 auf der Seite gemeinsam durch: Schritt für Schritt, beide zur selben Zeit am eigenen Laptop.
+2.  Eine Person kann den Bildschirm teilen, damit ihr dasselbe seht.
+3.  Ihr dürft es auch nacheinander machen, wenn euch das besser gelingt.
 :::
 
 Hängt es? Klicke im Breakout-Raum auf **Ask for Help**, dann komme ich zu euch.
@@ -411,7 +412,7 @@ Hängt es? Klicke im Breakout-Raum auf **Ask for Help**, dann komme ich zu euch.
 {{< countdown "30:00" >}}
 
 ::: {.notes}
-10:35, 30 Minuten, geschützter Block. Vor dem Öffnen der Räume: Link zur Seite in den Chat, warten, bis alle sie offen haben. Räume zu zweit, automatisch zugeteilt, Ende nach 30 Minuten mit 60 Sekunden Vorwarnung. Bei 11:00 als Nachricht an alle Räume: noch fünf Minuten. Wer nicht vorbereitet ist: mitlesen und später über die Seite einreichen. Die sechs Schritte: klonen (Reiter URL, gitklar/kochbuch), Branch rezept-benutzername, Ordner kopieren und umbenennen, Commit, Publish branch, Create pull request.
+10:35, 30 Minuten, geschützter Block. Vor dem Öffnen der Räume: Link zur Seite in den Chat, warten, bis alle sie offen haben. Räume zu zweit, automatisch zugeteilt, beide arbeiten gleichzeitig am eigenen Laptop, Ende nach 30 Minuten mit 60 Sekunden Vorwarnung. Bei 11:00 als Nachricht an alle Räume: noch fünf Minuten. Wer nicht vorbereitet ist: mitlesen und später über die Seite einreichen. Die sechs Schritte: klonen (Reiter URL, gitklar/kochbuch), Branch rezept-benutzername, Ordner kopieren und umbenennen, Commit, Publish branch, Create pull request.
 Push abgelehnt: der Commit trägt die eigentliche E-Mail-Adresse, und im Konto ist das Blockieren solcher Pushes an (Issue 30). In GitHub Desktop Settings (Windows: File, Options), Reiter Git, bei Email die noreply-Adresse wählen, Save, dann Undo und noch einmal committen.
 :::
 
