@@ -11,6 +11,8 @@ format:
     theme: [default, brand, folien.scss]
     transition: fade
     slide-number: true
+    # arrows to click, for people who open the deck without a keyboard habit
+    controls: true
     toc: false
     lightbox: false
     include-in-header:
