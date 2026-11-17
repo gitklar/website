@@ -102,11 +102,11 @@ Ein Pull request ist deine Bitte, deinen Branch zu prüfen und in `main` zu übe
 
    ![](bilder/rezept-einreichen/11-preview-pr.png){.bild-screenshot fig-alt="GitHub Desktop: nach dem Veröffentlichen steht in der Mitte der Kasten Preview the Pull Request from your current branch mit dem Knopf Preview Pull Request"}
 
-2. Das Fenster **Open a Pull Request** zeigt deine Dateien. Klicke unten rechts auf **Create Pull Request**. Dein Browser öffnet sich auf github.com.
+2. Das Fenster **Open a Pull Request** zeigt deine Dateien.
 
    ![](bilder/rezept-einreichen/12-open-pr-desktop.png){.bild-screenshot fig-alt="GitHub Desktop: das Fenster Open a Pull Request mit base main, den zwei Dateien und unten rechts dem Knopf Create Pull Request"}
 
-3. Oben steht **base: main** und **compare: rezept-dein-benutzername**. So soll es sein.
+3. Oben steht **base: main** und **compare: rezept-dein-benutzername**. So soll es sein. Klicke jetzt unten rechts auf den Knopf **Create Pull Request**. Jetzt öffnet sich dein Browser auf github.com.
 4. Bei **Add a title** steht deine Commit-Nachricht. Ersetze sie durch den Namen deines Gerichts, zum Beispiel `Linsensuppe`.
 5. Im Textfeld darunter steht schon eine Vorlage mit drei Zeilen. Ergänze bei **Gericht** den Namen. Schreib bei **Name im Buch**, was im öffentlichen Kochbuch bei deinem Rezept stehen soll: dein Benutzername, ein anderer Name oder «kein Name». Bei **Link** kannst du eine Website oder ein Profil angeben, wenn du magst.
 
