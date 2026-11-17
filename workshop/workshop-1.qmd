@@ -38,6 +38,8 @@ Schreib in den Chat: **Welches Rezept bringst du heute mit?**
 Der Name des Gerichts reicht. Noch keines? Dann das, was du zuletzt gekocht hast.
 :::
 
+{{< countdown "1:00" >}}
+
 ::: hand
 Wir zeichnen auf.
 :::

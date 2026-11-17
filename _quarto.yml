@@ -41,6 +41,8 @@ website:
         text: Vorbereitung
       - href: werkzeuge.qmd
         text: Nachschlagen
+      - href: workshop/workshop-1.qmd
+        text: Workshop 1
     right:
       - icon: github
         href: https://github.com/gitklar
