@@ -233,9 +233,23 @@ Siehst du deine Commits? Schreib «ich sehe es» in den Chat.
 Bis 10:00. Wer die Vorbereitung nicht fertig hat, schaut bei mir zu. Kurz auf rainbow-train zeigen: derselbe Blick.
 :::
 
+## Commits auf GitHub {.smaller}
+
+[Ich bin dran]{.dran .ich}
+
+Ich zeige das Repository `rezept-rainbow-train` im Browser.
+
+-   Von GitHub Desktop zu GitHub: Menü **Repository**, **View on GitHub**
+-   Die Liste der Commits: die Uhr mit der Zahl
+-   Ein Commit aus der Nähe: wer, wann, was, warum
+
+::: {.notes}
+5 Minuten. Ich zeige GitHub und erkläre, ihr schaut zu. Danach die nächste Folie: ihr seid dran, 3 Minuten.
+:::
+
 ## Deine Commits auf GitHub {.smaller}
 
-[Wir sind dran]{.dran .wir}
+[Ihr seid dran]{.dran .ihr}
 
 ::: aufgabe
 1.  In GitHub Desktop: Menü **Repository**, **View on GitHub**. Dein Repository öffnet sich im Browser.
@@ -246,6 +260,12 @@ Du siehst dieselben Commits wie in GitHub Desktop. Dein Laptop und GitHub haben 
 
 ::: hand
 Siehst du dieselben Commits? Schreib «ich sehe es» in den Chat.
+:::
+
+{{< countdown "3:00" >}}
+
+::: {.notes}
+3 Minuten, jede Person am eigenen Laptop.
 :::
 
 ## Dasselbe im Terminal {.smaller}
