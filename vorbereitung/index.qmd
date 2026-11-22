@@ -7,7 +7,7 @@ Die Vorbereitung sorgt dafür, dass wir im Workshop mit Git arbeiten statt mit I
 
 ## Dein Issue sagt dir, was gilt
 
-Nicht jede Seite hier gilt für dich. Im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung) auf GitHub liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen. Es ist dir zugewiesen. Es nennt deine Schritte in deiner Reihenfolge, zusammengestellt aus deinen Antworten in der Umfrage: dein Betriebssystem, ob du Claude Code hast, ob du mit einem Editor schreibst. Jeder Schritt verlinkt auf die Seite hier, die ihn erklärt.
+Nicht jede Seite hier gilt für dich. Im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung) auf GitHub liegt ein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen. Es nennt deine Schritte in deiner Reihenfolge, zusammengestellt aus deinen Antworten in der Umfrage: dein Betriebssystem, ob du Claude Code hast, ob du mit einem Editor schreibst. Jeder Schritt verlinkt auf die Seite hier, die ihn erklärt.
 
 Hake jeden Schritt im Issue ab, sobald er erledigt ist. Ich sehe den Fortschritt und melde mich, wenn etwas hängt.
 
