@@ -15,6 +15,8 @@ project:
     - "*.qmd"
     - "vorbereitung/*.qmd"
     - "workshop/*.qmd"
+    # the deck of workshop 2 is in work: not published until this line is removed
+    - "!workshop/workshop-2.qmd"
   # the practice games: static pages, published as they are (spiel/README.md)
   resources:
     - "spiel/*.html"
@@ -77,6 +79,9 @@ website:
         - section: "Im Workshop 1"
           contents:
             - rezept-einreichen.qmd
+        - section: "Für den Workshop 2"
+          contents:
+            - eigenes-projekt.qmd
         - section: "Nachschlagen"
           contents:
             - werkzeuge.qmd

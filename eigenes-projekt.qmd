@@ -1,0 +1,86 @@
+---
+title: "Dein eigenes Projekt vorbereiten"
+subtitle: "Für den Workshop 2. Etwa 30 Minuten"
+---
+
+<!-- Geschrieben am 23. November 2026 aus dem Plan für Workshop 2. Die Schritte im Workshop sind noch nicht mit einem Testkonto durchgespielt. -->
+
+Das Rezept war die Übung. Im Workshop 2 kommt dein eigenes Projekt dazu: Du bringst einen Ordner mit, an dem du wirklich arbeitest, und am Ende des Workshops liegt er als {{< gl Repository >}} auf GitHub. Damit hast du nach dem Kurs einen Ort, an dem du weitermachst.
+
+Diese Seite erklärt, worum es geht, was wir im Workshop 2 vorhaben und was du vorher bereitlegst.
+
+## Worum es geht
+
+Mit dem Rezept hast du die Schritte gelernt: ein Repository anlegen, klonen, einen {{< gl Commit >}} machen, pushen, einen {{< gl "Pull request" >}} öffnen. Diese Schritte sind für jedes Projekt dieselben, egal ob darin ein Rezept, ein Angebot, ein Konzept oder eine Auswertung liegt.
+
+Ein eigenes Projekt auf GitHub gibt dir drei Dinge:
+
+- **Eine Geschichte.** Jeder Stand deiner Arbeit ist als Commit festgehalten, und du kannst zu jedem zurück.
+- **Einen Ort zum Teilen.** Du entscheidest, wer mitliest und wer mitarbeitet.
+- **Einen Arbeitsplatz für KI-Agenten.** Ein Agent wie Claude Code arbeitet in einem Ordner. Liegt dieser Ordner in einem Repository, siehst du in jedem Commit, was der Agent geändert hat, und kannst es prüfen oder zurücknehmen.
+
+## Was wir im Workshop 2 vorhaben
+
+1.  **Dein Projekt kommt auf GitHub.** Du legst ein privates Repository an, klonst es mit GitHub Desktop, kopierst deine Dateien hinein, prüfst die Liste der Dateien und machst den ersten Commit. Ich zeige es zuerst, dann machen es alle am eigenen Laptop.
+2.  **Du entscheidest, wo es liegt.** In deinem eigenen Konto, oder in einer eigenen {{< gl Organization >}}, wenn du mit anderen daran arbeitest. Ob jetzt der Moment für eine Organisation ist, entscheidest du.
+3.  **Wir arbeiten ein Stück daran weiter.** Aufgaben als {{< gl Issue >}} festhalten und die Arbeit an einem Projekt planen, mit den Mitteln von GitHub.
+4.  **Ein Ausblick auf die Arbeit mit Agenten.** Das ist der nächste Schritt nach dem Kurs, siehe [unten](#wie-es-nach-dem-kurs-weitergeht).
+
+Wenn du nach dem Workshop Unterstützung an deinem Projekt möchtest, lädst du mich in dein Repository ein: Benutzername `larnsce`, in den **Settings** des Repositorys unter **Collaborators**.
+
+## Was du vorher bereitlegst
+
+### Schritt 1: ein Projekt wählen
+
+Wähle etwas, an dem du in den nächsten Wochen arbeitest. Es soll klein sein: wenige Dateien reichen. Beispiele: die Unterlagen für ein Angebot, die Texte einer Website, ein Konzept, eine Sammlung von Vorlagen, Skills für Claude.
+
+### Schritt 2: einen Ordner anlegen
+
+Lege auf deinem Laptop einen Ordner mit dem Namen deines Projekts an und kopiere die Dateien hinein, die dazugehören. Mit Git machst du in diesem Ordner noch nichts. Das kommt im Workshop.
+
+### Schritt 3: den Ordner prüfen
+
+Was einmal auf GitHub liegt, bleibt in der Geschichte des Repositorys. Prüfe deshalb vorher drei Dinge:
+
+- **Grösse.** Keine Datei ist grösser als 50 MB. Videos, Archive und grosse Exporte bleiben draussen.
+- **Geheimes.** Im Ordner liegen keine Passwörter, keine Schlüssel und keine Zugangsdaten, auch nicht in Notizen.
+- **Daten über andere.** Im Ordner liegen keine Kundenlisten, Adressen oder andere Angaben über Personen.
+
+Bist du bei einer Datei unsicher, lass sie weg. Sie kann später dazukommen.
+
+### Dein Projekt liegt in der Claude App?
+
+Dann gibt es noch keinen Ordner auf deinem Laptop. So bekommst du einen:
+
+1.  Bitte Claude im Projekt, eine Übergabe vorzubereiten, zum Beispiel mit diesem Satz:
+
+    ``` bash
+    Bereite eine Übergabe für dieses Projekt vor: Worum geht es, was ist entschieden, was ist offen, und welche Dateien gehören dazu? Schreib sie als Markdown-Datei.
+    ```
+
+2.  Lade die Übergabe herunter, und dazu alle anderen Dateien aus dem Projekt, die wichtig sind.
+
+3.  Lege alles in einen eigenen Ordner auf deinem Laptop, wie in Schritt 2. Dann prüfst du ihn wie in Schritt 3.
+
+### Kein eigenes Projekt?
+
+Dann legen wir im Workshop einen Übungsordner an. Die Schritte sind dieselben, und du wiederholst sie später mit einem echten Projekt.
+
+::: {.content-visible when-profile="cohort"}
+### Schritt 4: Bescheid geben
+
+Schreib bis Montag, 30. November, in dein Issue «Zwischen den Workshops», ob du ein eigenes Projekt mitbringst: [Liste der Issues](https://github.com/gitklar/vorbereitung/issues). Ein Satz reicht. Fragen zu deinem Projekt gehören ebenfalls dorthin.
+:::
+
+## Wie es nach dem Kurs weitergeht {#wie-es-nach-dem-kurs-weitergeht}
+
+Mit einem Projekt auf GitHub ist der nächste Schritt die Arbeit mit KI-Agenten: Werkzeuge wie {{< gl "Claude Code" >}} und Codex, die in deinem Ordner lesen, schreiben und Commits machen. gitklar ist kein KI-Kurs, es gibt dir Grundlagen für sicheres und nachvollziehbares Arbeiten.
+
+Ich nehme dazu kurze Screencasts auf, die zeigen, was ein Agent in einem Repository kann. Die Links stehen auf dieser Seite, sobald es sie gibt.
+
+Dazu biete ich mit bitz zwei Formate an:
+
+- **Workshops zur Arbeit mit KI-Agenten.** Von der Einrichtung bis zu den Grundlagen, an deinem eigenen Projekt.
+- **Coaching für Einzelne und Teams.** Wie ihr Werkzeuge wie Claude Code und Codex in eurer Arbeit wirksam einsetzt.
+
+Falls du Interesse hast, melde dich bei mir, und wir können ein Angebot ausarbeiten.
