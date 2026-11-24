@@ -274,7 +274,7 @@ Der zweite Durchgang, als rainbow-train. Die vier Fragen im Finder stellen. Repo
 [Ihr seid dran]{.dran .ihr}
 
 ::: hand
-Die Schritte stehen auch auf der Seite [gitklar.ch/eigenes-projekt.html](https://gitklar.ch/eigenes-projekt.html), der Link steht im Chat.
+Die Schritte stehen auch auf der Seite [gitklar.ch/airetreat-01/eigenes-projekt.html](https://gitklar.ch/airetreat-01/eigenes-projekt.html), der Link steht im Chat.
 :::
 
 ::: aufgabe
