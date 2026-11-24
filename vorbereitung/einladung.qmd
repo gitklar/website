@@ -15,13 +15,13 @@ Der Kurs läuft in der GitHub-Organisation **gitklar**. Dort legst du dein eigen
 
    ![](../bilder/vorbereitung/einladung-join.png){.bild-screenshot fig-alt="github.com: You've been invited to the gitklar organization, mit den Knöpfen Join gitklar und Decline"}
 
-3. GitHub zeigt die Seite der Organisation, oben mit **You are being added as a member of gitklar**. Klicke auf **Repositories**, dann auf **vorbereitung**, dann auf den Reiter **Issues**. Dort liegt dein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen in Klammern. Es ist dir zugewiesen.
+3. GitHub zeigt die Seite der Organisation, oben mit **You are being added as a member of gitklar**. Klicke auf **Repositories**, dann auf **vorbereitung**, dann auf den Reiter **Issues**. Dort liegt dein Issue mit dem Titel «Deine Vorbereitung auf gitklar» und deinem Benutzernamen in Klammern.
 
 Einladungen gelten sieben Tage. Ist deine abgelaufen, schreib mir, und ich schicke sie neu.
 
 ## Geschafft, wenn
 
-Du dein Issue im Repository [gitklar/vorbereitung](https://github.com/gitklar/vorbereitung/issues?q=is%3Aissue+involves%3A%40me) siehst.
+Du in der [Liste der Issues](https://github.com/gitklar/vorbereitung/issues) von gitklar/vorbereitung das Issue mit deinem Benutzernamen im Titel siehst.
 
 ## Wer was sieht
 
